@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\bin\Debug\net6.0\DelightDinner.Domain.deps.json
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\bin\Debug\net6.0\DelightDinner.Domain.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\bin\Debug\net6.0\DelightDinner.Domain.pdb
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\DelightDinner.Domain.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\DelightDinner.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\DelightDinner.Domain.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\DelightDinner.Domain.AssemblyInfo.cs
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\DelightDinner.Domain.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\DelightDinner.Domain.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\refint\DelightDinner.Domain.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\DelightDinner.Domain.pdb
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Domain\obj\Debug\net6.0\ref\DelightDinner.Domain.dll

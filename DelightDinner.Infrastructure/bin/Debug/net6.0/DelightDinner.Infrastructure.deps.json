@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "DelightDinner.Infrastructure/1.0.0": {
+        "dependencies": {
+          "DelightDinner.Application": "1.0.0"
+        },
+        "runtime": {
+          "DelightDinner.Infrastructure.dll": {}
+        }
+      },
+      "DelightDinner.Application/1.0.0": {
+        "dependencies": {
+          "DelightDinner.Domain": "1.0.0"
+        },
+        "runtime": {
+          "DelightDinner.Application.dll": {}
+        }
+      },
+      "DelightDinner.Domain/1.0.0": {
+        "runtime": {
+          "DelightDinner.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DelightDinner.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DelightDinner.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DelightDinner.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
