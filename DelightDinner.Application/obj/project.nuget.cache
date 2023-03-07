@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1w5lgvSeRk+cHt14AxZbs93uK68pLyLpX85z/LOWgId3o+80b/UVIS864y1ydUMxYfTMR06K8Aq7sJLCPhAGqg==",
+  "dgSpecHash": "yenI5yUgerPvKLdXZcFX7vTpxULZqCm85NFSjuuqFetpLTdeMM8hLMuRZUpmgPRrJ1XOfEW5vxoWhxO9dakM1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

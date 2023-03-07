@@ -5,10 +5,6 @@ C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\DelightDi
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\DelightDinner.Api.runtimeconfig.json
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\DelightDinner.Api.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\DelightDinner.Api.pdb
-C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\DelightDinner.Application.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\DelightDinner.Contracts.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\DelightDinner.Domain.dll
@@ -22,7 +18,6 @@ C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDi
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.AssemblyInfoInputs.cache
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.AssemblyInfo.cs
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\staticwebassets\msbuild.DelightDinner.Api.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\staticwebassets\msbuild.build.DelightDinner.Api.props
@@ -38,3 +33,4 @@ C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\refint\De
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.pdb
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.genruntimeconfig.cache
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\ref\DelightDinner.Api.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
