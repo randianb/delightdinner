@@ -34,3 +34,14 @@ C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDi
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.genruntimeconfig.cache
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\ref\DelightDinner.Api.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
