@@ -1,6 +1,8 @@
-﻿namespace DelightDinner.Application.Common.Interfaces.Authentication;
+﻿using DelightDinner.Domain.Entities;
+
+namespace DelightDinner.Application.Common.Interfaces.Authentication;
 
 public interface IJwtTokenGenerator
 {
-    string GenerateToken(Guid userId, string firstName, string lastName);
+    string GenerateToken(User user);
 }
