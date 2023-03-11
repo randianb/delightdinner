@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "PTwwWOe4/2NoSePSQGoTe10NqxtV2wl5Z2vmhwkO8z7l5xCnmLrEuzCm6MfDOeVZ3RzOLY8p9PBUHHUGn+IPLg==",
+  "dgSpecHash": "0IgbBTuqQdMr4pELmCiF0MdRbiAqxCWpVb5OzQabGvKovj/DwnRURuRta4y8LF1xUbgJr4idBaTRDQfFzoKIFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
+  ],
   "logs": []
 }

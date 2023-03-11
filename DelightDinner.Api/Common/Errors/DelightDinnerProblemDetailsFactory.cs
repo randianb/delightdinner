@@ -1,19 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DelightDinner.Api.Common.Http;
+using ErrorOr;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
-namespace DelightDinner.Api.Errors;
+namespace DelightDinner.Api.Common.Errors;
 
 public class DelightDinnerProblemDetailsFactory : ProblemDetailsFactory
 {
     private readonly ApiBehaviorOptions _options;
 
-	public DelightDinnerProblemDetailsFactory(IOptions<ApiBehaviorOptions> options)
-	{
-		_options = options?.Value ?? throw new ArgumentNullException(nameof(options));
-	}
+    public DelightDinnerProblemDetailsFactory(IOptions<ApiBehaviorOptions> options)
+    {
+        _options = options?.Value ?? throw new ArgumentNullException(nameof(options));
+    }
 
     public override ProblemDetails CreateProblemDetails(
         HttpContext httpContext,
@@ -84,11 +86,15 @@ public class DelightDinnerProblemDetailsFactory : ProblemDetailsFactory
         }
 
         var traceId = Activity.Current?.Id ?? httpContext?.TraceIdentifier;
-        if (traceId == null)
+        if (traceId != null)
         {
             problemDetails.Extensions["traceId"] = traceId;
         }
 
-        problemDetails.Extensions.Add("customProperty", "customValue");
+        var errors = httpContext?.Items[HttpContextItemKeys.Errors] as List<Error>;
+        if (errors is not null)
+        {
+            problemDetails.Extensions.Add("errorCodes", errors.Select(e => e.Code));
+        }        
     }
 }

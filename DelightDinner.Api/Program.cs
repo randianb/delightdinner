@@ -1,4 +1,4 @@
-using DelightDinner.Api.Errors;
+using DelightDinner.Api.Common.Errors;
 using DelightDinner.Application;
 using DelightDinner.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Infrastructure;

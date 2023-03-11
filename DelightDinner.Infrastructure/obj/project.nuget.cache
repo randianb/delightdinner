@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "5cS+69qQvBnRReetqv2RPRKTYckJTUV/0yUE0j3ITS45w1GWp14rf266Dosh8ke8vCzrkmUHVchF8ezarNKPPg==",
+  "dgSpecHash": "B1EpMlUdiiLlf0+z5tdg1k6i2GJgdFaWLv3AFuHxO1Jxp3I1r/eMRQ7MS52EvwnKm/Zi+LXR7VHnYXY8Wiimwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
