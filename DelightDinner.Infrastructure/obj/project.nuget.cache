@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "B1EpMlUdiiLlf0+z5tdg1k6i2GJgdFaWLv3AFuHxO1Jxp3I1r/eMRQ7MS52EvwnKm/Zi+LXR7VHnYXY8Wiimwg==",
+  "dgSpecHash": "xyYFadvSPeHpF0ZLqIy++twdF6Az9uQG/7b2ul3m6LPdIwolLlTX4ISvcWdrEoxNKAArOdeEaNt7U8Qkwa8JxA==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

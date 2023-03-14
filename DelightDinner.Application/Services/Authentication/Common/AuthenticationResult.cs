@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Entities;
 
-namespace DelightDinner.Application.Services.Authentication;
+namespace DelightDinner.Application.Services.Authentication.Common;
 
 public record AuthenticationResult(
     User User,

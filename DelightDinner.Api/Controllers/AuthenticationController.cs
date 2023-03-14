@@ -1,29 +1,30 @@
 ﻿using DelightDinner.Contracts.Authentication;
-using DelightDinner.Application.Services.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using ErrorOr;
 using DelightDinner.Domain.Common.Errors;
+using DelightDinner.Application.Services.Authentication.Common;
+using DelightDinner.Application.Services.Authentication.Commands;
+using DelightDinner.Application.Services.Authentication.Query;
+using MediatR;
+using DelightDinner.Application.Authentication.Commands.Register;
 
 namespace DelightDinner.Api.Controllers;
 
 [Route("auth")]
 public class AuthenticationController : ApiController
 {
-    private readonly IAuthenticationService _authenticationService;
+    private readonly IMediator _mediator;
 
-    public AuthenticationController(IAuthenticationService authenticationService)
+    public AuthenticationController(IMediator mediator)
     {
-        _authenticationService = authenticationService;
+        _mediator = mediator;
     }
 
     [HttpPost("register")]
-    public IActionResult Register(RegisterRequest request)
+    public async Task<IActionResult> Register(RegisterRequest request)
     {
-        ErrorOr<AuthenticationResult> authResult = _authenticationService.Register(
-            request.FirstName,
-            request.LastName,
-            request.Email,
-            request.Password);
+        var command = new RegisterCommand(request.FirstName, request.LastName, request.Email, request.Password);
+        ErrorOr<AuthenticationResult> authResult = await _mediator.Send(command);
 
         return authResult.Match(
             authResult => Ok(MapAuthResult(authResult)),
@@ -33,7 +34,7 @@ public class AuthenticationController : ApiController
     [HttpPost("login")]
     public IActionResult Login(LoginRequest request)
     {
-        var authResult = _authenticationService.Login(
+        var authResult = _authenticationQueryService.Login(
             request.Email,
             request.Password);
 
