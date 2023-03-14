@@ -1,4 +1,4 @@
-﻿using DelightDinner.Application.Services.Authentication.Common;
+﻿using DelightDinner.Application.Authentication.Common;
 using ErrorOr;
 using MediatR;
 

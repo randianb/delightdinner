@@ -1,6 +1,6 @@
-﻿using DelightDinner.Application.Common.Interfaces.Authentication;
+﻿using DelightDinner.Application.Authentication.Common;
+using DelightDinner.Application.Common.Interfaces.Authentication;
 using DelightDinner.Application.Common.Interfaces.Persistence;
-using DelightDinner.Application.Services.Authentication.Common;
 using DelightDinner.Domain.Common.Errors;
 using DelightDinner.Domain.Entities;
 using ErrorOr;

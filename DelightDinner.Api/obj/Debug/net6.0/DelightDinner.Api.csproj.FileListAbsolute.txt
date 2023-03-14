@@ -46,3 +46,6 @@ C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\ErrorOr.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\MediatR.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\MediatR.Contracts.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
