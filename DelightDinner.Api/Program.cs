@@ -1,17 +1,13 @@
-using DelightDinner.Api.Common.Errors;
+using DelightDinner.Api;
 using DelightDinner.Application;
 using DelightDinner.Infrastructure;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services
+        .AddPresentation()
         .AddApplication()
         .AddInfrastructure(builder.Configuration);
-
-    builder.Services.AddControllers();
-
-    builder.Services.AddSingleton<ProblemDetailsFactory, DelightDinnerProblemDetailsFactory>();
 }
 
 var app = builder.Build();

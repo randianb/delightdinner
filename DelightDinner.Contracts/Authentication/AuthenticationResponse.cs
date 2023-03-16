@@ -1,6 +1,6 @@
 ﻿namespace DelightDinner.Contracts.Authentication;
 
-public record AuthenticatioResponse(
+public record AuthenticationResponse(
     Guid Id,
     string FirstName,
     string LastName,
