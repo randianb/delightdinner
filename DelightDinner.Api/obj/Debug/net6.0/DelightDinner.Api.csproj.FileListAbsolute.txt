@@ -52,3 +52,7 @@ C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\MediatR.E
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Mapster.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Mapster.Core.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Mapster.DependencyInjection.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.MvcApplicationPartsAssemblyInfo.cs
