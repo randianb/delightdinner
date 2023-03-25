@@ -1,7 +1,4 @@
-﻿using DelightDinner.Application.Authentication.Commands.Register;
-using DelightDinner.Application.Authentication.Common;
-using DelightDinner.Application.Common.Behaviors;
-using ErrorOr;
+﻿using DelightDinner.Application.Common.Behaviors;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,9 +12,9 @@ public static class DependencyInjection
     {
         services.AddMediatR(typeof(DependencyInjection).Assembly);
 
-        services.AddScoped<
-            IPipelineBehavior<RegisterCommand, ErrorOr<AuthenticationResult>>, 
-            ValidationRegisterCommandBehavior>();
+        services.AddScoped(
+            typeof(IPipelineBehavior<,>),
+            typeof(ValidationBehavior<,>));
 
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
