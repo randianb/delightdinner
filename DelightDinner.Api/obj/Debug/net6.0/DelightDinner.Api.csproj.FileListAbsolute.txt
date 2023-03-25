@@ -56,3 +56,6 @@ C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\FluentVal
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\obj\Debug\net6.0\DelightDinner.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\user\Desktop\DelightDinner\DelightDinner.Api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

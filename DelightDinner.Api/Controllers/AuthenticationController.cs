@@ -7,10 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 using MapsterMapper;
 using MediatR;
 using ErrorOr;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DelightDinner.Api.Controllers;
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthenticationController : ApiController
 {
     private readonly ISender _mediator;
