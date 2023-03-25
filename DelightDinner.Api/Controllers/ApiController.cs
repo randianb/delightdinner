@@ -23,9 +23,7 @@ public class ApiController : ControllerBase
 
         HttpContext.Items[HttpContextItemKeys.Errors] = errors;
 
-        var firstError = errors[0];
-
-        return Problem(firstError);
+        return Problem(errors[0]);
     }
 
     private IActionResult Problem(Error error)
