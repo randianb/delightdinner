@@ -3,15 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelightDinner.Api", "DelightDinner.Api\DelightDinner.Api.csproj", "{1BE3F102-6D39-4593-A0A6-FE4DC56F65E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Api", "DelightDinner.Api\DelightDinner.Api.csproj", "{1BE3F102-6D39-4593-A0A6-FE4DC56F65E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelightDinner.Contracts", "DelightDinner.Contracts\DelightDinner.Contracts.csproj", "{8D5AD78C-6CE3-402B-8681-E2A4B1782E37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Contracts", "DelightDinner.Contracts\DelightDinner.Contracts.csproj", "{8D5AD78C-6CE3-402B-8681-E2A4B1782E37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelightDinner.Infrastructure", "DelightDinner.Infrastructure\DelightDinner.Infrastructure.csproj", "{D03734FE-69D7-41C7-A37A-B6E4FAE4FCB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Infrastructure", "DelightDinner.Infrastructure\DelightDinner.Infrastructure.csproj", "{D03734FE-69D7-41C7-A37A-B6E4FAE4FCB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelightDinner.Application", "DelightDinner.Application\DelightDinner.Application.csproj", "{C0DEA2D6-D3E6-4B22-95B1-60A141DF684A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Application", "DelightDinner.Application\DelightDinner.Application.csproj", "{C0DEA2D6-D3E6-4B22-95B1-60A141DF684A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelightDinner.Domain", "DelightDinner.Domain\DelightDinner.Domain.csproj", "{E8877DB9-AF04-446B-9094-7D4564710AEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Domain", "DelightDinner.Domain\DelightDinner.Domain.csproj", "{E8877DB9-AF04-446B-9094-7D4564710AEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F8E308EB-1CE3-4C24-B0B0-8B8E06C52888}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModels", "DomainModels", "{EE304F80-A7B6-48F5-B5EA-6F7E5AEB8A59}"
+	ProjectSection(SolutionItems) = preProject
+		Aggregates.Menu.md = Aggregates.Menu.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +49,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE304F80-A7B6-48F5-B5EA-6F7E5AEB8A59} = {F8E308EB-1CE3-4C24-B0B0-8B8E06C52888}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0541607F-6469-46BD-8DDA-867945F2E549}
