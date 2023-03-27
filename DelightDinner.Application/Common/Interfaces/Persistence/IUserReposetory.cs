@@ -1,4 +1,4 @@
-﻿using DelightDinner.Domain.Entities;
+﻿using DelightDinner.Domain.User;
 
 namespace DelightDinner.Application.Common.Interfaces.Persistence;
 

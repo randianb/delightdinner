@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Authentication;
 using DelightDinner.Application.Common.Services;
-using DelightDinner.Domain.Entities;
+using DelightDinner.Domain.User;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
