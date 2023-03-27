@@ -21,7 +21,9 @@ public sealed class MenuSection : Entity<MenuSectionId>
         Description = description;
     }
 
-    public static MenuSection Create(string name, string description)
+    public static MenuSection Create(
+        string name,
+        string description)
     {
         return new(
             MenuSectionId.CreateUnique(),
