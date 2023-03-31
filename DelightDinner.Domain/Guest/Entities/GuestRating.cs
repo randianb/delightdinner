@@ -2,57 +2,46 @@
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
-using DelightDinner.Domain.MenuReview.ValueObjects;
 
-namespace DelightDinner.Domain.MenuReview;
+namespace DelightDinner.Domain.Guest.Entities;
 
-public class MenuReview : AggregateRoot<MenuReviewId>
+public class GuestRating : Entity<GuestRatingId>
 {
-    public float Rating { get; }
-    public string Comment { get; }
     public HostId HostId { get; }
-    public GuestId GuestId { get; }
     public DinnerId DinnerId { get; }
-
+    public float Rating { get; }
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 
-    private MenuReview(
-        MenuReviewId menuReviewId,
+    private GuestRating(
+        GuestRatingId guesRatingtId,
         HostId hostId,
         DinnerId dinnerId,
-        GuestId guestId,
         float rating,
-        string comment,
         DateTime createdDateTime,
         DateTime updatedDateTime)
-        : base(menuReviewId)
+        : base(guesRatingtId)
     {
         HostId = hostId;
         DinnerId = dinnerId;
-        GuestId = guestId;
         Rating = rating;
-        Comment = comment;
         CreatedDateTime = createdDateTime;
         UpdatedDateTime = updatedDateTime;
     }
 
-    public static MenuReview Create(
+
+    public static GuestRating Create(
         HostId hostId,
         DinnerId dinnerId,
-        GuestId guestId,
         float rating,
-        string comment,
         DateTime createdDateTime,
         DateTime updatedDateTime)
     {
         return new(
-            MenuReviewId.CreateUnique(),
+            GuestRatingId.CreateUnique(),
             hostId,
             dinnerId,
-            guestId,
             rating,
-            comment,
             createdDateTime,
             updatedDateTime);
     }

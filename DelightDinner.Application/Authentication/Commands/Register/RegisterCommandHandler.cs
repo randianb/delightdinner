@@ -2,7 +2,7 @@
 using DelightDinner.Application.Common.Interfaces.Authentication;
 using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Domain.Common.Errors;
-using DelightDinner.Domain.Entities;
+using DelightDinner.Domain.User;
 using ErrorOr;
 using MediatR;
 
