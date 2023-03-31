@@ -2,6 +2,10 @@
 
 ## User
 
+'''csahrp
+	// TODO: Add methods
+'''
+
 '''json
 {
 	"id": { "value": "0000000-000-000-00000000000" },
