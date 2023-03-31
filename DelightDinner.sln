@@ -17,6 +17,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{F8E308EB-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModels", "DomainModels", "{EE304F80-A7B6-48F5-B5EA-6F7E5AEB8A59}"
 	ProjectSection(SolutionItems) = preProject
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+		Aggregate.Host.md = Aggregate.Host.md
+=======
+		Aggregates.Bill.md = Aggregates.Bill.md
+>>>>>>> Stashed changes
+=======
+		Aggregates.Bill.md = Aggregates.Bill.md
+>>>>>>> Stashed changes
 		Aggregates.Menu.md = Aggregates.Menu.md
 		Aggregates.User.md = Aggregates.User.md
 	EndProjectSection
