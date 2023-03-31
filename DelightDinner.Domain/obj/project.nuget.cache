@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JbrXbEeRZqsNx0cRAMr9TPmmtrz6H0nJ+zD/bgdxJFQCknXuX31c6dquFzxj0jYe0hfAPhTxG8o2zdTey/SHmQ==",
+  "dgSpecHash": "/FOi2yfTSUuGrINDSh0fr4jb7/Tyy6TJ8sNKkQzqv+8rjiW10JKSS8CBUeqEWYf87DGVuMHLIzwy8I3mqNqDQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
   ],
   "logs": []
 }

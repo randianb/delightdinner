@@ -41,37 +41,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
       "projectName": "DelightDinner.Domain",
-      "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
-      "packagesPath": "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\obj\\",
+      "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\AndriiKorshenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/FsrXwUUlgL2RgGyErEq2EXUPB9kLmW84puSEEzA8TUHVe4UPcB/api": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {

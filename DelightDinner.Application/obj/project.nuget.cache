@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "S3jRhr3Pa/wi2FkCJgfWoJrx1dZA4x6qZMwL3YwuSf2+ZyxQCRdvhhizYRGBzrjKKaaeWnkDk2D0sZWOKBrpPw==",
+  "dgSpecHash": "ZhMrbyiFEqqa0VgeU/LtDT8BmPQ5kkEG7XVkhJyNzSx7GJgbCGoVHPot3xq8GIDeDrt1DApU92Ib9I+DGhg1dA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj",
+  "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
-    "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
