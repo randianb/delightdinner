@@ -1,41 +1,49 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj": {}
+    "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Api\\DelightDinner.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj": {
+    "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Api\\DelightDinner.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
+        "projectUniqueName": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Api\\DelightDinner.Api.csproj",
         "projectName": "DelightDinner.Api",
-        "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\obj\\",
+        "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Api\\DelightDinner.Api.csproj",
+        "packagesPath": "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\AndriiKorshenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/FsrXwUUlgL2RgGyErEq2EXUPB9kLmW84puSEEzA8TUHVe4UPcB/api": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj"
+              "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj": {
+                "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj"
               },
-              "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj"
+              "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
+                "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj"
               },
-              "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj"
+              "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj"
               }
             }
           }
@@ -82,32 +90,40 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj": {
+    "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
+        "projectUniqueName": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj",
         "projectName": "DelightDinner.Application",
-        "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\obj\\",
+        "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj",
+        "packagesPath": "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\AndriiKorshenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/FsrXwUUlgL2RgGyErEq2EXUPB9kLmW84puSEEzA8TUHVe4UPcB/api": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj"
+              "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj": {
+                "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj"
               }
             }
           }
@@ -159,25 +175,33 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
+    "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
         "projectName": "DelightDinner.Contracts",
-        "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\obj\\",
+        "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
+        "packagesPath": "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Contracts\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\AndriiKorshenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/FsrXwUUlgL2RgGyErEq2EXUPB9kLmW84puSEEzA8TUHVe4UPcB/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -214,25 +238,33 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj": {
+    "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
         "projectName": "DelightDinner.Domain",
-        "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\obj\\",
+        "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
+        "packagesPath": "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\AndriiKorshenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/FsrXwUUlgL2RgGyErEq2EXUPB9kLmW84puSEEzA8TUHVe4UPcB/api": {}
         },
         "frameworks": {
           "net6.0": {
@@ -275,32 +307,40 @@
         }
       }
     },
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj": {
+    "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj",
         "projectName": "DelightDinner.Infrastructure",
-        "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\AndriiKorshenko\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\AndriiKorshenko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/FsrXwUUlgL2RgGyErEq2EXUPB9kLmW84puSEEzA8TUHVe4UPcB/api": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj": {
-                "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj"
+              "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj": {
+                "projectPath": "C:\\Users\\AndriiKorshenko\\Projects\\DelightDinner.Application\\DelightDinner.Application.csproj"
               }
             }
           }
