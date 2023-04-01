@@ -13,7 +13,6 @@ public class MenuReview : AggregateRoot<MenuReviewId>
     public HostId HostId { get; }
     public GuestId GuestId { get; }
     public DinnerId DinnerId { get; }
-
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 

@@ -16,10 +16,8 @@ public class Host : AggregateRoot<HostId>
     public string ProfileImage { get; }
     public float AverageRating { get; }
     public UserId UserId { get; }
-
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerId.AsReadOnly();
     public IReadOnlyList<MenuId> MenuIds => _menuId.AsReadOnly();
-
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 

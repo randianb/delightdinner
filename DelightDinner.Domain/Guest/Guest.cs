@@ -15,10 +15,8 @@ public class Guest : AggregateRoot<GuestId>
     public string ProfileImage { get; }
     public float AverageRating { get; }
     public UserId UserId { get; }
-
     public IReadOnlyList<GuestRatingId> GuestRatingIds => _guestRatingIds.AsReadOnly();
     public IReadOnlyList<BillId> BillIds => _billIds.AsReadOnly();
-
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 

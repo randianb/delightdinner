@@ -1,17 +1,17 @@
 ﻿using DelightDinner.Domain.Common.Models;
 
-namespace DelightDinner.Domain.User.ValueObjects;
+namespace DelightDinner.Domain.Dinner.ValueObjects;
 
-public class UserId : ValueObject
+public sealed class ReservationId : ValueObject
 {
-    public UserId(Guid value)
+    public ReservationId(Guid value)
     {
         Value = value;
     }
 
     public Guid Value { get; }
 
-    public static UserId CreateUnique()
+    public static ReservationId CreateUnique()
     {
         return new(Guid.NewGuid());
     }
