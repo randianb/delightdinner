@@ -22,7 +22,9 @@ public class RegisterCommandHandler :
         _userReposetory = userReposetory;
     }
 
-    public async Task<ErrorOr<AuthenticationResult>> Handle(RegisterCommand command, CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(
+        RegisterCommand command,
+        CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
 
@@ -33,13 +35,11 @@ public class RegisterCommandHandler :
         }
 
         // 2. Create user (generate unique ID) & Persist to DB.
-        var user = new User
-        {
-            FirstName = command.FirstName,
-            LastName = command.LastName,
-            Email = command.Email,
-            Password = command.Password
-        };
+        var user = User.Create(
+            command.FirstName,
+            command.LastName,
+            command.Email,
+            command.Password);
 
         _userReposetory.Add(user);
 
