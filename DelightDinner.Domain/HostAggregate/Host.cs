@@ -1,4 +1,5 @@
 ﻿using DelightDinner.Domain.Common.Models;
+using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;
@@ -13,11 +14,13 @@ public class Host : AggregateRoot<HostId>
 
     public string FirstName { get; }
     public string LastName { get; }
-    public string ProfileImage { get; }
-    public float AverageRating { get; }
+    public Uri ProfileImage { get; }
+    public AverageRating AverageRating { get; }
     public UserId UserId { get; }
+
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerId.AsReadOnly();
     public IReadOnlyList<MenuId> MenuIds => _menuId.AsReadOnly();
+
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 
@@ -26,34 +29,29 @@ public class Host : AggregateRoot<HostId>
         UserId userId,
         string firstName,
         string lastName,
-        string profileImage,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
-        : base(hostId)
+        Uri profileImage,
+        AverageRating averageRating)
+        : base(hostId ?? HostId.Create(userId))
     {
-        UserId = userId;
         FirstName = firstName;
         LastName = lastName;
         ProfileImage = profileImage;
-        CreatedDateTime = createdDateTime;
-        UpdatedDateTime = updatedDateTime;
+        UserId = userId;
+        AverageRating = averageRating;
     }
 
     public static Host Create(
         UserId userId,
         string firstName,
         string lastName,
-        string profileImage,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
+        Uri profileImage)
     {
         return new(
-            HostId.CreateUnique(),
+            HostId.Create(userId),
             userId,
             firstName,
             lastName,
             profileImage,
-            createdDateTime,
-            updatedDateTime);
+            AverageRating.CreateNew());
     }
 }
