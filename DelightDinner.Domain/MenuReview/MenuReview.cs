@@ -1,58 +1,65 @@
 ﻿using DelightDinner.Domain.Common.Models;
+using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.Menu.MenuObjects;
 using DelightDinner.Domain.MenuReview.ValueObjects;
 
 namespace DelightDinner.Domain.MenuReview;
 
 public class MenuReview : AggregateRoot<MenuReviewId>
 {
-    public float Rating { get; }
+    public Rating Rating { get; }
     public string Comment { get; }
     public HostId HostId { get; }
-    public GuestId GuestId { get; }
+    public MenuId MenuId { get; }
+    public GuestId GuestId { get; }    
     public DinnerId DinnerId { get; }
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 
     private MenuReview(
         MenuReviewId menuReviewId,
-        HostId hostId,
-        DinnerId dinnerId,
-        GuestId guestId,
-        float rating,
+        Rating rating,
         string comment,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
+        HostId hostId,
+        MenuId menuId,
+        GuestId guestId,
+        DinnerId dinnerId,
+        DateTime createdDateTime)
         : base(menuReviewId)
     {
-        HostId = hostId;
-        DinnerId = dinnerId;
-        GuestId = guestId;
         Rating = rating;
         Comment = comment;
+        HostId = hostId;
+        MenuId = menuId;
+        GuestId = guestId;
+        DinnerId = dinnerId;
         CreatedDateTime = createdDateTime;
-        UpdatedDateTime = updatedDateTime;
     }
 
     public static MenuReview Create(
-        HostId hostId,
-        DinnerId dinnerId,
-        GuestId guestId,
-        float rating,
+        int rating,
         string comment,
+        HostId hostId,
+        MenuId menuId,
+        GuestId guestId,
+        DinnerId dinnerId,
         DateTime createdDateTime,
-        DateTime updatedDateTime)
+        MenuReviewId? menuReviewId = null)
     {
+        // TODO: enforce invariants
+        var ratingValueObject = Rating.Create(rating);
+
         return new(
-            MenuReviewId.CreateUnique(),
-            hostId,
-            dinnerId,
-            guestId,
-            rating,
+            menuReviewId ?? MenuReviewId.Create(menuId, dinnerId, guestId),
+            ratingValueObject,
             comment,
-            createdDateTime,
-            updatedDateTime);
+            hostId,
+            menuId,            
+            guestId,
+            dinnerId,
+            createdDateTime);
     }
 }
