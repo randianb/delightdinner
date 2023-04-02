@@ -46,7 +46,7 @@
           "dependencies": {
             "FluentValidation.AspNetCore": {
               "target": "Package",
-              "version": "[11.2.2, )"
+              "version": "[11.3.0, )"
             },
             "MediatR": {
               "target": "Package",
