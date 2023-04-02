@@ -8,15 +8,18 @@ public class User : AggregateRoot<UserId>
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public string Email { get; set; }
-    public string Password { get; set; }
+    public string Password { get; set; } // TODO: Hash password
 
-    private User(
-        UserId userId,
+    public DateTime CreateDateTime { get; }
+    public DateTime UpdateDateTime { get; }
+
+    private User(        
         string firstName,
         string lastName,
         string email,
-        string password) 
-        : base(userId) 
+        string password,
+        UserId? userId = null) 
+        : base(userId ?? UserId.CreateUnique()) 
     {
         FirstName = firstName;
         LastName = lastName;
@@ -31,7 +34,6 @@ public class User : AggregateRoot<UserId>
         string password) 
     {
         return new(
-            UserId.CreateUnique(),
             firstName,
             lastName,
             email,
