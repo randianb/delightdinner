@@ -4,16 +4,23 @@ namespace DelightDinner.Domain.Menu.MenuObjects;
 
 public sealed class MenuId : ValueObject
 {
-    public MenuId(Guid value)
+    public Guid Value { get; private set; }
+
+    private MenuId(Guid value)
     {
         Value = value;
     }
 
-    public Guid Value { get; }
-
     public static MenuId CreateUnique()
     {
+        // TODO: enforce invariants
         return new MenuId(Guid.NewGuid());
+    }
+
+    public static MenuId Create(Guid value)
+    {
+        // TODO: enforce invariants
+        return new MenuId(value);
     }
 
     public override IEnumerable<object> GetEqualityComponents()

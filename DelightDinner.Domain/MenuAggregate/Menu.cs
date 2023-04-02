@@ -1,4 +1,5 @@
 ﻿using DelightDinner.Domain.Common.Models;
+using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.Entities;
@@ -13,45 +14,47 @@ public sealed class Menu : AggregateRoot<MenuId>
     private readonly List<DinnerId> _dinnerId = new();
     private readonly List<MenuReviewId> _menuReviewId = new();
 
-    public string Name { get; }
-    public string Description { get; }
-    public float AverageRating { get; }
+    public string Name { get; private set; }
+    public string Description { get; private set; }
+    public AverageRating AverageRating { get; private set; }
     public IReadOnlyList<MenuSection> Sections => _section.AsReadOnly();
-    public HostId HostId { get; }
+    public HostId HostId { get; private set; }
+
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerId.AsReadOnly();
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewId.AsReadOnly();
-    public DateTime CreatedDateTime { get; }
-    public DateTime UpdatedDateTime { get; }
+    
+    public DateTime CreatedDateTime { get; private set; }
+    public DateTime UpdatedDateTime { get; private set; }
 
     private Menu(
         MenuId menuId,
         HostId hostId,
         string name,
         string description,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
+        AverageRating averageRating,
+        List<MenuSection> sections)
         : base(menuId)
     {
         HostId = hostId;
         Name = name;
         Description = description;
-        CreatedDateTime = createdDateTime;
-        UpdatedDateTime = updatedDateTime;
+        AverageRating = averageRating;
+        _section = sections;
     }
 
     public static Menu Create(
         HostId hostId,
         string name,
         string description,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
+        List<MenuSection>? sections = null)
     {
+        // TODO: enforce invariants
         return new(
             MenuId.CreateUnique(),
             hostId,
             name,
             description,
-            createdDateTime,
-            updatedDateTime);
+            AverageRating.CreateNew(),
+            sections ?? new());
     }
 }
