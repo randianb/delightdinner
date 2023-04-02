@@ -2,16 +2,16 @@
 
 namespace DelightDinner.Domain.Guest.ValueObjects;
 
-public class GuestRatingId : ValueObject
+public class GuestId : ValueObject
 {
-    public GuestRatingId(Guid value)
+    public Guid Value { get; }
+
+    private GuestId(Guid value)
     {
         Value = value;
     }
 
-    public Guid Value { get; }
-
-    public static GuestRatingId CreateUnique()
+    public static GuestId CreateUnique()
     {
         return new(Guid.NewGuid());
     }

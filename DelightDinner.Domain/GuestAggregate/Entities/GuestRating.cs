@@ -1,7 +1,9 @@
 ﻿using DelightDinner.Domain.Common.Models;
+using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
+using ErrorOr;
 
 namespace DelightDinner.Domain.Guest.Entities;
 
@@ -9,40 +11,32 @@ public class GuestRating : Entity<GuestRatingId>
 {
     public HostId HostId { get; }
     public DinnerId DinnerId { get; }
-    public float Rating { get; }
+    public Rating Rating { get; }
+
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 
     private GuestRating(
-        GuestRatingId guesRatingtId,
         HostId hostId,
         DinnerId dinnerId,
-        float rating,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
-        : base(guesRatingtId)
+        Rating rating)
+        : base(GuestRatingId.CreateUnique())
     {
         HostId = hostId;
         DinnerId = dinnerId;
         Rating = rating;
-        CreatedDateTime = createdDateTime;
-        UpdatedDateTime = updatedDateTime;
     }
 
-
-    public static GuestRating Create(
+    public static ErrorOr<GuestRating> Create(
         HostId hostId,
         DinnerId dinnerId,
-        float rating,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
+        int rating)
     {
-        return new(
-            GuestRatingId.CreateUnique(),
+        var ratingValueObject = Rating.Create(rating);
+
+        return new GuestRating(
             hostId,
             dinnerId,
-            rating,
-            createdDateTime,
-            updatedDateTime);
+            ratingValueObject);
     }
 }
