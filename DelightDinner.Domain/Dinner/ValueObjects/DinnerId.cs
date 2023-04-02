@@ -4,12 +4,12 @@ namespace DelightDinner.Domain.Dinner.ValueObjects;
 
 public sealed class DinnerId : ValueObject 
 {
+    public Guid Value { get; private set; }
+
     public DinnerId(Guid value)
     {
         Value = value;
     }
-
-    public Guid Value { get; }
 
     public static DinnerId CreateUnique()
     {

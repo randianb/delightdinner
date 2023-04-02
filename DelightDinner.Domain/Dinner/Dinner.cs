@@ -1,4 +1,5 @@
 ﻿using DelightDinner.Domain.Common.Models;
+using DelightDinner.Domain.Dinner.Entities;
 using DelightDinner.Domain.Dinner.Enums;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
@@ -8,23 +9,25 @@ namespace DelightDinner.Domain.Dinner;
 
 public class Dinner : AggregateRoot<DinnerId>
 {
-    private readonly List<ReservationId> _reservationIds = new();
+    private readonly List<Reservation> _reservations = new();
 
     public string Name { get; }
     public string Description { get; }
     public DateTime StartDateTime { get; }
     public DateTime EndDateTime { get; }
-    public DateTime StartedDateTime { get;}
-    public DateTime EndedDateTime { get; }
-    public ReservationStatus Status { get; }
+    public DateTime? StartedDateTime { get;}
+    public DateTime? EndedDateTime { get; }
+    public DinnerStatus Status { get; }
     public bool IsPublic { get; }
-    public uint MaxGuests { get; }
+    public int MaxGuests { get; }
     public Price Price { get; }
     public HostId HostId { get; }
     public MenuId MenuId { get; }
-    public string ImageUrl { get; }
+    public Uri ImageUrl { get; }
     public Location Location { get; set; }
-    public IReadOnlyList<ReservationId> ReservationIds => _reservationIds.AsReadOnly();
+
+    public IReadOnlyList<Reservation> Reservations => _reservations.AsReadOnly();
+    
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 
@@ -34,21 +37,27 @@ public class Dinner : AggregateRoot<DinnerId>
         string description,
         DateTime startDateTime,
         DateTime endDateTime,
-        ReservationStatus reservationStatus,
         bool isPublic,
-        uint maxGuests,
+        int maxGuests,
         Price price,
         HostId hostId,
         MenuId menuId,
-        Location location,
-        DateTime createdDateTime,
-        DateTime updatedDateTime) 
+        Uri imageUrl,
+        Location location) 
         : base(dinnerId)
     {
+        Name = name;
+        Description = description;
+        StartDateTime = startDateTime;
+        EndDateTime = endDateTime;
+        IsPublic = isPublic;
+        MaxGuests = maxGuests;
+        Price = price;
         HostId = hostId;
         MenuId = menuId;
-        CreatedDateTime = createdDateTime;
-        UpdatedDateTime = updatedDateTime;
+        ImageUrl = imageUrl;
+        Location = location;
+        Status = DinnerStatus.Upcomming;
     }
 
     public static Dinner Create(
@@ -56,15 +65,13 @@ public class Dinner : AggregateRoot<DinnerId>
         string description,
         DateTime startDateTime,
         DateTime endDateTime,
-        ReservationStatus reservationStatus,
         bool isPublic,
-        uint maxGuests,
+        int maxGuests,
         Price price,
         HostId hostId,
         MenuId menuId,
-        Location location,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
+        Uri imageUrl,
+        Location location)
     {
         return new(
             DinnerId.CreateUnique(),
@@ -72,14 +79,12 @@ public class Dinner : AggregateRoot<DinnerId>
             description,
             startDateTime,
             endDateTime,
-            reservationStatus,
             isPublic,
             maxGuests,
             price,
             hostId,
             menuId,
-            location,
-            createdDateTime,
-            updatedDateTime);
+            imageUrl,
+            location);
     }
 }

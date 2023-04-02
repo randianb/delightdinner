@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/FOi2yfTSUuGrINDSh0fr4jb7/Tyy6TJ8sNKkQzqv+8rjiW10JKSS8CBUeqEWYf87DGVuMHLIzwy8I3mqNqDQA==",
+  "dgSpecHash": "vcBacQHkVrfLR+98ZfFp9thbm/vnEg11Xqo2RNWmYhhnyM++uAfUG36V0BnVt9uqkR1pjvHJGusMHZclVuPvUw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\ardalis.smartenum\\7.0.0\\ardalis.smartenum.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
   ],
   "logs": []

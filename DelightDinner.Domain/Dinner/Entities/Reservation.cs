@@ -6,7 +6,7 @@ using DelightDinner.Domain.Guest.ValueObjects;
 
 namespace DelightDinner.Domain.Dinner.Entities;
 
-internal class Reservation : Entity<ReservationId>
+public class Reservation : Entity<ReservationId>
 {
     public uint GuestCount { get; }
     public ReservationStatus ReservationStatus { get; }

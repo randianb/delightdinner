@@ -1,9 +1,14 @@
-﻿namespace DelightDinner.Domain.Dinner.Enums;
+﻿using Ardalis.SmartEnum;
 
-public enum DinnerStatus
+namespace DelightDinner.Domain.Dinner.Enums;
+
+public class DinnerStatus : SmartEnum<DinnerStatus>
 {
-    Upcomming, 
-    InProgress, 
-    Started, 
-    Ended
+    public DinnerStatus(string name, int value) 
+        : base(name, value) { }
+
+    public static readonly DinnerStatus Upcomming = new DinnerStatus(nameof(Upcomming), 1);
+    public static readonly DinnerStatus InProgress = new DinnerStatus(nameof(InProgress), 2);
+    public static readonly DinnerStatus Ended = new DinnerStatus(nameof(Ended), 3);
+    public static readonly DinnerStatus Canceled = new DinnerStatus(nameof(Canceled), 4);
 }
