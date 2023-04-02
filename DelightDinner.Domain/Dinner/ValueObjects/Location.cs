@@ -1,4 +1,4 @@
-﻿namespace DelightDinner.Domain.Common.Entities;
+﻿namespace DelightDinner.Domain.Dinner.ValueObjects;
 
 public class Location
 {

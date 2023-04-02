@@ -1,5 +1,4 @@
-﻿using DelightDinner.Domain.Common.Entities;
-using DelightDinner.Domain.Bill.ValueObjects;
+﻿using DelightDinner.Domain.Bill.ValueObjects;
 using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;

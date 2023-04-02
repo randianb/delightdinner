@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Enums;
 
-namespace DelightDinner.Domain.Common.Entities;
+namespace DelightDinner.Domain.Dinner.ValueObjects;
 
 public class Price
 {
