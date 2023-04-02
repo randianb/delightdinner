@@ -16,6 +16,7 @@ public class MenuReview : AggregateRoot<MenuReviewId>
     public MenuId MenuId { get; }
     public GuestId GuestId { get; }    
     public DinnerId DinnerId { get; }
+
     public DateTime CreatedDateTime { get; }
     public DateTime UpdatedDateTime { get; }
 
@@ -27,7 +28,8 @@ public class MenuReview : AggregateRoot<MenuReviewId>
         MenuId menuId,
         GuestId guestId,
         DinnerId dinnerId,
-        DateTime createdDateTime)
+        DateTime createdDateTime,
+        DateTime updatedDateTime)
         : base(menuReviewId)
     {
         Rating = rating;
@@ -37,6 +39,7 @@ public class MenuReview : AggregateRoot<MenuReviewId>
         GuestId = guestId;
         DinnerId = dinnerId;
         CreatedDateTime = createdDateTime;
+        UpdatedDateTime = updatedDateTime;
     }
 
     public static MenuReview Create(
@@ -47,6 +50,7 @@ public class MenuReview : AggregateRoot<MenuReviewId>
         GuestId guestId,
         DinnerId dinnerId,
         DateTime createdDateTime,
+        DateTime updateDateTime,
         MenuReviewId? menuReviewId = null)
     {
         // TODO: enforce invariants
@@ -60,6 +64,7 @@ public class MenuReview : AggregateRoot<MenuReviewId>
             menuId,            
             guestId,
             dinnerId,
-            createdDateTime);
+            createdDateTime,
+            updateDateTime);
     }
 }

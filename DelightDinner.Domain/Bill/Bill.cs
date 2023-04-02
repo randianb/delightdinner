@@ -12,33 +12,42 @@ public class Bill : AggregateRoot<BillId>
     public DinnerId DinnerId { get; }
     public GuestId GuestId { get; }
     public HostId HostId { get; }
-    public Price Price { get; }
+    public Price Amount { get; }
+
+    public DateTime CreateDateTime { get; }
+    public DateTime UpdateDateTime { get; }
 
     private Bill(
-        BillId billId,
         DinnerId dinnerId,
         GuestId guestId,
         HostId hostId,
-        Price price) 
-        : base(billId)
+        Price price,
+        DateTime createDateTime,
+        DateTime updateDateTime) 
+        : base(BillId.Create(dinnerId, guestId))
     {
         DinnerId = dinnerId;
         GuestId = guestId;
         HostId = hostId;
-        Price = price;
+        Amount = price;
+        CreateDateTime = createDateTime;
+        UpdateDateTime = updateDateTime;
     }
 
     public static Bill Create(
         DinnerId dinnerId,
         GuestId guestId,
         HostId hostId,
-        Price price)
+        Price price,
+        DateTime createDateTime,
+        DateTime updateDateTime)
     {          
-        return new (
-            BillId.CreateUnique(),
+        return new(
             dinnerId,
             guestId,
             hostId,
-            price);
+            price,
+            createDateTime,
+            updateDateTime);
     }
 }
