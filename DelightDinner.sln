@@ -19,11 +19,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModels", "DomainModel
 	ProjectSection(SolutionItems) = preProject
 		Aggregates.Bill.md = Aggregates.Bill.md
 		Aggregates.Dinner.md = Aggregates.Dinner.md
-		Aggregates.Menu.md = Aggregates.Menu.md
 		Aggregates.Guest.md = Aggregates.Guest.md
 		Aggregates.Host.md = Aggregates.Host.md
-		Aggregates.User.md = Aggregates.User.md
+		Aggregates.Menu.md = Aggregates.Menu.md
 		Aggregates.MenuReview.md = Aggregates.MenuReview.md
+		Aggregates.User.md = Aggregates.User.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE9769D6-E3B4-4B56-BB9B-4D287467D047}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
 	EndProjectSection
 EndProject
 Global
