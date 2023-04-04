@@ -35,6 +35,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{6AEE4AE6-848C-443B-AB48-0F4D7D3093C4}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\Api\Api.Auth.md = Docs\Api\Api.Auth.md
+		Docs\Api\Api.Menu.md = Docs\Api\Api.Menu.md
 	EndProjectSection
 EndProject
 Global
