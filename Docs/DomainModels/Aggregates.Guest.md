@@ -1,12 +1,12 @@
 # Domain Model
 
-## Guest
+## GuestAggregate
 
-'''csahrp
+```csahrp
 	// TODO: Add methods
-'''
+```
 
-'''json
+```json
 {
 	"id": { "value": "0000000-000-000-00000000000" },
 	"firstName": "John",
@@ -42,4 +42,4 @@
     "createdDateTime": "2020-01-01T00:00:00.0000000Z",
     "updatedDateTime": "2020-01-01T00:00:00.0000000Z"
 }
-'''
+```

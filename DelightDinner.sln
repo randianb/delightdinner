@@ -32,6 +32,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModels", "DomainModel
 		Docs\DomainModels\Aggregates.User.md = Docs\DomainModels\Aggregates.User.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{6AEE4AE6-848C-443B-AB48-0F4D7D3093C4}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\Api\Api.Auth.md = Docs\Api\Api.Auth.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +69,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3C3F7821-1D38-4627-AEF4-0997CDC0DC5B} = {09A98A4E-72F6-4694-B19F-A97DDA5C70BE}
+		{6AEE4AE6-848C-443B-AB48-0F4D7D3093C4} = {09A98A4E-72F6-4694-B19F-A97DDA5C70BE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0541607F-6469-46BD-8DDA-867945F2E549}

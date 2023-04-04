@@ -1,12 +1,12 @@
-# Domain Model
+# DomainModels
 
-## Bill
+## BillAggregate
 
-'''csahrp
+```csahrp
 	// TODO: Add methods
-'''
+```
 
-'''json
+```json
 {
 	"id": { "value": "0000000-000-000-00000000000" },
 	"dinnerId": { "value": "0000000-000-000-00000000000" },
@@ -19,4 +19,4 @@
 	"createdDateTime": "2023-01-01T00:00:00.0000000Z",
 	"updatedDateTime": "2023-01-01T00:00:00.0000000Z"
 }
-'''
+```

@@ -1,8 +1,8 @@
 # DomainModels
 
-## Menu
+## MenuAggregate
 
-'''csharp
+```csharp
 class Menu
 {
 	Menu Create();
@@ -10,9 +10,9 @@ class Menu
 	void RemoveDinner(Dinner dinner);
 	void UpdateSection(MenuSection section);
 }
-'''
+```
 
-'''json
+```json
 {
 	"id": { "value": "0000000-000-000-00000000000" },
 	"name": "Yammy menu",
@@ -26,21 +26,18 @@ class Menu
 			{
 				"id": { "value": "0000000-000-000-00000000000" },
 				"name": "Fried Pickles",
-				"description": "Deep fried pickles",
-				"price": 5.99
+				"description": "Deep fried pickles"
 			}
 		]
 	],
 	"hostId": { "value": "0000000-000-000-00000000000" },
 	"dinnerIds": [
-		{ "value": "0000000-000-000-00000000000" },
 		{ "value": "0000000-000-000-00000000000" }
 	],
 	"menuReviewIds": [
-		{ "value": "0000000-000-000-00000000000" },
 		{ "value": "0000000-000-000-00000000000" }
 	],
 	"createdDateTime": "2023-01-01T00:00:00.0000000Z",
 	"updatedDateTime": "2023-01-01T00:00:00.0000000Z",
 }
-'''
+```

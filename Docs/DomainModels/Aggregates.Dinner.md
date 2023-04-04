@@ -1,12 +1,12 @@
-# Domain Model
+# DomainModels
 
-## Dinner
+## DinnerAggregate
 
-'''csahrp
+```csahrp
 	// TODO: Add methods
-'''
+```
 
-'''json
+```json
 {
 	"id": { "value": "0000000-000-000-00000000000" },
     "name": "Yammy Dinner",
@@ -47,4 +47,4 @@
     "createdDateTime": "2020-01-01T00:00:00.0000000Z",
     "updatedDateTime": "2020-01-01T00:00:00.0000000Z"
 }
-'''
+```

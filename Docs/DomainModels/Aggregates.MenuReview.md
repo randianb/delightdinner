@@ -2,11 +2,11 @@
 
 ## MenuReview
 
-'''csahrp
+```csahrp
 	// TODO: Add methods
-'''
+```
 
-'''json
+```json
 {
 	"id": { "value": "0000000-000-000-00000000000" },
 	"rating": 4,
@@ -17,4 +17,4 @@
 	"createdFateTime": "2023-01-01T00:00:00.000Z",
 	"updatedDateTime": "2023-01-01T00:00:00.000Z"
 }
-'''
+```

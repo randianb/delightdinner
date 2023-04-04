@@ -2,11 +2,11 @@
 
 ## User
 
-'''csahrp
+```csahrp
 	// TODO: Add methods
-'''
+```
 
-'''json
+```json
 {
 	"id": { "value": "0000000-000-000-00000000000" },
 	"firstName": "Andrii",
@@ -14,4 +14,4 @@
 	"email": "andriikorshenko@gmail.com",
 	"password": "Andrii123!"
 }
-'''
+```
