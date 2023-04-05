@@ -2,9 +2,7 @@
 using DelightDinner.Contracts.Menu;
 
 using MapsterMapper;
-
 using MediatR;
-
 using Microsoft.AspNetCore.Mvc;
 
 namespace DelightDinner.Api.Controllers;
@@ -31,6 +29,8 @@ public class MenusController : ApiController
 
         var createMenuResult = await _mdeiator.Send(command);
         
-        return Ok(request);
+        return createMenuResult.Match(
+                       menu => Ok(_mapper.Map<CreateMenuResponse>(menu)),
+                       error => Problem(error));
     }
 }
