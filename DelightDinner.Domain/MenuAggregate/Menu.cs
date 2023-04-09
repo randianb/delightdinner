@@ -10,19 +10,19 @@ namespace DelightDinner.Domain.Menu;
 
 public sealed class Menu : AggregateRoot<MenuId>
 {
-    private readonly List<MenuSection> _section = new();
-    private readonly List<DinnerId> _dinnerId = new();
-    private readonly List<MenuReviewId> _menuReviewId = new();
+    private readonly List<MenuSection> _sections = new();
+    private readonly List<DinnerId> _dinnerIds = new();
+    private readonly List<MenuReviewId> _menuReviewIds = new();
 
     public string Name { get; private set; }
     public string Description { get; private set; }
     public AverageRating AverageRating { get; private set; }
-    public IReadOnlyList<MenuSection> Sections => _section.AsReadOnly();
+    public IReadOnlyList<MenuSection> Sections => _sections.AsReadOnly();
     public HostId HostId { get; private set; }
 
-    public IReadOnlyList<DinnerId> DinnerIds => _dinnerId.AsReadOnly();
-    public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewId.AsReadOnly();
-    
+    public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
+    public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
+
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 
@@ -39,7 +39,7 @@ public sealed class Menu : AggregateRoot<MenuId>
         Name = name;
         Description = description;
         AverageRating = averageRating;
-        _section = sections;
+        _sections = sections;
     }
 
     public static Menu Create(
@@ -49,7 +49,7 @@ public sealed class Menu : AggregateRoot<MenuId>
         List<MenuSection>? sections = null)
     {
         // TODO: enforce invariants
-        return new(
+        return new Menu(
             MenuId.CreateUnique(),
             hostId,
             name,
@@ -60,7 +60,7 @@ public sealed class Menu : AggregateRoot<MenuId>
 
 #pragma warning disable CS8618
     private Menu()
-    {        
+    {
     }
 #pragma warning restore CS8618
 }

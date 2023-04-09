@@ -36,8 +36,9 @@ public static class DependencyInjection
     {
         services.AddDbContext<DelightDinnerDbContext>(options => 
             options.UseSqlServer());
+
         services.AddScoped<IUserReposetory, UserRepository>();
-        services.AddSingleton<IMenuRepository, MenuRepository>();
+        services.AddScoped<IMenuRepository, MenuRepository>();
 
         return services;
     }

@@ -2,16 +2,16 @@
 
 namespace DelightDinner.Domain.Common.ValueObjects;
 
-public class AverageRating : ValueObject
+public sealed class AverageRating : ValueObject
 {
-    public double Value { get; private set; }
-    public int NumRating { get; private set; }
-
     private AverageRating(double value, int numRatings)
     {
         Value = value;
-        NumRating = numRatings;
+        NumRatings = numRatings;
     }
+
+    public double Value { get; private set; }
+    public int NumRatings { get; private set; }
 
     public static AverageRating CreateNew(double rating = 0, int numRatings = 0)
     {
@@ -20,12 +20,12 @@ public class AverageRating : ValueObject
 
     public void AddNewRating(Rating rating)
     {
-        Value = (Value * NumRating + rating.Value) / ++NumRating;
+        Value = ((Value * NumRatings) + rating.Value) / ++NumRatings;
     }
 
     public void RemoveRating(Rating rating)
     {
-        Value = (Value * NumRating - rating.Value) / --NumRating;
+        Value = ((Value * NumRatings) - rating.Value) / --NumRatings;
     }
 
     public override IEnumerable<object> GetEqualityComponents()

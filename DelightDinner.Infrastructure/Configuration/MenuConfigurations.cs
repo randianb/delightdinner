@@ -47,7 +47,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 
             dib.HasKey("Id");
 
-            dib.Property(i => i.Value)
+            dib.Property(d => d.Value)
                 .HasColumnName("DinnerId");
         });
 
