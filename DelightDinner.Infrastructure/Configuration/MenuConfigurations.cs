@@ -38,7 +38,36 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 
             sb.Property(s => s.Description)
                 .HasMaxLength(500);
+
+            sb.OwnsMany(s => s.Items, ib =>
+            {
+                ib.ToTable("MenuItems");
+
+                ib.WithOwner()
+                    .HasForeignKey("MenuSectionId", "MenuId");
+
+                ib.HasKey("Id", "MenuSectionId", "MenuId");
+
+                ib.Property(i => i.Id)
+                    .HasColumnName("MenuItemId")
+                    .ValueGeneratedNever()
+                    .HasConversion(
+                        id => id.Value,
+                        value => MenuItemId.Create(value));
+
+                ib.Property(s => s.Name)
+                    .HasMaxLength(100);
+
+                ib.Property(s => s.Description)
+                    .HasMaxLength(500);
+            });
+
+            sb.Navigation(s => s.Items).Metadata.SetField("_items");
+            sb.Navigation(s => s.Items).UsePropertyAccessMode(PropertyAccessMode.Field);
         });
+
+        builder.Metadata.FindNavigation(nameof(Menu.Sections))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
     private void ConfigureMenusTable(EntityTypeBuilder<Menu> builder)
