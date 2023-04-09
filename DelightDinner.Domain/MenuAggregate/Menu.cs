@@ -49,7 +49,7 @@ public sealed class Menu : AggregateRoot<MenuId>
         List<MenuSection>? sections = null)
     {
         // TODO: enforce invariants
-        return new Menu(
+        return new(
             MenuId.CreateUnique(),
             hostId,
             name,

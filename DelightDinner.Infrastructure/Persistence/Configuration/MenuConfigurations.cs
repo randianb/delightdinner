@@ -5,7 +5,7 @@ using DelightDinner.Domain.Menu.MenuObjects;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace DelightDinner.Infrastructure.Configuration;
+namespace DelightDinner.Infrastructure.Persistence.Configuration;
 
 public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 {

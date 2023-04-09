@@ -4,23 +4,35 @@ namespace DelightDinner.Domain.Dinner.ValueObjects;
 
 public class Location : ValueObject
 {
-    public string Name { get; }
-    public string Address { get; }
-    public float Latitude { get; }
-    public float Longtitute { get; }
+    public string Name { get; private set; }
+    public string Address { get; private set; }
+    public float Latitude { get; private set; }
+    public float Longtitute { get; private set; }
 
-    private Location(string name, string address, float latitude, float longtitute)
+    private Location(
+        string name,
+        string address,
+        float latitude,
+        float longtitute)
     {
         Name = name;
         Address = address;
         Latitude = latitude;
         Longtitute = longtitute;
-    }
+    }   
 
-    public static Location Create(string name, string address, float latitude, float longtitute)
+    public static Location Create(
+        string name,
+        string address,
+        float latitude,
+        float longtitute)
     {
         // TODO: enforce invariants
-        return new Location(name, address, latitude, longtitute);
+        return new(
+            name,
+            address,
+            latitude,
+            longtitute);
     }
 
     public override IEnumerable<object> GetEqualityComponents()

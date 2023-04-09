@@ -5,8 +5,8 @@ namespace DelightDinner.Domain.Dinner.ValueObjects;
 
 public class Price : ValueObject
 {
-    public decimal Amount { get; }
-    public Currency Currency { get; }
+    public decimal Amount { get; private set; }
+    public Currency Currency { get; private set; }
 
     private Price(decimal amount, Currency currency)
     {
@@ -16,7 +16,7 @@ public class Price : ValueObject
 
     public static Price Create(decimal amount, Currency currency)
     {
-        return new Price(amount, currency);
+        return new(amount, currency);
     }
 
     public override IEnumerable<object> GetEqualityComponents()

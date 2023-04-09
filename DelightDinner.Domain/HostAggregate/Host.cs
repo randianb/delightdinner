@@ -12,17 +12,17 @@ public class Host : AggregateRoot<HostId>
     private readonly List<MenuId> _menuId = new();
     private readonly List<DinnerId> _dinnerId = new();
 
-    public string FirstName { get; }
-    public string LastName { get; }
-    public Uri ProfileImage { get; }
-    public AverageRating AverageRating { get; }
-    public UserId UserId { get; }
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
+    public Uri ProfileImage { get; private set; }
+    public AverageRating AverageRating { get; private set; }
+    public UserId UserId { get; private set; }
 
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerId.AsReadOnly();
     public IReadOnlyList<MenuId> MenuIds => _menuId.AsReadOnly();
 
-    public DateTime CreatedDateTime { get; }
-    public DateTime UpdatedDateTime { get; }
+    public DateTime CreatedDateTime { get; private set; }
+    public DateTime UpdatedDateTime { get; private set; }
 
     private Host(
         HostId hostId,
@@ -54,4 +54,10 @@ public class Host : AggregateRoot<HostId>
             profileImage,
             AverageRating.CreateNew());
     }
+
+#pragma warning disable CS8618
+    private Host()
+    {
+    }
+#pragma warning restore CS8618
 }

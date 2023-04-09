@@ -5,13 +5,13 @@ namespace DelightDinner.Domain.User;
 
 public class User : AggregateRoot<UserId>
 {
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public string Email { get; set; }
-    public string Password { get; set; } // TODO: Hash password
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
+    public string Email { get; private set; }
+    public string Password { get; private set; } // TODO: Hash password
 
-    public DateTime CreateDateTime { get; }
-    public DateTime UpdateDateTime { get; }
+    public DateTime CreateDateTime { get; private set; }
+    public DateTime UpdateDateTime { get; private set; }
 
     private User(        
         string firstName,
@@ -39,4 +39,10 @@ public class User : AggregateRoot<UserId>
             email,
             password);
     }
+
+#pragma warning disable CS8618
+    private User()
+    {
+    }
+#pragma warning restore CS8618
 }

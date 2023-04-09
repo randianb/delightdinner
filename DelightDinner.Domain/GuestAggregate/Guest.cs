@@ -1,6 +1,5 @@
 ﻿using DelightDinner.Domain.Bill.ValueObjects;
 using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Guest.Entities;
 using DelightDinner.Domain.Guest.ValueObjects;
@@ -18,10 +17,10 @@ public class Guest : AggregateRoot<GuestId>
     private readonly List<GuestRating> _ratings = new();
     private readonly List<BillId> _billIds = new();
 
-    public string FirstName { get; }
-    public string LastName { get; }
-    public Uri ProfileImage { get; }
-    public UserId UserId { get; }
+    public string FirstName { get; private set; }
+    public string LastName { get; private set; }
+    public Uri ProfileImage { get; private set; }
+    public UserId UserId { get; private set; }
 
     public IReadOnlyList<DinnerId> UpcommingDinnersIds => _upcommingDinnerIds.AsReadOnly();
     public IReadOnlyList<DinnerId> PastDinnersIds => _pastDinnerIds.AsReadOnly();
@@ -30,8 +29,8 @@ public class Guest : AggregateRoot<GuestId>
     public IReadOnlyList<GuestRating> Ratings => _ratings.AsReadOnly();
     public IReadOnlyList<BillId> BillIds => _billIds.AsReadOnly();
 
-    public DateTime CreatedDateTime { get; }
-    public DateTime UpdatedDateTime { get; }
+    public DateTime CreatedDateTime { get; private set; }
+    public DateTime UpdatedDateTime { get; private set; }
 
     private Guest(
         string firstName,
@@ -61,4 +60,10 @@ public class Guest : AggregateRoot<GuestId>
             userId,
             profileImage);
     }
+
+#pragma warning disable CS8618
+    private Guest()
+    {
+    }
+#pragma warning restore CS8618
 }

@@ -10,15 +10,15 @@ namespace DelightDinner.Domain.MenuReview;
 
 public class MenuReview : AggregateRoot<MenuReviewId>
 {
-    public Rating Rating { get; }
-    public string Comment { get; }
-    public HostId HostId { get; }
-    public MenuId MenuId { get; }
-    public GuestId GuestId { get; }    
-    public DinnerId DinnerId { get; }
+    public Rating Rating { get; private set; }
+    public string Comment { get; private set; }
+    public HostId HostId { get; private set; }
+    public MenuId MenuId { get; private set; }
+    public GuestId GuestId { get; private set; }
+    public DinnerId DinnerId { get; private set; }
 
-    public DateTime CreatedDateTime { get; }
-    public DateTime UpdatedDateTime { get; }
+    public DateTime CreatedDateTime { get; private set; }
+    public DateTime UpdatedDateTime { get; private set; }
 
     private MenuReview(
         MenuReviewId menuReviewId,
@@ -67,4 +67,9 @@ public class MenuReview : AggregateRoot<MenuReviewId>
             createdDateTime,
             updateDateTime);
     }
+#pragma warning disable CS8618
+    private MenuReview()
+    {
+    }
+#pragma warning restore CS8618
 }

@@ -4,7 +4,7 @@ namespace DelightDinner.Domain.Common.ValueObjects;
 
 public class Rating : ValueObject
 {
-    public int Value { get; }
+    public int Value { get; private set; }
 
     public Rating(int value)
     {
@@ -14,7 +14,7 @@ public class Rating : ValueObject
     public static Rating Create(int value)
     {
         // TODO: Enforce invariants
-        return new Rating(value);
+        return new(value);
     }
 
     public override IEnumerable<object> GetEqualityComponents()

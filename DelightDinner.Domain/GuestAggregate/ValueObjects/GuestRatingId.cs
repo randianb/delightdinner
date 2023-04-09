@@ -4,7 +4,7 @@ namespace DelightDinner.Domain.Guest.ValueObjects;
 
 public class GuestRatingId : ValueObject
 {
-    public Guid Value { get; }
+    public Guid Value { get; private set; }
 
     private GuestRatingId(Guid value)
     {

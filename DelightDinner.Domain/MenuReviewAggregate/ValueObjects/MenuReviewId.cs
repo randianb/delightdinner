@@ -7,7 +7,7 @@ namespace DelightDinner.Domain.MenuReview.ValueObjects;
 
 public sealed class MenuReviewId : ValueObject
 {
-    public string Value { get; }
+    public string Value { get; private set; }
 
     private MenuReviewId(MenuId menuId, DinnerId dinnerId, GuestId guestId)
     {

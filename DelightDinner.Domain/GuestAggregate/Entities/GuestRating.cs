@@ -9,12 +9,12 @@ namespace DelightDinner.Domain.Guest.Entities;
 
 public class GuestRating : Entity<GuestRatingId>
 {
-    public HostId HostId { get; }
-    public DinnerId DinnerId { get; }
-    public Rating Rating { get; }
+    public HostId HostId { get; private set; }
+    public DinnerId DinnerId { get; private set; }
+    public Rating Rating { get; private set; }
 
-    public DateTime CreatedDateTime { get; }
-    public DateTime UpdatedDateTime { get; }
+    public DateTime CreatedDateTime { get; private set; }
+    public DateTime UpdatedDateTime { get; private set; }
 
     private GuestRating(
         HostId hostId,
@@ -39,4 +39,10 @@ public class GuestRating : Entity<GuestRatingId>
             dinnerId,
             ratingValueObject);
     }
+
+#pragma warning disable CS8618
+    private GuestRating()
+    {
+    }
+#pragma warning restore CS8618
 }

@@ -8,13 +8,13 @@ namespace DelightDinner.Domain.Bill;
 
 public class Bill : AggregateRoot<BillId>
 {
-    public DinnerId DinnerId { get; }
-    public GuestId GuestId { get; }
-    public HostId HostId { get; }
-    public Price Amount { get; }
+    public DinnerId DinnerId { get; private set; }
+    public GuestId GuestId { get; private set; }
+    public HostId HostId { get; private set; }
+    public Price Amount { get; private set; }
 
-    public DateTime CreateDateTime { get; }
-    public DateTime UpdateDateTime { get; }
+    public DateTime CreateDateTime { get; private set; }
+    public DateTime UpdateDateTime { get; private set; }
 
     private Bill(
         DinnerId dinnerId,
@@ -49,4 +49,10 @@ public class Bill : AggregateRoot<BillId>
             createDateTime,
             updateDateTime);
     }
+
+#pragma warning disable CS8618
+    private Bill()
+    {
+    }
+#pragma warning restore CS8618
 }

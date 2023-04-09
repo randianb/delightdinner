@@ -6,7 +6,7 @@ namespace DelightDinner.Domain.Bill.ValueObjects;
 
 public class BillId : ValueObject
 {
-    public string Value { get; }
+    public string Value { get; private set; }
 
     private BillId(string value)
     {

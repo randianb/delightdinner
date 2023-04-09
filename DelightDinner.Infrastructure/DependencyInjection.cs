@@ -13,6 +13,7 @@ using System.Text;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using DelightDinner.Infrastructure.Persistence.Repositories;
+using DelightDinner.Infrastructure.Persistence;
 
 namespace DelightDinner.Infrastructure;
 

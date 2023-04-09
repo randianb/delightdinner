@@ -3,7 +3,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace DelightDinner.Infrastructure;
+namespace DelightDinner.Infrastructure.Persistence;
 
 public class DelightDinnerDbContext : DbContext
 {
