@@ -20,7 +20,7 @@ public sealed class MenuId : ValueObject
     public static MenuId Create(Guid value)
     {
         // TODO: enforce invariants
-        return new MenuId(value);
+        return new(value);
     }
 
     public override IEnumerable<object> GetEqualityComponents()
