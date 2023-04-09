@@ -12,11 +12,32 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
     public void Configure(EntityTypeBuilder<Menu> builder)
     {
         ConfigureMenusTable(builder);
-        ConfigureMenuSections(builder);
-        ConfigureMenuDinnerIds(builder);
+        ConfigureMenuSectionsTable(builder);
+        ConfigureMenuDinnerIdsTable(builder);
+        ConfigureMenuReviewIdsTable(builder);
     }
 
-    private void ConfigureMenuDinnerIds(EntityTypeBuilder<Menu> builder)
+    private void ConfigureMenuReviewIdsTable(EntityTypeBuilder<Menu> builder)
+    {
+        builder.OwnsMany(m => m.MenuReviewIds, mib =>
+        {
+            mib.ToTable("MenuReviewsId");
+
+            mib.WithOwner()
+                .HasForeignKey("MenuId");
+
+            mib.HasKey("Id");
+
+            mib.Property(i => i.Value)
+                .HasColumnName("MenuReviewId")
+                .ValueGeneratedNever();
+        });
+
+        builder.Metadata.FindNavigation(nameof(Menu.MenuReviewIds))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
+    }
+
+    private void ConfigureMenuDinnerIdsTable(EntityTypeBuilder<Menu> builder)
     {
         builder.OwnsMany(m => m.DinnerIds, dib =>
         {
@@ -36,7 +57,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
-    private void ConfigureMenuSections(EntityTypeBuilder<Menu> builder)
+    private void ConfigureMenuSectionsTable(EntityTypeBuilder<Menu> builder)
     {
         builder.OwnsMany(m => m.Sections, sb =>
         {
