@@ -57,4 +57,10 @@ public sealed class Menu : AggregateRoot<MenuId>
             AverageRating.CreateNew(),
             sections ?? new());
     }
+
+#pragma warning disable CS8618
+    private Menu()
+    {        
+    }
+#pragma warning restore CS8618
 }
