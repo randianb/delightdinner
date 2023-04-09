@@ -29,8 +29,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             mib.HasKey("Id");
 
             mib.Property(i => i.Value)
-                .HasColumnName("MenuReviewId")
-                .ValueGeneratedNever();
+                .HasColumnName("MenuReviewId");
         });
 
         builder.Metadata.FindNavigation(nameof(Menu.MenuReviewIds))!
@@ -49,8 +48,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             dib.HasKey("Id");
 
             dib.Property(i => i.Value)
-                .HasColumnName("DinnerId")
-                .ValueGeneratedNever();
+                .HasColumnName("DinnerId");
         });
 
         builder.Metadata.FindNavigation(nameof(Menu.DinnerIds))!
@@ -70,7 +68,6 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 
             sb.Property(s => s.Id)
                 .HasColumnName("MenuSectionId")
-                .ValueGeneratedNever()
                 .HasConversion(
                     id => id.Value,
                     value => MenuSectionId.Create(value));
@@ -92,7 +89,6 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 
                 ib.Property(i => i.Id)
                     .HasColumnName("MenuItemId")
-                    .ValueGeneratedNever()
                     .HasConversion(
                         id => id.Value,
                         value => MenuItemId.Create(value));
@@ -119,7 +115,6 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.Id)
-            .ValueGeneratedNever()
             .HasConversion(
                 id => id.Value,
                 value => MenuId.Create(value));
@@ -133,7 +128,6 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
         builder.OwnsOne(x => x.AverageRating);
 
         builder.Property(x => x.HostId)
-            .ValueGeneratedNever()
             .HasConversion(
             id => id.Value,
             value => HostId.Create(value));
