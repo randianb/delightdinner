@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Domain.User;
 
-namespace DelightDinner.Infrastructure.Persistence;
+namespace DelightDinner.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserReposetory
 {

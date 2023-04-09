@@ -17,7 +17,10 @@ class Menu
 	"id": { "value": "0000000-000-000-00000000000" },
 	"name": "Yammy menu",
 	"description": "A menu with yammy food",
-	"averageRating": 4.5,
+	"averageRating": {
+        "value": 4.5,
+        "numRating": 1,
+    },
 	"sections": [
 		"id": { "value": "0000000-000-000-00000000000" },
 		"name": "Appetizers",

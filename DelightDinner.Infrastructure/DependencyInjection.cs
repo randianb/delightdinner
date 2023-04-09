@@ -2,7 +2,6 @@
 using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Application.Common.Services;
 using DelightDinner.Infrastructure.Authentication;
-using DelightDinner.Infrastructure.Persistence;
 using DelightDinner.Infrastructure.Services;
 
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -11,6 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore;
+using DelightDinner.Infrastructure.Persistence.Repositories;
 
 namespace DelightDinner.Infrastructure;
 
@@ -32,6 +34,8 @@ public static class DependencyInjection
     public static IServiceCollection AddPersistance(
         this IServiceCollection services)
     {
+        services.AddDbContext<DelightDinnerDbContext>(options => 
+            options.UseSqlServer());
         services.AddScoped<IUserReposetory, UserRepository>();
         services.AddSingleton<IMenuRepository, MenuRepository>();
 
