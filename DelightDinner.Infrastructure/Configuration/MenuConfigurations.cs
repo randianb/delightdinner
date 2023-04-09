@@ -12,6 +12,33 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
     public void Configure(EntityTypeBuilder<Menu> builder)
     {
         ConfigureMenusTable(builder);
+        ConfigureMenuSections(builder);
+    }
+
+    private void ConfigureMenuSections(EntityTypeBuilder<Menu> builder)
+    {
+        builder.OwnsMany(m => m.Sections, sb =>
+        {
+            sb.ToTable("MenuSections");
+
+            sb.WithOwner()
+                .HasForeignKey("MenuId");
+
+            sb.HasKey("Id", "MenuId");
+
+            sb.Property(s => s.Id)
+                .HasColumnName("MenuSectionId")
+                .ValueGeneratedNever()
+                .HasConversion(
+                    id => id.Value,
+                    value => MenuSectionId.Create(value));
+
+            sb.Property(s => s.Name)
+                .HasMaxLength(100);
+
+            sb.Property(s => s.Description)
+                .HasMaxLength(500);
+        });
     }
 
     private void ConfigureMenusTable(EntityTypeBuilder<Menu> builder)
