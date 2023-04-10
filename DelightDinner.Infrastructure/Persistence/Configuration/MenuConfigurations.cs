@@ -21,7 +21,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
     {
         builder.OwnsMany(m => m.MenuReviewIds, mib =>
         {
-            mib.ToTable("MenuReviewsId");
+            mib.ToTable("MenuReviewsIds");
 
             mib.WithOwner()
                 .HasForeignKey("MenuId");
