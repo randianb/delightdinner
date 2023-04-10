@@ -23,7 +23,7 @@ public static class DependencyInjection
         ConfigurationManager configuration)
     {
         services
-            .AddPersistance()
+            .AddPersistance(configuration)
             .AddAuth(configuration);  
         
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();        
@@ -32,10 +32,11 @@ public static class DependencyInjection
     }
 
     public static IServiceCollection AddPersistance(
-        this IServiceCollection services)
+        this IServiceCollection services,
+        ConfigurationManager configuration)
     {
         services.AddDbContext<DelightDinnerDbContext>(options => 
-            options.UseSqlServer("Server=localhost,1433;Database=DelightDinner;User Id=SA;Password=Andrii123!;Encrypt=false"));
+            options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<IUserReposetory, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
