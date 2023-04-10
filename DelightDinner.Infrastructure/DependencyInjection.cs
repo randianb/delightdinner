@@ -35,7 +35,7 @@ public static class DependencyInjection
         this IServiceCollection services)
     {
         services.AddDbContext<DelightDinnerDbContext>(options => 
-            options.UseSqlServer());
+            options.UseSqlServer("Server=localhost,1433;Database=DelightDinner;User Id=SA;Password=Andrii123!;Encrypt=false"));
 
         services.AddScoped<IUserReposetory, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
