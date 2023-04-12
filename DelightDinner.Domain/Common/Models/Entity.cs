@@ -1,14 +1,14 @@
 ﻿namespace DelightDinner.Domain.Common.Models;
 
 public abstract class Entity<TId> : IEquatable<Entity<TId>>
-    where TId: notnull
+    where TId: ValueObject
 {
-    public Entity(TId id)
+    public TId Id { get; protected set; }
+
+    protected Entity(TId id)
     {
         Id = id;
     }
-
-    public TId Id { get; private set; }
 
     public override bool Equals(object? obj)
     {
