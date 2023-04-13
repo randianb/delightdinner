@@ -12,8 +12,7 @@ public sealed class MenuSection : Entity<MenuSectionId>
 
     public IReadOnlyList<MenuItem> Items => _items.AsReadOnly(); 
 
-    private MenuSection(
-        
+    private MenuSection(        
         string name,
         string description,
         List<MenuItem> items,
@@ -30,6 +29,7 @@ public sealed class MenuSection : Entity<MenuSectionId>
         string description,
         List<MenuItem>? items = null)
     {
+        // TODO: enforce invariants
         return new(
             name,
             description,

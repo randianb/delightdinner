@@ -17,6 +17,7 @@ public sealed class MenuItem : Entity<MenuItemId>
 
     public static MenuItem Create(string name, string description)
     {
+        // TODO: enforce invariants
         return new(name, description);
     }
 

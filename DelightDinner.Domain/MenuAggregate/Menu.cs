@@ -8,7 +8,7 @@ using DelightDinner.Domain.MenuReview.ValueObjects;
 
 namespace DelightDinner.Domain.Menu;
 
-public sealed class Menu : AggregateRoot<MenuId>
+public sealed class Menu : AggregateRoot<MenuId, Guid>
 {
     private readonly List<MenuSection> _sections = new();
     private readonly List<DinnerId> _dinnerIds = new();
