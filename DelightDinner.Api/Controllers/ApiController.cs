@@ -1,4 +1,5 @@
 ﻿using DelightDinner.Api.Common.Http;
+
 using ErrorOr;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

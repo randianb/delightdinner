@@ -2,17 +2,17 @@
 using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Application.Common.Services;
 using DelightDinner.Infrastructure.Authentication;
+using DelightDinner.Infrastructure.Persistence;
+using DelightDinner.Infrastructure.Persistence.Repositories;
 using DelightDinner.Infrastructure.Services;
 
+using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using DelightDinner.Infrastructure.Persistence.Repositories;
-using DelightDinner.Infrastructure.Persistence;
 
 namespace DelightDinner.Infrastructure;
 

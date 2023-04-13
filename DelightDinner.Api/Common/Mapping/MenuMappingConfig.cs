@@ -1,8 +1,8 @@
-﻿using DelightDinner.Application.Menus.Commands.CreateMenu;
+﻿using Mapster;
+
+using DelightDinner.Application.Menus.Commands.CreateMenu;
 using DelightDinner.Contracts.Menu;
 using DelightDinner.Domain.Menu;
-
-using Mapster;
 
 using MenuSection = DelightDinner.Domain.Menu.Entities.MenuSection;
 using MenuItem = DelightDinner.Domain.Menu.Entities.MenuItem;

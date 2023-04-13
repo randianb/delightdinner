@@ -1,13 +1,14 @@
 ﻿using DelightDinner.Application.Authentication.Commands.Register;
-using DelightDinner.Application.Authentication.Queries.Login;
 using DelightDinner.Application.Authentication.Common;
+using DelightDinner.Application.Authentication.Queries.Login;
 using DelightDinner.Contracts.Authentication;
 using DelightDinner.Domain.Common.Errors;
-using Microsoft.AspNetCore.Mvc;
+
+using ErrorOr;
 using MapsterMapper;
 using MediatR;
-using ErrorOr;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DelightDinner.Api.Controllers;
 

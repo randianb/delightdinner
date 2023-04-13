@@ -1,6 +1,6 @@
-﻿using Mapster;
+﻿using System.Reflection;
+using Mapster;
 using MapsterMapper;
-using System.Reflection;
 
 namespace DelightDinner.Api.Common.Mapping;
 

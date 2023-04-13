@@ -1,7 +1,7 @@
-﻿using ErrorOr;
-using MediatR;
+﻿using DelightDinner.Domain.Menu;
 
-using DelightDinner.Domain.Menu;
+using ErrorOr;
+using MediatR;
 
 namespace DelightDinner.Application.Menus.Commands.CreateMenu;
 

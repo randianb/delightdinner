@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "vcBacQHkVrfLR+98ZfFp9thbm/vnEg11Xqo2RNWmYhhnyM++uAfUG36V0BnVt9uqkR1pjvHJGusMHZclVuPvUw==",
+  "dgSpecHash": "7KjThwjFb3e+3jM2yR/9oLtRwKLazXvultvffnBnxsVOZPTSq0LSiUOSHy5EMsjzGeIkdjzrmZtTy6eYMQlorw==",
   "success": true,
   "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\ardalis.smartenum\\7.0.0\\ardalis.smartenum.7.0.0.nupkg.sha512",
-    "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512"
+    "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
   ],
   "logs": []
 }

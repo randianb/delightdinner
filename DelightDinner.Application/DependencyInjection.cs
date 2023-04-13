@@ -1,8 +1,8 @@
-﻿using DelightDinner.Application.Common.Behaviors;
+﻿using System.Reflection;
+using DelightDinner.Application.Common.Behaviors;
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 
 namespace DelightDinner.Application;
 
