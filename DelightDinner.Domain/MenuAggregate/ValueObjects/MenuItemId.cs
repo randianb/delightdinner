@@ -27,4 +27,10 @@ public sealed class MenuItemId : ValueObject
     {
         yield return Value;
     }
+
+#pragma warning disable CS8618
+    private MenuItemId()
+    {
+    }
+#pragma warning restore CS8618
 }
