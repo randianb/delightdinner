@@ -17,7 +17,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
         ConfigureMenuReviewIdsTable(builder);
     }
 
-    private void ConfigureMenuReviewIdsTable(EntityTypeBuilder<Menu> builder)
+    private static void ConfigureMenuReviewIdsTable(EntityTypeBuilder<Menu> builder)
     {
         builder.OwnsMany(m => m.MenuReviewIds, mib =>
         {
@@ -36,7 +36,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
-    private void ConfigureMenuDinnerIdsTable(EntityTypeBuilder<Menu> builder)
+    private static void ConfigureMenuDinnerIdsTable(EntityTypeBuilder<Menu> builder)
     {
         builder.OwnsMany(m => m.DinnerIds, dib =>
         {
@@ -55,7 +55,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
-    private void ConfigureMenuSectionsTable(EntityTypeBuilder<Menu> builder)
+    private static void ConfigureMenuSectionsTable(EntityTypeBuilder<Menu> builder)
     {
         builder.OwnsMany(m => m.Sections, sb =>
         {
@@ -108,7 +108,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
-    private void ConfigureMenusTable(EntityTypeBuilder<Menu> builder)
+    private static void ConfigureMenusTable(EntityTypeBuilder<Menu> builder)
     {
         builder.ToTable("Menus");
 
@@ -129,7 +129,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 
         builder.Property(x => x.HostId)
             .HasConversion(
-            id => id.Value,
-            value => HostId.Create(value));
+                id => id.Value,
+                value => HostId.Create(value));
     }
 }
