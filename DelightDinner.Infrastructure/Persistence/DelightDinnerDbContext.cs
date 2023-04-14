@@ -1,5 +1,6 @@
 ﻿using DelightDinner.Domain.Bill;
 using DelightDinner.Domain.Menu;
+using DelightDinner.Domain.User;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -16,6 +17,8 @@ public class DelightDinnerDbContext : DbContext
     DbSet<Menu> Menus { get; set; } = null!;
 
     DbSet<Bill> Bills { get; set; } = null!;
+
+    DbSet<User> Users { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

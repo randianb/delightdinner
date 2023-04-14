@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DelightDinner.Infrastructure.Persistence.Configuration;
 
-public class BillConfiguration : IEntityTypeConfiguration<Bill>
+public class BillConfigurations : IEntityTypeConfiguration<Bill>
 {
     public void Configure(EntityTypeBuilder<Bill> builder)
     {

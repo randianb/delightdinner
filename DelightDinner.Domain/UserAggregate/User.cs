@@ -3,7 +3,7 @@ using DelightDinner.Domain.User.ValueObjects;
 
 namespace DelightDinner.Domain.User;
 
-public class User : AggregateRoot<UserId>
+public class User : AggregateRoot<UserId, Guid>
 {
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
@@ -33,6 +33,7 @@ public class User : AggregateRoot<UserId>
         string email,
         string password) 
     {
+        // TODO: enforce invariants
         return new(
             firstName,
             lastName,
