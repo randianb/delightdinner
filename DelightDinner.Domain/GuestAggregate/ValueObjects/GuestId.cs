@@ -16,6 +16,11 @@ public class GuestId : ValueObject
         return new(Guid.NewGuid());
     }
 
+    public static GuestId Create(Guid value)
+    {
+        return new(value);
+    }
+
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
