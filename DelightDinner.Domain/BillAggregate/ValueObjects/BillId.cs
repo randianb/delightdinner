@@ -4,9 +4,9 @@ using DelightDinner.Domain.Guest.ValueObjects;
 
 namespace DelightDinner.Domain.Bill.ValueObjects;
 
-public class BillId : ValueObject
+public class BillId : AggregateRootId<string>
 {
-    public string Value { get; private set; }
+    public override string Value { get; protected set; }
 
     private BillId(string value)
     {
@@ -20,16 +20,22 @@ public class BillId : ValueObject
 
     public static BillId Create(string value)
     {
-        return new BillId(value);
+        return new(value);
     }
 
     public static BillId Create(DinnerId dinnerId, GuestId guestId)
     {
-        return new BillId(dinnerId, guestId);
+        return new(dinnerId, guestId);
     }
 
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
     }
+
+#pragma warning disable CS8618
+    private BillId()
+    {
+    }
+#pragma warning restore CS8618
 }

@@ -6,7 +6,7 @@ using DelightDinner.Domain.Host.ValueObjects;
 
 namespace DelightDinner.Domain.Bill;
 
-public class Bill : AggregateRoot<BillId>
+public class Bill : AggregateRoot<BillId, string>
 {
     public DinnerId DinnerId { get; private set; }
     public GuestId GuestId { get; private set; }
@@ -40,7 +40,8 @@ public class Bill : AggregateRoot<BillId>
         Price price,
         DateTime createDateTime,
         DateTime updateDateTime)
-    {          
+    {
+        // TODO: enforce invariants
         return new(
             dinnerId,
             guestId,
