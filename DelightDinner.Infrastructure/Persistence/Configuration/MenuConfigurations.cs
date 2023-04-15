@@ -48,7 +48,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             dib.HasKey("Id");
 
             dib.Property(d => d.Value)
-                .HasColumnName("DinnerId");
+                .HasColumnName("MenuDinnerId");
         });
 
         builder.Metadata.FindNavigation(nameof(Menu.DinnerIds))!
