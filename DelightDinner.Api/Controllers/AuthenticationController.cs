@@ -42,7 +42,7 @@ public class AuthenticationController : ApiController
         var query = _mapper.Map<LoginQuery>(request);
         var authResult = await _mediator.Send(query);
 
-        if (authResult.IsError && authResult.FirstError == Errors.Authentiacation.InvalidCredentials)
+        if (authResult.IsError && authResult.FirstError == Domain.Common.Errors.Errors.Authentiacation.InvalidCredentials)
         {
             return Problem(
                 statusCode: StatusCodes.Status401Unauthorized,

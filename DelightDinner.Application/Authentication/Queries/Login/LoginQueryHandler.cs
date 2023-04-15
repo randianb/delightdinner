@@ -1,8 +1,8 @@
 ﻿using DelightDinner.Application.Authentication.Common;
 using DelightDinner.Application.Common.Interfaces.Authentication;
 using DelightDinner.Application.Common.Interfaces.Persistence;
-using DelightDinner.Domain.Common.Errors;
 using DelightDinner.Domain.User;
+
 using ErrorOr;
 using MediatR;
 
@@ -29,13 +29,13 @@ public class LoginQueryHandler :
         // 1. Validate the user exist. 
         if (_userReposetory.GetUserByEmail(query.Email) is not User user)
         {
-            return Errors.Authentiacation.InvalidCredentials;
+            return Domain.Common.Errors.Errors.Authentiacation.InvalidCredentials;
         }
 
         // 2. Validate the password is correct. 
         if (user.Password != query.Password)
         {
-            return Errors.Authentiacation.InvalidCredentials;
+            return Domain.Common.Errors.Errors.Authentiacation.InvalidCredentials;
         }
 
         // 3. Create JWT-token.
