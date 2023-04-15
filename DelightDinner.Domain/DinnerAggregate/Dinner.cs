@@ -73,6 +73,7 @@ public class Dinner : AggregateRoot<DinnerId, Guid>
         Uri imageUrl,
         Location location)
     {
+        // TODO: Enforce invariants
         return new(
             DinnerId.CreateUnique(),
             name,

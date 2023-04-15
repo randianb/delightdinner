@@ -24,4 +24,10 @@ public class Price : ValueObject
         yield return Amount;
         yield return Currency;
     }
+
+#pragma warning disable CS8618
+    private Price()
+    {
+    }
+#pragma warning restore CS8618
 }

@@ -9,52 +9,41 @@ namespace DelightDinner.Domain.Dinner.Entities;
 public class Reservation : Entity<ReservationId>
 {
     public uint GuestCount { get; private set; }
-    public ReservationStatus ReservationStatus { get; private set; }
-    public DinnerId DinnerId { get; private set; }
+    public ReservationStatus Status { get; private set; }
     public GuestId GuestId { get; private set; }
-    public BillId BillId { get; private set; }
-    public DateTime ArrivalDateTime { get; private set; }
+    public BillId? BillId { get; private set; }
+    public DateTime? ArrivalDateTime { get; private set; }
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 
     private Reservation(
-        ReservationId reservationId,
         uint guestCount,
-        ReservationStatus reservationStatus,
-        DinnerId dinnerId,
+        ReservationStatus status,
+        DateTime? arrivalDateTime,
         GuestId guestId,
-        BillId billId,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
-        : base(reservationId)
+        BillId? billId)
+        : base(ReservationId.CreateUnique())
     {
-        DinnerId = dinnerId;
         GuestId = guestId;
         BillId = billId;
         GuestCount = guestCount;
-        ReservationStatus = reservationStatus;
-        CreatedDateTime = createdDateTime;
-        UpdatedDateTime = updatedDateTime;
+        ArrivalDateTime = arrivalDateTime;
+        Status = status;
     }
 
     public static Reservation Create(
         uint guestCount,
         ReservationStatus reservationStatus,
-        DinnerId dinnerId,
         GuestId guestId,
-        BillId billId,
-        DateTime createdDateTime,
-        DateTime updatedDateTime)
+        BillId? billId = null,
+        DateTime? arrivalDateTime = null)
     {
         return new(
-            ReservationId.CreateUnique(),
             guestCount,
             reservationStatus,
-            dinnerId,
+            arrivalDateTime,
             guestId,
-            billId,
-            createdDateTime,
-            updatedDateTime);
+            billId);
     }
 
 #pragma warning disable CS8618
