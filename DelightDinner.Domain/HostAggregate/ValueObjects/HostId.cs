@@ -3,9 +3,9 @@ using DelightDinner.Domain.User.ValueObjects;
 
 namespace DelightDinner.Domain.Host.ValueObjects;
 
-public sealed class HostId : ValueObject
+public sealed class HostId : AggregateRootId<string>
 {
-    public string Value { get; private set; }
+    public override string Value { get; protected set; }
 
     public HostId(string value)
     {
@@ -28,4 +28,10 @@ public sealed class HostId : ValueObject
     {
         yield return Value;
     }
+
+#pragma warning disable CS8618
+    private HostId()
+    {
+    }
+#pragma warning restore CS8618
 }

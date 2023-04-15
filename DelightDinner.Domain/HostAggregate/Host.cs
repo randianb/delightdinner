@@ -7,7 +7,7 @@ using DelightDinner.Domain.User.ValueObjects;
 
 namespace DelightDinner.Domain.Host;
 
-public class Host : AggregateRoot<HostId>
+public class Host : AggregateRoot<HostId, string>
 {
     private readonly List<MenuId> _menuId = new();
     private readonly List<DinnerId> _dinnerId = new();
