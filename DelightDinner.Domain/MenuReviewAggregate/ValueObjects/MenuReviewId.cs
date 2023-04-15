@@ -1,35 +1,34 @@
 ﻿using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Dinner.ValueObjects;
-using DelightDinner.Domain.Guest.ValueObjects;
-using DelightDinner.Domain.Menu.MenuObjects;
 
 namespace DelightDinner.Domain.MenuReview.ValueObjects;
 
-public sealed class MenuReviewId : ValueObject
+public sealed class MenuReviewId : AggregateRootId<Guid>
 {
-    public string Value { get; private set; }
+    public override Guid Value { get; protected set; }
 
-    private MenuReviewId(MenuId menuId, DinnerId dinnerId, GuestId guestId)
-    {
-        Value = $"MenuReview_{menuId.Value}_{dinnerId.Value}_{guestId.Value}";
-    }
-
-    private MenuReviewId(string value)
+    private MenuReviewId(Guid value)
     {
         Value = value;
     }
 
-    public static MenuReviewId Create(MenuId menuId, DinnerId dinnerId, GuestId guestId)
+    public static MenuReviewId CreateUnique()
     {
-        return new MenuReviewId(menuId, dinnerId, guestId);
+        return new(Guid.NewGuid());
     }
-    public static MenuReviewId Create(string value)
+
+    public static MenuReviewId Create(Guid value)
     {
-        return new MenuReviewId(value);
+        return new(value);
     }
 
     public override IEnumerable<object> GetEqualityComponents()
     {
         yield return Value;
     }
+
+#pragma warning disable CS8618
+    private MenuReviewId()
+    {
+    }
+#pragma warning restore CS8618
 }

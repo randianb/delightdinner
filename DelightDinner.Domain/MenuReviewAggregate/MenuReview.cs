@@ -8,7 +8,7 @@ using DelightDinner.Domain.MenuReview.ValueObjects;
 
 namespace DelightDinner.Domain.MenuReview;
 
-public class MenuReview : AggregateRoot<MenuReviewId>
+public class MenuReview : AggregateRoot<MenuReviewId, Guid>
 {
     public Rating Rating { get; private set; }
     public string Comment { get; private set; }
@@ -57,7 +57,7 @@ public class MenuReview : AggregateRoot<MenuReviewId>
         var ratingValueObject = Rating.Create(rating);
 
         return new(
-            menuReviewId ?? MenuReviewId.Create(menuId, dinnerId, guestId),
+            menuReviewId ?? MenuReviewId.CreateUnique(),
             ratingValueObject,
             comment,
             hostId,
