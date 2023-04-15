@@ -1,5 +1,6 @@
 ﻿using DelightDinner.Domain.Bill;
 using DelightDinner.Domain.Menu;
+using DelightDinner.Domain.MenuReview;
 using DelightDinner.Domain.User;
 
 using Microsoft.EntityFrameworkCore;
@@ -15,6 +16,8 @@ public class DelightDinnerDbContext : DbContext
     }
 
     DbSet<Menu> Menus { get; set; } = null!;
+
+    DbSet<MenuReview> MenuReviews { get; set; } = null!;
 
     DbSet<Bill> Bills { get; set; } = null!;
 
