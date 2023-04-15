@@ -20,7 +20,7 @@ public class HostConfigurations : IEntityTypeConfiguration<Host>
     {
         builder.OwnsMany(x => x.DinnerIds, did =>
         {
-            did.ToTable("DinnerIds");
+            did.ToTable("HostDinnerIds");
 
             did.WithOwner()
                 .HasForeignKey("HostId");
@@ -39,7 +39,7 @@ public class HostConfigurations : IEntityTypeConfiguration<Host>
     {
         builder.OwnsMany(x => x.MenuIds, mid =>
         {
-            mid.ToTable("MenuIds");
+            mid.ToTable("HostMenuIds");
 
             mid.WithOwner()
                 .HasForeignKey("HostId");

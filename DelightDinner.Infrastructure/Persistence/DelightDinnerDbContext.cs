@@ -1,4 +1,5 @@
 ﻿using DelightDinner.Domain.Bill;
+using DelightDinner.Domain.Dinner;
 using DelightDinner.Domain.Host;
 using DelightDinner.Domain.Menu;
 using DelightDinner.Domain.MenuReview;
@@ -25,6 +26,8 @@ public class DelightDinnerDbContext : DbContext
     DbSet<User> Users { get; set; } = null!;
 
     DbSet<Host> Hosts { get; set; } = null!;
+
+    DbSet<Dinner> Dinners { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -29,7 +29,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             mib.HasKey("Id");
 
             mib.Property(i => i.Value)
-                .HasColumnName("MenuReviewId");
+                .HasColumnName("ReviewId");
         });
 
         builder.Metadata.FindNavigation(nameof(Menu.MenuReviewIds))!
@@ -48,7 +48,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             dib.HasKey("Id");
 
             dib.Property(d => d.Value)
-                .HasColumnName("MenuDinnerId");
+                .HasColumnName("DinnerId");
         });
 
         builder.Metadata.FindNavigation(nameof(Menu.DinnerIds))!

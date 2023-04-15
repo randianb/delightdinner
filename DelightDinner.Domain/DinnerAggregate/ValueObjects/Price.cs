@@ -1,20 +1,19 @@
 ﻿using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Dinner.Enums;
 
 namespace DelightDinner.Domain.Dinner.ValueObjects;
 
 public class Price : ValueObject
 {
     public decimal Amount { get; private set; }
-    public Currency Currency { get; private set; }
+    public string Currency { get; private set; }
 
-    private Price(decimal amount, Currency currency)
+    private Price(decimal amount, string currency)
     {
         Amount = amount;
         Currency = currency;
     }
 
-    public static Price Create(decimal amount, Currency currency)
+    public static Price Create(decimal amount, string currency)
     {
         return new(amount, currency);
     }

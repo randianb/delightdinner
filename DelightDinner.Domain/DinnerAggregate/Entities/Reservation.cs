@@ -9,7 +9,7 @@ namespace DelightDinner.Domain.Dinner.Entities;
 public class Reservation : Entity<ReservationId>
 {
     public uint GuestCount { get; private set; }
-    public ReservationStatus Status { get; private set; }
+    public ReservationStatus ReservationStatus { get; private set; }
     public GuestId GuestId { get; private set; }
     public BillId? BillId { get; private set; }
     public DateTime? ArrivalDateTime { get; private set; }
@@ -18,7 +18,7 @@ public class Reservation : Entity<ReservationId>
 
     private Reservation(
         uint guestCount,
-        ReservationStatus status,
+        ReservationStatus reservationStatus,
         DateTime? arrivalDateTime,
         GuestId guestId,
         BillId? billId)
@@ -28,7 +28,7 @@ public class Reservation : Entity<ReservationId>
         BillId = billId;
         GuestCount = guestCount;
         ArrivalDateTime = arrivalDateTime;
-        Status = status;
+        ReservationStatus = reservationStatus;
     }
 
     public static Reservation Create(
