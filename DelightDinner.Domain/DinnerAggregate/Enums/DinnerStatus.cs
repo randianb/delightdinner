@@ -5,7 +5,9 @@ namespace DelightDinner.Domain.Dinner.Enums;
 public class DinnerStatus : SmartEnum<DinnerStatus>
 {
     public DinnerStatus(string name, int value) 
-        : base(name, value) { }
+        : base(name, value) 
+    { 
+    }
 
     public static readonly DinnerStatus Upcomming = new DinnerStatus(nameof(Upcomming), 1);
     public static readonly DinnerStatus InProgress = new DinnerStatus(nameof(InProgress), 2);

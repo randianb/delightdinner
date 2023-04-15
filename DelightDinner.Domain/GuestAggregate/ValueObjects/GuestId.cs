@@ -2,9 +2,9 @@
 
 namespace DelightDinner.Domain.Guest.ValueObjects;
 
-public class GuestId : ValueObject
+public class GuestId : AggregateRootId<Guid>
 {
-    public Guid Value { get; private set; }
+    public override Guid Value { get; protected set; }
 
     private GuestId(Guid value)
     {

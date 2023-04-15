@@ -7,7 +7,7 @@ using DelightDinner.Domain.Menu.MenuObjects;
 
 namespace DelightDinner.Domain.Dinner;
 
-public class Dinner : AggregateRoot<DinnerId>
+public class Dinner : AggregateRoot<DinnerId, Guid>
 {
     private readonly List<Reservation> _reservations = new();
 
