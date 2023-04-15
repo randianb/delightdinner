@@ -93,7 +93,7 @@ public class GuestConfigurations : IEntityTypeConfiguration<Guest>
 
     private void ConfigureGuestPendingDinnersIdsTable(EntityTypeBuilder<Guest> builder)
     {
-        builder.OwnsMany(g => g.PendingDinnersIds, ped =>
+        builder.OwnsMany(g => g.PendingDinnerIds, ped =>
         {
             ped.ToTable("GuestPendingDinnersIds");
 
@@ -105,13 +105,13 @@ public class GuestConfigurations : IEntityTypeConfiguration<Guest>
                 .HasColumnName("DinnerId");
         });
 
-        builder.Metadata.FindNavigation(nameof(Guest.PendingDinnersIds))!
+        builder.Metadata.FindNavigation(nameof(Guest.PendingDinnerIds))!
             .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
     private void ConfigureGuestPastDinnersIdsTable(EntityTypeBuilder<Guest> builder)
     {
-        builder.OwnsMany(g => g.PastDinnersIds, pdid =>
+        builder.OwnsMany(g => g.PastDinnerIds, pdid =>
         {
             pdid.ToTable("GuestPastDinnersIds");
 
@@ -123,13 +123,13 @@ public class GuestConfigurations : IEntityTypeConfiguration<Guest>
                 .HasColumnName("DinnerId");
         });
 
-        builder.Metadata.FindNavigation(nameof(Guest.PastDinnersIds))!
+        builder.Metadata.FindNavigation(nameof(Guest.PastDinnerIds))!
             .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 
     private void ConfigureGuestUpcommingDinnersIdsTable(EntityTypeBuilder<Guest> builder)
     {
-        builder.OwnsMany(g => g.UpcommingDinnersIds, udid =>
+        builder.OwnsMany(g => g.UpcommingDinnerIds, udid =>
         {
             udid.ToTable("GuestUpcommingDinnersIds");
 
@@ -141,7 +141,7 @@ public class GuestConfigurations : IEntityTypeConfiguration<Guest>
                 .HasColumnName("DinnerId");
         });
 
-        builder.Metadata.FindNavigation(nameof(Guest.UpcommingDinnersIds))!
+        builder.Metadata.FindNavigation(nameof(Guest.UpcommingDinnerIds))!
             .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 

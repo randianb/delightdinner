@@ -22,9 +22,9 @@ public class Guest : AggregateRoot<GuestId, Guid>
     public Uri ProfileImage { get; private set; }
     public UserId UserId { get; private set; }
 
-    public IReadOnlyList<DinnerId> UpcommingDinnersIds => _upcommingDinnerIds.AsReadOnly();
-    public IReadOnlyList<DinnerId> PastDinnersIds => _pastDinnerIds.AsReadOnly();
-    public IReadOnlyList<DinnerId> PendingDinnersIds => _pendingDinnerIds.AsReadOnly();
+    public IReadOnlyList<DinnerId> UpcommingDinnerIds => _upcommingDinnerIds.AsReadOnly();
+    public IReadOnlyList<DinnerId> PastDinnerIds => _pastDinnerIds.AsReadOnly();
+    public IReadOnlyList<DinnerId> PendingDinnerIds => _pendingDinnerIds.AsReadOnly();
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
     public IReadOnlyList<GuestRating> Ratings => _ratings.AsReadOnly();
     public IReadOnlyList<BillId> BillIds => _billIds.AsReadOnly();
