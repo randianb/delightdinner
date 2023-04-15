@@ -29,7 +29,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
             mib.HasKey("Id");
 
             mib.Property(i => i.Value)
-                .HasColumnName("ReviewId");
+                .HasColumnName("MenuReviewId");
         });
 
         builder.Metadata.FindNavigation(nameof(Menu.MenuReviewIds))!

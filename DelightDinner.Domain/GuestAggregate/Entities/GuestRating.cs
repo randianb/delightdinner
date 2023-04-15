@@ -3,6 +3,7 @@ using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
+
 using ErrorOr;
 
 namespace DelightDinner.Domain.Guest.Entities;
