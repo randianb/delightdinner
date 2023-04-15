@@ -2,6 +2,7 @@
 using DelightDinner.Application.Common.Interfaces.Authentication;
 using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Domain.User;
+using DelightDinner.Domain.Common.Errors;
 
 using ErrorOr;
 using MediatR;
@@ -31,7 +32,7 @@ public class RegisterCommandHandler :
         // 1. Validate the user doesn't exist.
         if (_userReposetory.GetUserByEmail(command.Email) is not null)
         {
-            return Domain.Common.Errors.Errors.User.DuplicateEmail;
+            return Errors.User.DuplicateEmail;
         }
 
         // 2. Create user (generate unique ID) & Persist to DB.

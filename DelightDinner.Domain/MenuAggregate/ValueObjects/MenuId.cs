@@ -1,4 +1,5 @@
 ﻿using DelightDinner.Domain.Common.Models;
+using DelightDinner.Domain.Common.Errors;
 
 using ErrorOr;
 

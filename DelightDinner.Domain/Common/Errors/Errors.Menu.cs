@@ -1,5 +1,7 @@
 ﻿using ErrorOr;
 
+namespace DelightDinner.Domain.Common.Errors;
+
 public static partial class Errors
 {
     public static class Menu
