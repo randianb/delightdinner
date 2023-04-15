@@ -9,8 +9,8 @@ namespace DelightDinner.Domain.Host;
 
 public class Host : AggregateRoot<HostId, string>
 {
-    private readonly List<MenuId> _menuId = new();
-    private readonly List<DinnerId> _dinnerId = new();
+    private readonly List<MenuId> _menuIds = new();
+    private readonly List<DinnerId> _dinnerIds = new();
 
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
@@ -18,8 +18,8 @@ public class Host : AggregateRoot<HostId, string>
     public AverageRating AverageRating { get; private set; }
     public UserId UserId { get; private set; }
 
-    public IReadOnlyList<DinnerId> DinnerIds => _dinnerId.AsReadOnly();
-    public IReadOnlyList<MenuId> MenuIds => _menuId.AsReadOnly();
+    public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
+    public IReadOnlyList<MenuId> MenuIds => _menuIds.AsReadOnly();
 
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }

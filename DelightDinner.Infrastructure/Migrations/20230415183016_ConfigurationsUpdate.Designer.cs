@@ -4,6 +4,7 @@ using DelightDinner.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DelightDinner.Infrastructure.Migrations
 {
     [DbContext(typeof(DelightDinnerDbContext))]
-    partial class DelightDinnerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230415183016_ConfigurationsUpdate")]
+    partial class ConfigurationsUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
