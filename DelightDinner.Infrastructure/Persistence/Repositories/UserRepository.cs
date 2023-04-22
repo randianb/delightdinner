@@ -5,15 +5,22 @@ namespace DelightDinner.Infrastructure.Persistence.Repositories;
 
 public class UserRepository : IUserReposetory
 {
-    private static readonly List<User> _users = new();
+    private readonly DelightDinnerDbContext _dbContext;
+
+    public UserRepository(DelightDinnerDbContext dbContext)
+    {
+        _dbContext = dbContext;
+    }
 
     public void Add(User user)
     {
-        _users.Add(user);
+        _dbContext.Users.Add(user);
+        _dbContext.SaveChanges();
     }
 
     public User? GetUserByEmail(string email)
     {
-        return _users.SingleOrDefault(u => u.Email == email);
+        return _dbContext.Users
+            .SingleOrDefault(u => u.Email == email);
     }
 }
