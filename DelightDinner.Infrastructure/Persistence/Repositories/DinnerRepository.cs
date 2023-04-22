@@ -1,9 +1,10 @@
-﻿using DelightDinner.Domain.Dinner;
+﻿using DelightDinner.Application.Common.Interfaces.Persistence;
+using DelightDinner.Domain.Dinner;
 using DelightDinner.Domain.Host.ValueObjects;
 
 namespace DelightDinner.Infrastructure.Persistence.Repositories;
 
-public class DinnerRepository
+public class DinnerRepository : IDinnerRepository
 {
     private readonly DelightDinnerDbContext _dbContext;
 
