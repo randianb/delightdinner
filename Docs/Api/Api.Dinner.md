@@ -42,14 +42,14 @@ POST me/dinners
 
 ```json
 {
-    "name": "string",
-    "description": "string",
+    "name": "Pizza & Pasta",
+    "description": "Join us for a night of Pizza and Jazz! After dinner we will continue the fun at the BRB bar.",
     "startDateTime": "2018-01-01T00:00:00.000Z",
     "endDateTime": "2018-01-01T00:00:00.000Z",
     "isPublic": true,
-    "maxGuests": 10,
+    "maxGuests": 30,
     "price": {
-        "amount": 10.99,
+        "amount": 29.99,
         "currency": "USD"
     },
     "menuId": "00000000-0000-0000-0000-000000000000",
@@ -57,9 +57,87 @@ POST me/dinners
     "location": {
         "name": "string",
         "address": "string",
-        "latitude": 0,
-        "longitude": 0
+        "latitude": 60.391262,
+        "longitude": 5.322054
     }
 }
 ```
 #### Create Dinner Response
+```js
+201 Created
+```
+
+```json
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "Pizza & Pasta",
+    "description": "Join us for a night of Pizza and Jazz! After dinner we will continue the fun at the BRB bar.",
+    "startDateTime": "2018-01-01T00:00:00.000Z",
+    "endDateTime": "2018-01-01T00:00:00.000Z",
+    "startedDateTime": null,
+    "endedDateTime": null,
+    "status": "Upcomming", // Upcomming, InProgress, Ended
+    "isPublic": true,
+    "maxGuests": 30,
+    "price": {
+        "amount": 29.99,
+        "currency": "USD"
+    },
+    "hostId": "00000000-0000-0000-0000-000000000000",
+    "menuId": "00000000-0000-0000-0000-000000000000",
+    "imageUrl": "http://example.com/image.jpg",
+    "location": {
+        "name": "string",
+        "address": "string",
+        "latitude": 60.391262,
+        "longitude": 5.322054
+    },
+    "status": "Draft",
+    "guests": [],
+    "host": {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "imageUrl": "string"
+    },
+    "createdDateTime": "2019-01-01T00:00:00.000Z",
+    "updatedDateTime": "2019-01-01T00:00:00.000Z"
+}
+```
+
+### Update Dinner
+
+#### Update Dinner Request
+```js
+PUT /host/{hostId}/dinners/{dinnerId}
+PUT me/dinners/{dinnerId}
+```
+
+```json
+{
+    "name": "Pizza & Pasta",
+    "description": "Join us for a night of Pizza and Jazz! After dinner we will continue the fun at the BRB bar.",
+    "startDateTime": "2018-01-01T00:00:00.000Z",
+    "endDateTime": "2018-01-01T00:00:00.000Z",
+    "maxGuests": 30,
+    "menuId": "00000000-0000-0000-0000-000000000000",
+    "imageUrl": "http://example.com/image.jpg"
+}
+```
+#### Update Dinner Response
+```js
+204 Content
+```
+
+### Delete Dinner
+
+#### Delete Dinner Request
+```js
+DELETE /host/{hostId}/dinners/{dinnerId}
+DELETE me/dinners/{dinnerId}
+```
+
+#### Delete Dinner Response
+```js
+204 Content
+```
+
