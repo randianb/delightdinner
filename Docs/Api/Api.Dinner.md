@@ -141,3 +141,48 @@ DELETE me/dinners/{dinnerId}
 204 Content
 ```
 
+### Get Dinner
+
+#### Get Dinner Request
+```js
+GET /host/{hostId}/dinners/{dinnerId}
+GET me/dinners/{dinnerId}
+```
+
+#### Get Dinner Response
+```json
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "name": "Pizza & Pasta",
+    "description": "Join us for a night of Pizza and Jazz! After dinner we will continue the fun at the BRB bar.",
+    "startDateTime": "2018-01-01T00:00:00.000Z",
+    "endDateTime": "2018-01-01T00:00:00.000Z",
+    "startedDateTime": null,
+    "endedDateTime": null,
+    "status": "Upcomming", // Upcomming, InProgress, Ended
+    "isPublic": true,
+    "maxGuests": 30,
+    "price": {
+        "amount": 29.99,
+        "currency": "USD"
+    },
+    "hostId": "00000000-0000-0000-0000-000000000000",
+    "menuId": "00000000-0000-0000-0000-000000000000",
+    "imageUrl": "http://example.com/image.jpg",
+    "location": {
+        "name": "string",
+        "address": "string",
+        "latitude": 60.391262,
+        "longitude": 5.322054
+    },
+    "status": "Draft",
+    "guests": [],
+    "host": {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "name": "string",
+        "imageUrl": "string"
+    },
+    "createdDateTime": "2019-01-01T00:00:00.000Z",
+    "updatedDateTime": "2019-01-01T00:00:00.000Z"
+}
+```
