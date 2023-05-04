@@ -186,3 +186,61 @@ GET me/dinners/{dinnerId}
     "updatedDateTime": "2019-01-01T00:00:00.000Z"
 }
 ```
+### List Dinner Guests
+
+#### List Dinner Guests Request
+```js
+GET /host/{hostId}/dinners/{dinnerId}/guests
+GET me/dinners/{dinnerId}/guests
+```
+
+#### List Dinner Guests Response
+```json
+[
+    {
+        "id": "00000000-0000-0000-0000-000000000000",
+        "firstName": "John",
+        "lastName": "Cayenne",
+        "profileImageUrl": "http://example.com/image.jpg"
+    }
+]
+```
+
+### Start Dinner
+
+#### Start Dinner Request
+```js
+GET /host/{hostId}/dinners/{dinnerId}/start
+GET me/dinners/{dinnerId}/start
+```
+
+#### Start Dinner Response
+```js
+200 Ok
+```
+
+### End Dinner
+
+#### End Dinner Request
+```js
+GET /host/{hostId}/dinners/{dinnerId}/end
+GET me/dinners/{dinnerId}/end
+```
+
+### End Dinner Response
+```js
+200 Ok
+```
+
+### Cancel Dinner
+
+#### Cancel Dinner Request
+```js
+GET /host/{hostId}/dinners/{dinnerId}/cancel
+GET me/dinners/{dinnerId}/cancel
+```
+
+#### Cancel Dinner Response
+```js
+200 Ok
+```
