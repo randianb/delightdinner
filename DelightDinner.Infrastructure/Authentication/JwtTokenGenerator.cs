@@ -5,8 +5,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
 using DelightDinner.Application.Common.Interfaces.Authentication;
-using DelightDinner.Application.Common.Services;
 using DelightDinner.Domain.User;
+using DelightDinner.Application.Common.Interfaces.Services;
 
 namespace DelightDinner.Infrastructure.Authentication;
 

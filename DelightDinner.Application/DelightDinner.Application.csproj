@@ -17,4 +17,9 @@
     <ProjectReference Include="..\DelightDinner.Domain\DelightDinner.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dinners\Commands\CreateDinner\" />
+    <Folder Include="Dinners\Queries\ListDinners\" />
+  </ItemGroup>
+
 </Project>

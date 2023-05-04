@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Authentication;
 using DelightDinner.Application.Common.Interfaces.Persistence;
-using DelightDinner.Application.Common.Services;
+using DelightDinner.Application.Common.Interfaces.Services;
 using DelightDinner.Infrastructure.Authentication;
 using DelightDinner.Infrastructure.Persistence;
 using DelightDinner.Infrastructure.Persistence.Repositories;
@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+
 using System.Text;
 
 namespace DelightDinner.Infrastructure;

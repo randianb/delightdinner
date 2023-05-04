@@ -1,4 +1,4 @@
-﻿namespace DelightDinner.Application.Common.Services;
+﻿namespace DelightDinner.Application.Common.Interfaces.Services;
 
 public interface IDateTimeProvider
 {

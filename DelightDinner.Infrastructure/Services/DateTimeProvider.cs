@@ -1,4 +1,4 @@
-﻿using DelightDinner.Application.Common.Services;
+﻿using DelightDinner.Application.Common.Interfaces.Services;
 
 namespace DelightDinner.Infrastructure.Services;
 
