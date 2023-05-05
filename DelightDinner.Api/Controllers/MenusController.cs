@@ -1,8 +1,11 @@
 ﻿using DelightDinner.Application.Menus.Commands.CreateMenu;
+using DelightDinner.Application.Menus.Queries.ListMenus;
 using DelightDinner.Contracts.Menu;
 
 using MapsterMapper;
+
 using MediatR;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace DelightDinner.Api.Controllers;
@@ -27,9 +30,21 @@ public class MenusController : ApiController
         var command = _mapper.Map<CreateMenuCommand>((request, hostId));
 
         var createMenuResult = await _mdeiator.Send(command);
-        
+
         return createMenuResult.Match(
-                       menu => Ok(_mapper.Map<CreateMenuResponse>(menu)),
-                       error => Problem(error));
+            menu => Ok(_mapper.Map<CreateMenuResponse>(menu)),
+            errors => Problem(errors));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> ListMenus(string hostId)
+    {
+        var query = _mapper.Map<ListMenusQuery>(hostId);
+
+        var listMenusResult = await _mdeiator.Send(query);
+
+        return listMenusResult.Match(
+            menus => Ok(menus.Select(menu => _mapper.Map<CreateMenuResponse>(menu))),
+            errors => Problem(errors));
     }
 }

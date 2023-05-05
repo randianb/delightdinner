@@ -1,5 +1,6 @@
 ﻿using Mapster;
 
+using DelightDinner.Application.Menus.Queries.ListMenus;
 using DelightDinner.Application.Menus.Commands.CreateMenu;
 using DelightDinner.Contracts.Menu;
 using DelightDinner.Domain.Menu;
@@ -16,6 +17,9 @@ public class MenuMappingConfig : IRegister
         config.NewConfig<(CreateMenuRequest Request, string HostId), CreateMenuCommand>()
             .Map(dest => dest.HostId, src => src.HostId)
             .Map(dest => dest, src => src.Request);
+
+        config.NewConfig<string, ListMenusQuery>()
+            .MapWith(src => new ListMenusQuery(src));
 
         config.NewConfig<Menu, CreateMenuResponse>()
             .Map(dest => dest.Id, src => src.Id.Value)
