@@ -10,18 +10,23 @@ using MediatR;
 
 namespace DelightDinner.Application.Dinners.Commands.CreateDinner;
 
-public class CreateDinnerCommandHandler : IRequestHandler<CreateDinnerCommand, ErrorOr<Dinner>>
+public class CreateDinnerCommandHandler 
+    : IRequestHandler<CreateDinnerCommand, ErrorOr<Dinner>>
 {
     private readonly IDinnerRepository _dinnerRepository;
     private readonly IMenuRepository _menuRepository;
 
-    public CreateDinnerCommandHandler(IMenuRepository menuRepository, IDinnerRepository dinnerRepository)
+    public CreateDinnerCommandHandler(
+        IMenuRepository menuRepository, 
+        IDinnerRepository dinnerRepository)
     {
         _menuRepository = menuRepository;
         _dinnerRepository = dinnerRepository;
     }
 
-    public async Task<ErrorOr<Dinner>> Handle(CreateDinnerCommand command, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Dinner>> Handle(
+        CreateDinnerCommand command, 
+        CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
 
