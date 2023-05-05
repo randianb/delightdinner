@@ -3,9 +3,7 @@ using DelightDinner.Application.Menus.Queries.ListMenus;
 using DelightDinner.Contracts.Menu;
 
 using MapsterMapper;
-
 using MediatR;
-
 using Microsoft.AspNetCore.Mvc;
 
 namespace DelightDinner.Api.Controllers;
