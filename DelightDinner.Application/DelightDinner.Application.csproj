@@ -18,7 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dinners\Commands\CreateDinner\" />
     <Folder Include="Dinners\Queries\ListDinners\" />
   </ItemGroup>
 
