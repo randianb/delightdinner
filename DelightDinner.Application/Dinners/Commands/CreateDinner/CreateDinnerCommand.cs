@@ -15,7 +15,7 @@ public record CreateDinnerCommand(
     int MaxGuests,
     DinnerPriceCommand Price,
     string MenuId,
-    Uri ImageUri,
+    Uri ImageUrl,
     DinnerLocationCommand Location) : IRequest<ErrorOr<Dinner>>;
 
 public record DinnerPriceCommand(
@@ -25,5 +25,5 @@ public record DinnerPriceCommand(
 public record DinnerLocationCommand(
     string Name,
     string Address,
-    double Latitude,
-    double Longtitude);
+    float Latitude,
+    float Longtitude);
