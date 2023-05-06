@@ -30,7 +30,7 @@ public class MenusController : ApiController
         var createMenuResult = await _mdeiator.Send(command);
 
         return createMenuResult.Match(
-            menu => Ok(_mapper.Map<CreateMenuResponse>(menu)),
+            menu => Ok(_mapper.Map<MenuResponse>(menu)),
             errors => Problem(errors));
     }
 
@@ -42,7 +42,7 @@ public class MenusController : ApiController
         var listMenusResult = await _mdeiator.Send(query);
 
         return listMenusResult.Match(
-            menus => Ok(menus.Select(menu => _mapper.Map<CreateMenuResponse>(menu))),
+            menus => Ok(menus.Select(menu => _mapper.Map<MenuResponse>(menu))),
             errors => Problem(errors));
     }
 }

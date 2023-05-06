@@ -1,6 +1,6 @@
 ﻿namespace DelightDinner.Contracts.Menu;
 
-public record CreateMenuResponse(
+public record MenuResponse(
     string Id,
     string Name, 
     string Description,

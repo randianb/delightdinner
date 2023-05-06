@@ -18,7 +18,7 @@ public class DinnerMappingConfig : IRegister
         config.NewConfig<string, ListDinnersQuery>()
             .MapWith(src => new ListDinnersQuery(src));
 
-        config.NewConfig<Dinner, CreateDinnerResponse>()
+        config.NewConfig<Dinner, DinnerResponse>()
             .Map(dest => dest.Id, src => src.Id.Value.ToString())
             .Map(dest => dest.Status, src => src.Status.Value)
             .Map(dest => dest.MenuId, src => src.MenuId.Value)

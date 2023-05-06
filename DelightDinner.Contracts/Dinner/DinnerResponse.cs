@@ -1,6 +1,6 @@
 ﻿namespace DelightDinner.Contracts.Dinner;
 
-public record CreateDinnerResponse(
+public record DinnerResponse(
     string Id,
     string Name,
     string Description,

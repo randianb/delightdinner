@@ -21,7 +21,7 @@ public class MenuMappingConfig : IRegister
         config.NewConfig<string, ListMenusQuery>()
             .MapWith(src => new ListMenusQuery(src));
 
-        config.NewConfig<Menu, CreateMenuResponse>()
+        config.NewConfig<Menu, MenuResponse>()
             .Map(dest => dest.Id, src => src.Id.Value)
             .Map(dest => dest.AverageRating, src => src.AverageRating.Value)
             .Map(dest => dest.HostId, src => src.HostId.Value)
