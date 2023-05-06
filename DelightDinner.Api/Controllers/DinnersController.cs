@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DelightDinner.Api.Controllers;
 
-[Route("host/{hostId}/dinners")]
+[Route("hosts/{hostId}/dinners")]
 public class DinnersController : ApiController
 {
     private readonly ISender _mediator;

@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Infrastructure;
-
-using DelightDinner.Api.Common.Errors;
+﻿using DelightDinner.Api.Common.Errors;
 using DelightDinner.Api.Common.Mapping;
+
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 namespace DelightDinner.Api;
 

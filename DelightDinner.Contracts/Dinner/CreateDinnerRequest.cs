@@ -9,7 +9,7 @@ public record CreateDinnerRequest(
     bool IsPublic,
     DinnerPrice Price,
     string MenuId,
-    Uri ImageUri,
+    Uri ImageUrl,
     DinnerLocation Location);
 
 public record DinnerPrice(
