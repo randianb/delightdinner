@@ -34,5 +34,5 @@ public record Price(
 public record Location(
     string Name,
     string Address,
-    string Latitude,
-    string Longtitude);
+    float Latitude,
+    float Longtitude);

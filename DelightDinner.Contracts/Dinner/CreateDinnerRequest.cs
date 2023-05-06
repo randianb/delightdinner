@@ -19,5 +19,5 @@ public record DinnerPrice(
 public record DinnerLocation(
     string Name,
     string Address,
-    double Latitude,
-    double Longtitude);
+    float Latitude,
+    float Longtitude);
