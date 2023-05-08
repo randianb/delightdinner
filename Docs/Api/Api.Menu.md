@@ -85,7 +85,7 @@ GET /hosts/{hostId}/menus
 
 #### List Menus Response
 ```js
-200 OK
+200 Ok
 ```
 
 ```json
