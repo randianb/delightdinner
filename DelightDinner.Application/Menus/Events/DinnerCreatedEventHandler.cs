@@ -1,5 +1,7 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
+using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.Events;
+using DelightDinner.Domain.Menu;
 
 using MediatR;
 
@@ -14,11 +16,15 @@ public class DinnerCreatedEventHandler : INotificationHandler<DinnerCreated>
         _menuRepository = menuRepository;
     }
 
-    public async Task Handle(DinnerCreated notification, CancellationToken cancellationToken)
+    public async Task Handle(DinnerCreated dinnerCreatedEvent, CancellationToken cancellationToken)
     {
-        if (await _menuRepository.)
+        if (await _menuRepository.GetByIdAsync(dinnerCreatedEvent.Dinner.MenuId) is not Menu menu)
         {
-
+            throw new InvalidOperationException($"Dinner has invalid menu id (dinner id: {dinnerCreatedEvent.Dinner.Id}, menu id: {dinnerCreatedEvent.Dinner.MenuId}).");
         }
+
+        menu.AddDinnerId((DinnerId)dinnerCreatedEvent.Dinner.Id);
+
+        await _menuRepository.UpdateAsync(menu);
     }
 }

@@ -22,6 +22,6 @@ public class ListMenusQueryHandler : IRequestHandler<ListMenusQuery, ErrorOr<Lis
         
         var hostId = HostId.Create(query.HostId);
 
-        return _menuRepository.List(hostId);
+        return await _menuRepository.ListAsync(hostId);
     }
 }

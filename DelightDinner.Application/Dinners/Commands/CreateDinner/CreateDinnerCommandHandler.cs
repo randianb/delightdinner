@@ -37,7 +37,7 @@ public class CreateDinnerCommandHandler
             return createMenuIdResult.Errors;
         }
 
-        if (!_menuRepository.Exists(createMenuIdResult.Value))
+        if (!await _menuRepository.ExistsAsync(createMenuIdResult.Value))
         {
             return Errors.Menu.NotFound;
         }

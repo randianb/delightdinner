@@ -33,7 +33,7 @@ public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, Error
                     item.Description)))));
 
         // Persist Menu
-        _menuRepository.Add(menu);
+        await _menuRepository.AddAsync(menu);
 
         // Return Menu
 
