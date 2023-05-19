@@ -20,10 +20,8 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
     public AverageRating AverageRating { get; private set; }
     public IReadOnlyList<MenuSection> Sections => _sections.AsReadOnly();
     public HostId HostId { get; private set; }
-
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
-
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 

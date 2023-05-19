@@ -6,9 +6,13 @@ namespace DelightDinner.Application.Common.Interfaces.Persistence;
 
 public interface IMenuRepository
 {
-    void Add(Menu menu);
+    Task AddAsync(Menu menu);
 
-    bool Exists(MenuId menuId);
+    Task<bool> ExistsAsync(MenuId menuId);
 
-    List<Menu> List(HostId hostId);   
+    Task<List<Menu>> ListAsync(HostId hostId);
+
+    Task<Menu?> GetByIdAsync(MenuId menuId);
+
+    Task UpdateAsync(Menu menu);
 }

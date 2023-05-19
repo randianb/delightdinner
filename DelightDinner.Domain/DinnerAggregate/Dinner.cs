@@ -2,6 +2,7 @@
 using DelightDinner.Domain.Dinner.Entities;
 using DelightDinner.Domain.Dinner.Enums;
 using DelightDinner.Domain.Dinner.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate.Events;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;
 
@@ -74,7 +75,7 @@ public class Dinner : AggregateRoot<DinnerId, Guid>
         Location location)
     {
         // TODO: Enforce invariants
-        return new(
+        var dinner = new Dinner(
             DinnerId.CreateUnique(),
             name,
             description,
@@ -87,6 +88,10 @@ public class Dinner : AggregateRoot<DinnerId, Guid>
             menuId,
             imageUrl,
             location);
+
+        dinner.AddDomainEvent(new DinnerCreated(dinner));
+
+        return dinner;
     }
 
 #pragma warning disable CS8618

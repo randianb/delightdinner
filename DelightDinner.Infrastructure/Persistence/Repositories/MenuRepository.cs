@@ -3,6 +3,8 @@ using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu;
 using DelightDinner.Domain.Menu.MenuObjects;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace DelightDinner.Infrastructure.Persistence.Repositories;
 
 public class MenuRepository : IMenuRepository
@@ -14,21 +16,32 @@ public class MenuRepository : IMenuRepository
         _dbContext = dbContext;
     }
 
-    public void Add(Menu menu)
+    public async Task AddAsync(Menu menu)
     {
         _dbContext.Add(menu);
-        _dbContext.SaveChanges();
+        await _dbContext.SaveChangesAsync();
     }
 
-    public bool Exists(MenuId menuId)
+    public async Task<bool> ExistsAsync(MenuId menuId)
     {
-        return _dbContext.Menus.Any(m => m.Id == menuId);
+        return await _dbContext.Menus.AnyAsync(m => m.Id == menuId);
     }
 
-    public List<Menu> List(HostId hostId)
+    public async Task<List<Menu>> ListAsync(HostId hostId)
     {
-        return _dbContext.Menus
+        return await _dbContext.Menus
             .Where(m => m.HostId == hostId)
-            .ToList();
+            .ToListAsync();
+    }
+
+    public async Task<Menu?> GetByIdAsync(MenuId menuId)
+    {
+        return await _dbContext.Menus.FirstOrDefaultAsync(x => x.Id == menuId);
+    }
+
+    public async Task UpdateAsync(Menu menu)
+    {
+        _dbContext.Update(menu);
+        await _dbContext.SaveChangesAsync();
     }
 }
