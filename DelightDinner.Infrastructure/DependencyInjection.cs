@@ -3,6 +3,7 @@ using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Application.Common.Interfaces.Services;
 using DelightDinner.Infrastructure.Authentication;
 using DelightDinner.Infrastructure.Persistence;
+using DelightDinner.Infrastructure.Persistence.Interceptors;
 using DelightDinner.Infrastructure.Persistence.Repositories;
 using DelightDinner.Infrastructure.Services;
 
@@ -39,6 +40,7 @@ public static class DependencyInjection
         services.AddDbContext<DelightDinnerDbContext>(options => 
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
+        services.AddScoped<PublishDomainEventsInterceptor>();
         services.AddScoped<IUserReposetory, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         services.AddScoped<IDinnerRepository, DinnerRepository>();

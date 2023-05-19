@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {}
+    "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
+    "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
+        "projectUniqueName": "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
         "projectName": "DelightDinner.Contracts",
-        "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
+        "projectPath": "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\obj\\",
+        "outputPath": "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

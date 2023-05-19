@@ -384,11 +384,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
+      "projectUniqueName": "C:\\Projects\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
       "projectName": "DelightDinner.Application",
-      "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
+      "projectPath": "C:\\Projects\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\obj\\",
+      "outputPath": "C:\\Projects\\DelightDinner\\DelightDinner.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -405,8 +405,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj"
+            "C:\\Projects\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj": {
+              "projectPath": "C:\\Projects\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj"
             }
           }
         }

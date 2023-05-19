@@ -4,6 +4,7 @@ using DelightDinner.Domain.Dinner.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.Entities;
 using DelightDinner.Domain.Menu.MenuObjects;
+using DelightDinner.Domain.MenuAggregate.Events;
 using DelightDinner.Domain.MenuReview.ValueObjects;
 
 namespace DelightDinner.Domain.Menu;
@@ -49,13 +50,17 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
         List<MenuSection>? sections = null)
     {
         // TODO: enforce invariants
-        return new(
+        var menu = new Menu(
             MenuId.CreateUnique(),
             hostId,
             name,
             description,
             AverageRating.CreateNew(),
             sections ?? new());
+
+        menu.AddDomainEvent(new MenuCreated(menu));
+
+        return menu;
     }
 
 #pragma warning disable CS8618

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LI92ex+lJrcY8fT4URvCcTu6Buvk07aCG4Qd2wFLH7n3/0fpX49QjCcQwl7LOOF8QdsD6C/wfzFQuKmBCE7f5w==",
+  "dgSpecHash": "hQHYgQJ4CfedPB54oreHqKjBy1wjmRDCGs+3cxP+wQ1u9Y4/1zx1ZlVyh5GfJdZmbjPKl7/Yk1RAcwE0ll3KBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
+  "projectFilePath": "C:\\Projects\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\ardalis.smartenum\\7.0.0\\ardalis.smartenum.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",

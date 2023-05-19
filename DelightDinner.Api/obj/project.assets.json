@@ -4198,11 +4198,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
+      "projectUniqueName": "C:\\Projects\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
       "projectName": "DelightDinner.Api",
-      "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
+      "projectPath": "C:\\Projects\\DelightDinner\\DelightDinner.Api\\DelightDinner.Api.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Api\\obj\\",
+      "outputPath": "C:\\Projects\\DelightDinner\\DelightDinner.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4219,14 +4219,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj"
+            "C:\\Projects\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj": {
+              "projectPath": "C:\\Projects\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj"
             },
-            "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj"
+            "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj": {
+              "projectPath": "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj"
             },
-            "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj"
+            "C:\\Projects\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj": {
+              "projectPath": "C:\\Projects\\DelightDinner\\DelightDinner.Infrastructure\\DelightDinner.Infrastructure.csproj"
             }
           }
         }

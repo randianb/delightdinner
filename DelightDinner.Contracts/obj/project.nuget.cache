@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ANYaXX03q2YugXIGIHZCgh2kuMEd8dXI5dyZKy8sgq9YptT2tAV7ISdRjK1tnQtKBQlt0iIwhuIOnYfpEEm79Q==",
+  "dgSpecHash": "XTl6wK7TI5O1X8lB/OPjFcteUesTKPzJlkFbG5NNJXGwRN/sH6F3LgzSm4IaGbI+UKUHlo0LM+PMVKnAlM4iWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user\\Desktop\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
+  "projectFilePath": "C:\\Projects\\DelightDinner\\DelightDinner.Contracts\\DelightDinner.Contracts.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
