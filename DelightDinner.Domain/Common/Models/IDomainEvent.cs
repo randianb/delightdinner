@@ -1,5 +1,7 @@
-﻿namespace DelightDinner.Domain.Common.Models;
+﻿using MediatR;
 
-public interface IDomainEvent
+namespace DelightDinner.Domain.Common.Models;
+
+public interface IDomainEvent : INotification
 {
 }

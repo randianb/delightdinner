@@ -1354,7 +1354,8 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Ardalis.SmartEnum": "7.0.0",
-          "ErrorOr": "1.2.1"
+          "ErrorOr": "1.2.1",
+          "MediatR": "12.0.1"
         },
         "compile": {
           "bin/placeholder/DelightDinner.Domain.dll": {}
@@ -4059,5 +4060,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: MediatR from 12.0.1 to 11.1.0. Reference the package directly from the project to select a different version. \r\n DelightDinner.Infrastructure -> DelightDinner.Application -> DelightDinner.Domain -> MediatR (>= 12.0.1) \r\n DelightDinner.Infrastructure -> DelightDinner.Application -> MediatR (>= 11.1.0)",
+      "libraryId": "MediatR",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

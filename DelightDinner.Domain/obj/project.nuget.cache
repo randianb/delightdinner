@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "VFsyDKU6LWTkeH8UrVvOD8pKOqpfSnR3/hoD78kmbHbhd15yVE/0LwsyAfqMDKRyFWbY+FMa4ICax3KjhEitpQ==",
+  "dgSpecHash": "oP/4J/XqbUdzjH5iWL02qIZDfGYQzmlgY2GZee5WUYob3PzvFnW4OzMe+8QJe3hojveLMJlhip4V6UOFdv5WHw==",
   "success": true,
   "projectFilePath": "C:\\Projects\\DelightDinner\\DelightDinner.Domain\\DelightDinner.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\ardalis.smartenum\\7.0.0\\ardalis.smartenum.7.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\erroror\\1.2.1\\erroror.1.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
   ],

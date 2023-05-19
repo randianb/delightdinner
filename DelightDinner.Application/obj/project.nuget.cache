@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "IujSJGFaD+Uvu5q+bEEJcEGgaCxu2XaoUqZ6MTAa9S2b1Pa4xUXvU/Y1WKYn22FkwRmT+UC18WRTuAEsJcXmkw==",
-  "success": true,
+  "dgSpecHash": "pMleefkbc5qOOHjXd9dQtwcubuEAOe0pBoZi22vnsdv1L/ZmrLEsTbg1w3bQ3hC+535o67Di4TNP/50HXyapEw==",
+  "success": false,
   "projectFilePath": "C:\\Projects\\DelightDinner\\DelightDinner.Application\\DelightDinner.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\ardalis.smartenum\\7.0.0\\ardalis.smartenum.7.0.0.nupkg.sha512",
@@ -16,5 +16,15 @@
     "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: MediatR from 12.0.1 to 11.1.0. Reference the package directly from the project to select a different version. \r\n DelightDinner.Application -> DelightDinner.Domain -> MediatR (>= 12.0.1) \r\n DelightDinner.Application -> MediatR (>= 11.1.0)",
+      "libraryId": "MediatR",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
