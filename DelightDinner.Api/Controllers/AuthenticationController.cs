@@ -1,10 +1,8 @@
 ﻿using DelightDinner.Application.Authentication.Commands.Register;
-using DelightDinner.Application.Authentication.Common;
 using DelightDinner.Application.Authentication.Queries.Login;
 using DelightDinner.Contracts.Authentication;
 using DelightDinner.Domain.Common.Errors;
 
-using ErrorOr;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;

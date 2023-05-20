@@ -9,7 +9,6 @@ namespace DelightDinner.Api.Controllers;
 
 [ApiController]
 [Authorize]
-[Route("")]
 public class ApiController : ControllerBase
 {
     public IActionResult Problem(List<Error> errors)

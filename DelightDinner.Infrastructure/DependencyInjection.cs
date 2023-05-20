@@ -13,7 +13,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-
 using System.Text;
 
 namespace DelightDinner.Infrastructure;
@@ -40,10 +39,11 @@ public static class DependencyInjection
         services.AddDbContext<DelightDinnerDbContext>(options => 
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-        services.AddScoped<PublishDomainEventsInterceptor>();
         services.AddScoped<IUserReposetory, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         services.AddScoped<IDinnerRepository, DinnerRepository>();
+
+        services.AddScoped<PublishDomainEventsInterceptor>();
 
         return services;
     }

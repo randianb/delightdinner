@@ -12,6 +12,7 @@ public static class DependencyInjection
         services.AddMappings();
         services.AddControllers();
         services.AddSingleton<ProblemDetailsFactory, DelightDinnerProblemDetailsFactory>();
+
         return services;
     }
 }
