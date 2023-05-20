@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Domain.BillAggregate;
 using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.DinnerAggregate;
-using DelightDinner.Domain.Guest;
+using DelightDinner.Domain.GuestAggregate;
 using DelightDinner.Domain.Host;
 using DelightDinner.Domain.Menu;
 using DelightDinner.Domain.MenuReview;

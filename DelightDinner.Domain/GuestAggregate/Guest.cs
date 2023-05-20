@@ -1,12 +1,12 @@
 ﻿using DelightDinner.Domain.BillAggregate.ValueObjects;
 using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Guest.Entities;
-using DelightDinner.Domain.Guest.ValueObjects;
+using DelightDinner.Domain.GuestAggregate.Entities;
+using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.MenuReview.ValueObjects;
 using DelightDinner.Domain.User.ValueObjects;
 
-namespace DelightDinner.Domain.Guest;
+namespace DelightDinner.Domain.GuestAggregate;
 
 public class Guest : AggregateRoot<GuestId, Guid>
 {

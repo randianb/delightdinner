@@ -1,12 +1,12 @@
 ﻿using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Guest.ValueObjects;
+using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 
 using ErrorOr;
 
-namespace DelightDinner.Domain.Guest.Entities;
+namespace DelightDinner.Domain.GuestAggregate.Entities;
 
 public class GuestRating : Entity<GuestRatingId>
 {

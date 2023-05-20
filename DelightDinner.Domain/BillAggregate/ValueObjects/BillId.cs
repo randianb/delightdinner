@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Guest.ValueObjects;
+using DelightDinner.Domain.GuestAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.BillAggregate.ValueObjects;
 

@@ -2,7 +2,7 @@
 using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.DinnerAggregate.Enums;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Guest.ValueObjects;
+using DelightDinner.Domain.GuestAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.DinnerAggregate.Entities;
 

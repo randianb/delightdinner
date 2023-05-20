@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Models;
 
-namespace DelightDinner.Domain.Guest.ValueObjects;
+namespace DelightDinner.Domain.GuestAggregate.ValueObjects;
 
 public class GuestRatingId : ValueObject
 {

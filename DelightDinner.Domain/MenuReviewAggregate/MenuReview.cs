@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Guest.ValueObjects;
+using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;
 using DelightDinner.Domain.MenuReview.ValueObjects;
@@ -16,7 +16,6 @@ public class MenuReview : AggregateRoot<MenuReviewId, Guid>
     public MenuId MenuId { get; private set; }
     public GuestId GuestId { get; private set; }
     public DinnerId DinnerId { get; private set; }
-
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 

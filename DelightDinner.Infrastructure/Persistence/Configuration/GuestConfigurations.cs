@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Guest;
-using DelightDinner.Domain.Guest.ValueObjects;
+using DelightDinner.Domain.GuestAggregate;
+using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.User.ValueObjects;
 

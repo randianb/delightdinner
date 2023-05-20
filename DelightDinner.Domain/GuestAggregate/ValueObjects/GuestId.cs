@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
 
-namespace DelightDinner.Domain.Guest.ValueObjects;
+namespace DelightDinner.Domain.GuestAggregate.ValueObjects;
 
 public class GuestId : AggregateRootId<Guid>
 {
