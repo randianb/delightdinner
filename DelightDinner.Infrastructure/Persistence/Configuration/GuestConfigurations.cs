@@ -1,4 +1,4 @@
-﻿using DelightDinner.Domain.Dinner.ValueObjects;
+﻿using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.Guest;
 using DelightDinner.Domain.Guest.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;

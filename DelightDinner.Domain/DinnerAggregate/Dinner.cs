@@ -1,12 +1,12 @@
 ﻿using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Dinner.Entities;
-using DelightDinner.Domain.Dinner.Enums;
-using DelightDinner.Domain.Dinner.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate.Entities;
+using DelightDinner.Domain.DinnerAggregate.Enums;
+using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.Events;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;
 
-namespace DelightDinner.Domain.Dinner;
+namespace DelightDinner.Domain.DinnerAggregate;
 
 public class Dinner : AggregateRoot<DinnerId, Guid>
 {

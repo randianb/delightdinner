@@ -1,7 +1,7 @@
-﻿using DelightDinner.Domain.Bill.ValueObjects;
-using DelightDinner.Domain.Dinner;
-using DelightDinner.Domain.Dinner.Enums;
-using DelightDinner.Domain.Dinner.ValueObjects;
+﻿using DelightDinner.Domain.BillAggregate.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate;
+using DelightDinner.Domain.DinnerAggregate.Enums;
+using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;

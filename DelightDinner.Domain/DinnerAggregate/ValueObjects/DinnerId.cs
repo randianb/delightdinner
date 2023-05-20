@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
 
-namespace DelightDinner.Domain.Dinner.ValueObjects;
+namespace DelightDinner.Domain.DinnerAggregate.ValueObjects;
 
 public sealed class DinnerId : AggregateRootId<Guid> 
 {

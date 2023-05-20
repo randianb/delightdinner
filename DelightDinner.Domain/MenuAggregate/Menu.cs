@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.Common.ValueObjects;
-using DelightDinner.Domain.Dinner.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 using DelightDinner.Domain.Menu.Entities;
 using DelightDinner.Domain.Menu.MenuObjects;

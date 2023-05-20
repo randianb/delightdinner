@@ -1,10 +1,10 @@
-﻿using DelightDinner.Domain.Bill.ValueObjects;
+﻿using DelightDinner.Domain.BillAggregate.ValueObjects;
 using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Dinner.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 using DelightDinner.Domain.Host.ValueObjects;
 
-namespace DelightDinner.Domain.Bill;
+namespace DelightDinner.Domain.BillAggregate;
 
 public sealed class Bill : AggregateRoot<BillId, string>
 {

@@ -1,6 +1,6 @@
 ﻿using Ardalis.SmartEnum;
 
-namespace DelightDinner.Domain.Dinner.Enums;
+namespace DelightDinner.Domain.DinnerAggregate.Enums;
 
 public class DinnerStatus : SmartEnum<DinnerStatus>
 {

@@ -1,10 +1,10 @@
-﻿using DelightDinner.Domain.Bill.ValueObjects;
+﻿using DelightDinner.Domain.BillAggregate.ValueObjects;
 using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Dinner.Enums;
-using DelightDinner.Domain.Dinner.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate.Enums;
+using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 
-namespace DelightDinner.Domain.Dinner.Entities;
+namespace DelightDinner.Domain.DinnerAggregate.Entities;
 
 public class Reservation : Entity<ReservationId>
 {

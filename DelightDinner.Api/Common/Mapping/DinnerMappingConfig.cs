@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Application.Dinners.Commands.CreateDinner;
 using DelightDinner.Application.Dinners.Queries.ListDinners;
 using DelightDinner.Contracts.Dinner;
-using DelightDinner.Domain.Dinner;
+using DelightDinner.Domain.DinnerAggregate;
 
 using Mapster;
 

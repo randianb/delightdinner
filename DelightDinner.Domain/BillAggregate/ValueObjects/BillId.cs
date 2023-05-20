@@ -1,8 +1,8 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
-using DelightDinner.Domain.Dinner.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.Guest.ValueObjects;
 
-namespace DelightDinner.Domain.Bill.ValueObjects;
+namespace DelightDinner.Domain.BillAggregate.ValueObjects;
 
 public class BillId : AggregateRootId<string>
 {

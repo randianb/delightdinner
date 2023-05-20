@@ -2,4 +2,4 @@
 
 namespace DelightDinner.Domain.DinnerAggregate.Events;
 
-public record DinnerCreated(Dinner.Dinner Dinner) : IDomainEvent;
+public record DinnerCreated(Dinner Dinner) : IDomainEvent;

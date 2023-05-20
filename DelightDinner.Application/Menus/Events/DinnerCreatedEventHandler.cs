@@ -1,5 +1,5 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
-using DelightDinner.Domain.Dinner.ValueObjects;
+using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.Events;
 using DelightDinner.Domain.Menu;
 

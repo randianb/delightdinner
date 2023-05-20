@@ -1,6 +1,6 @@
-﻿using DelightDinner.Domain.Bill;
+﻿using DelightDinner.Domain.BillAggregate;
 using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Dinner;
+using DelightDinner.Domain.DinnerAggregate;
 using DelightDinner.Domain.Guest;
 using DelightDinner.Domain.Host;
 using DelightDinner.Domain.Menu;
