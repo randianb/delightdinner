@@ -6,13 +6,12 @@ using DelightDinner.Domain.Host.ValueObjects;
 
 namespace DelightDinner.Domain.Bill;
 
-public class Bill : AggregateRoot<BillId, string>
+public sealed class Bill : AggregateRoot<BillId, string>
 {
     public DinnerId DinnerId { get; private set; }
     public GuestId GuestId { get; private set; }
     public HostId HostId { get; private set; }
     public Price Amount { get; private set; }
-
     public DateTime CreateDateTime { get; private set; }
     public DateTime UpdateDateTime { get; private set; }
 

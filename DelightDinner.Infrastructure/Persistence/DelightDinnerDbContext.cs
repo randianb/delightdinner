@@ -57,6 +57,7 @@ public class DelightDinnerDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.AddInterceptors(_publishDomainEventsInterceptor);
+
         base.OnConfiguring(optionsBuilder);
     }
 }

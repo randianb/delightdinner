@@ -1,4 +1,6 @@
-﻿namespace DelightDinner.Domain.Common.Models;
+﻿using DelightDinner.Domain.Common.Models.Identities;
+
+namespace DelightDinner.Domain.Common.Models;
 
 public abstract class AggregateRoot<TId, TIdType> : Entity<TId>
     where TId : AggregateRootId<TIdType>

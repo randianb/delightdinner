@@ -1,14 +1,11 @@
-﻿using DelightDinner.Domain.Common.Models;
+﻿using DelightDinner.Domain.Common.Models.Identities;
 
 namespace DelightDinner.Domain.Guest.ValueObjects;
 
 public class GuestId : AggregateRootId<Guid>
 {
-    public override Guid Value { get; protected set; }
-
-    private GuestId(Guid value)
+    private GuestId(Guid value) : base(value)
     {
-        Value = value;
     }
 
     public static GuestId CreateUnique()
@@ -20,15 +17,4 @@ public class GuestId : AggregateRootId<Guid>
     {
         return new(value);
     }
-
-    public override IEnumerable<object> GetEqualityComponents()
-    {
-        yield return Value;
-    }
-
-#pragma warning disable CS8618
-    private GuestId()
-    {
-    }
-#pragma warning restore CS8618
 }
