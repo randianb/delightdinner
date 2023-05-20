@@ -2,8 +2,8 @@
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.MenuAggregate.MenuObjects;
-using DelightDinner.Domain.MenuReview;
-using DelightDinner.Domain.MenuReview.ValueObjects;
+using DelightDinner.Domain.MenuReviewAggregate;
+using DelightDinner.Domain.MenuReviewAggregate.ValueObjects;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

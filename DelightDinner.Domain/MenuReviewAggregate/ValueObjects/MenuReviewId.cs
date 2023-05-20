@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
 
-namespace DelightDinner.Domain.MenuReview.ValueObjects;
+namespace DelightDinner.Domain.MenuReviewAggregate.ValueObjects;
 
 public sealed class MenuReviewId : AggregateRootId<Guid>
 {

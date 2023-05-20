@@ -4,7 +4,7 @@ using DelightDinner.Domain.DinnerAggregate;
 using DelightDinner.Domain.GuestAggregate;
 using DelightDinner.Domain.HostAggregate;
 using DelightDinner.Domain.MenuAggregate;
-using DelightDinner.Domain.MenuReview;
+using DelightDinner.Domain.MenuReviewAggregate;
 using DelightDinner.Domain.User;
 using DelightDinner.Infrastructure.Persistence.Interceptors;
 

@@ -4,9 +4,9 @@ using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.MenuAggregate.MenuObjects;
-using DelightDinner.Domain.MenuReview.ValueObjects;
+using DelightDinner.Domain.MenuReviewAggregate.ValueObjects;
 
-namespace DelightDinner.Domain.MenuReview;
+namespace DelightDinner.Domain.MenuReviewAggregate;
 
 public sealed class MenuReview : AggregateRoot<MenuReviewId, Guid>
 {

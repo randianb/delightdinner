@@ -5,7 +5,7 @@ using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.MenuAggregate.Entities;
 using DelightDinner.Domain.MenuAggregate.MenuObjects;
 using DelightDinner.Domain.MenuAggregate.Events;
-using DelightDinner.Domain.MenuReview.ValueObjects;
+using DelightDinner.Domain.MenuReviewAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.MenuAggregate;
 
