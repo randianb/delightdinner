@@ -6,7 +6,7 @@ using DelightDinner.Domain.GuestAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.DinnerAggregate.Entities;
 
-public class Reservation : Entity<ReservationId>
+public sealed class Reservation : Entity<ReservationId>
 {
     public uint GuestCount { get; private set; }
     public ReservationStatus ReservationStatus { get; private set; }

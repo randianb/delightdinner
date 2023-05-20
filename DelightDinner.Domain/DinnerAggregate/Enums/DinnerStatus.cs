@@ -2,7 +2,7 @@
 
 namespace DelightDinner.Domain.DinnerAggregate.Enums;
 
-public class DinnerStatus : SmartEnum<DinnerStatus>
+public sealed class DinnerStatus : SmartEnum<DinnerStatus>
 {
     public DinnerStatus(string name, int value) 
         : base(name, value) 

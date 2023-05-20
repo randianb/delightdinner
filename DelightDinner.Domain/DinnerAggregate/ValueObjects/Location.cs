@@ -2,7 +2,7 @@
 
 namespace DelightDinner.Domain.DinnerAggregate.ValueObjects;
 
-public class Location : ValueObject
+public sealed class Location : ValueObject
 {
     public string Name { get; private set; }
     public string Address { get; private set; }

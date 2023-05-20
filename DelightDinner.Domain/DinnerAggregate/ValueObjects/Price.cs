@@ -2,7 +2,7 @@
 
 namespace DelightDinner.Domain.DinnerAggregate.ValueObjects;
 
-public class Price : ValueObject
+public sealed class Price : ValueObject
 {
     public decimal Amount { get; private set; }
     public string Currency { get; private set; }

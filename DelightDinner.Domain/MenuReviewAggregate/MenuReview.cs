@@ -8,7 +8,7 @@ using DelightDinner.Domain.MenuReview.ValueObjects;
 
 namespace DelightDinner.Domain.MenuReview;
 
-public class MenuReview : AggregateRoot<MenuReviewId, Guid>
+public sealed class MenuReview : AggregateRoot<MenuReviewId, Guid>
 {
     public Rating Rating { get; private set; }
     public string Comment { get; private set; }

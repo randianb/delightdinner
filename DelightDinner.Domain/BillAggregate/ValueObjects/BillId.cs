@@ -4,7 +4,7 @@ using DelightDinner.Domain.GuestAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.BillAggregate.ValueObjects;
 
-public class BillId : AggregateRootId<string>
+public sealed class BillId : AggregateRootId<string>
 {
     private BillId(string value) : base(value)
     {
