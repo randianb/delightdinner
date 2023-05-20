@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.Events;
-using DelightDinner.Domain.Menu;
+using DelightDinner.Domain.MenuAggregate;
 
 using MediatR;
 

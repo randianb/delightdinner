@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Domain.Common.Models;
 
-namespace DelightDinner.Domain.Menu.MenuObjects;
+namespace DelightDinner.Domain.MenuAggregate.MenuObjects;
 
 public sealed class MenuSectionId : ValueObject
 {

@@ -2,12 +2,12 @@
 using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
-using DelightDinner.Domain.Menu.MenuObjects;
+using DelightDinner.Domain.MenuAggregate.MenuObjects;
 using DelightDinner.Domain.User.ValueObjects;
 
 namespace DelightDinner.Domain.HostAggregate;
 
-public class Host : AggregateRoot<HostId, string>
+public sealed class Host : AggregateRoot<HostId, string>
 {
     private readonly List<MenuId> _menuIds = new();
     private readonly List<DinnerId> _dinnerIds = new();

@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
-using DelightDinner.Domain.Menu;
+using DelightDinner.Domain.MenuAggregate;
 
 using ErrorOr;
 using MediatR;

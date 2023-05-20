@@ -2,4 +2,4 @@
 
 namespace DelightDinner.Domain.MenuAggregate.Events;
 
-public record MenuCreated(Menu.Menu Menu) : IDomainEvent;
+public record MenuCreated(Menu Menu) : IDomainEvent;

@@ -4,11 +4,11 @@ using DelightDinner.Domain.DinnerAggregate.Enums;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.Events;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
-using DelightDinner.Domain.Menu.MenuObjects;
+using DelightDinner.Domain.MenuAggregate.MenuObjects;
 
 namespace DelightDinner.Domain.DinnerAggregate;
 
-public class Dinner : AggregateRoot<DinnerId, Guid>
+public sealed class Dinner : AggregateRoot<DinnerId, Guid>
 {
     private readonly List<Reservation> _reservations = new();
 

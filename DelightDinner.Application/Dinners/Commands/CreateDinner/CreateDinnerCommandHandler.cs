@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Domain.DinnerAggregate;
-using DelightDinner.Domain.Menu.MenuObjects;
+using DelightDinner.Domain.MenuAggregate.MenuObjects;
 using DelightDinner.Domain.Common.Errors;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.HostAggregate.ValueObjects;

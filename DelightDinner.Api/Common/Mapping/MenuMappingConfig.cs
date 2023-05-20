@@ -1,12 +1,12 @@
-﻿using Mapster;
-
-using DelightDinner.Application.Menus.Queries.ListMenus;
+﻿using DelightDinner.Application.Menus.Queries.ListMenus;
 using DelightDinner.Application.Menus.Commands.CreateMenu;
 using DelightDinner.Contracts.Menu;
-using DelightDinner.Domain.Menu;
+using DelightDinner.Domain.MenuAggregate;
 
-using MenuSection = DelightDinner.Domain.Menu.Entities.MenuSection;
-using MenuItem = DelightDinner.Domain.Menu.Entities.MenuItem;
+using Mapster;
+
+using MenuSection = DelightDinner.Domain.MenuAggregate.Entities.MenuSection;
+using MenuItem = DelightDinner.Domain.MenuAggregate.Entities.MenuItem;
 
 namespace DelightDinner.Api.Common.Mapping;
 

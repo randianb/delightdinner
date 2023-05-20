@@ -1,4 +1,4 @@
-﻿using DelightDinner.Domain.Menu;
+﻿using DelightDinner.Domain.MenuAggregate;
 
 using ErrorOr;
 using MediatR;

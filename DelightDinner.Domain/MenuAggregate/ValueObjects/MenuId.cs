@@ -3,7 +3,7 @@ using DelightDinner.Domain.Common.Models.Identities;
 
 using ErrorOr;
 
-namespace DelightDinner.Domain.Menu.MenuObjects;
+namespace DelightDinner.Domain.MenuAggregate.MenuObjects;
 
 public sealed class MenuId : AggregateRootId<Guid>
 {

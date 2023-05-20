@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.Menu.MenuObjects;
+using DelightDinner.Domain.MenuAggregate.MenuObjects;
 
-namespace DelightDinner.Domain.Menu.Entities;
+namespace DelightDinner.Domain.MenuAggregate.Entities;
 
 public sealed class MenuItem : Entity<MenuItemId>
 {

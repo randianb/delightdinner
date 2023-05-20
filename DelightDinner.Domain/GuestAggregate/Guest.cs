@@ -8,7 +8,7 @@ using DelightDinner.Domain.User.ValueObjects;
 
 namespace DelightDinner.Domain.GuestAggregate;
 
-public class Guest : AggregateRoot<GuestId, Guid>
+public sealed class Guest : AggregateRoot<GuestId, Guid>
 {
     private readonly List<DinnerId> _upcommingDinnerIds = new();
     private readonly List<DinnerId> _pastDinnerIds = new();

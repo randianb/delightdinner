@@ -2,12 +2,12 @@
 using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
-using DelightDinner.Domain.Menu.Entities;
-using DelightDinner.Domain.Menu.MenuObjects;
+using DelightDinner.Domain.MenuAggregate.Entities;
+using DelightDinner.Domain.MenuAggregate.MenuObjects;
 using DelightDinner.Domain.MenuAggregate.Events;
 using DelightDinner.Domain.MenuReview.ValueObjects;
 
-namespace DelightDinner.Domain.Menu;
+namespace DelightDinner.Domain.MenuAggregate;
 
 public sealed class Menu : AggregateRoot<MenuId, Guid>
 {
