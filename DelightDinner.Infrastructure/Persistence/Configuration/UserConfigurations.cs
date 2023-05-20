@@ -1,5 +1,5 @@
-﻿using DelightDinner.Domain.User;
-using DelightDinner.Domain.User.ValueObjects;
+﻿using DelightDinner.Domain.UserAggregate;
+using DelightDinner.Domain.UserAggregate.ValueObjects;
 
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;

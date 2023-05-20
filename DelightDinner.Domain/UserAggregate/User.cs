@@ -1,15 +1,14 @@
 ﻿using DelightDinner.Domain.Common.Models;
-using DelightDinner.Domain.User.ValueObjects;
+using DelightDinner.Domain.UserAggregate.ValueObjects;
 
-namespace DelightDinner.Domain.User;
+namespace DelightDinner.Domain.UserAggregate;
 
-public class User : AggregateRoot<UserId, Guid>
+public sealed class User : AggregateRoot<UserId, Guid>
 {
     public string FirstName { get; private set; }
     public string LastName { get; private set; }
     public string Email { get; private set; }
     public string Password { get; private set; } // TODO: Hash password
-
     public DateTime CreateDateTime { get; private set; }
     public DateTime UpdateDateTime { get; private set; }
 

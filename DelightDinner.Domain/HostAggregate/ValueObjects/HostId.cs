@@ -1,5 +1,5 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
-using DelightDinner.Domain.User.ValueObjects;
+using DelightDinner.Domain.UserAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.HostAggregate.ValueObjects;
 

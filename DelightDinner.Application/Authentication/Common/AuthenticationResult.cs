@@ -1,4 +1,4 @@
-﻿using DelightDinner.Domain.User;
+﻿using DelightDinner.Domain.UserAggregate;
 
 namespace DelightDinner.Application.Authentication.Common;
 

@@ -5,7 +5,7 @@ using DelightDinner.Domain.GuestAggregate;
 using DelightDinner.Domain.HostAggregate;
 using DelightDinner.Domain.MenuAggregate;
 using DelightDinner.Domain.MenuReviewAggregate;
-using DelightDinner.Domain.User;
+using DelightDinner.Domain.UserAggregate;
 using DelightDinner.Infrastructure.Persistence.Interceptors;
 
 using Microsoft.EntityFrameworkCore;

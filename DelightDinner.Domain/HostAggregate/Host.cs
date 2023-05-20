@@ -3,7 +3,7 @@ using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.MenuAggregate.MenuObjects;
-using DelightDinner.Domain.User.ValueObjects;
+using DelightDinner.Domain.UserAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.HostAggregate;
 

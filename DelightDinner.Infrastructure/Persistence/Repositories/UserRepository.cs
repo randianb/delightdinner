@@ -1,5 +1,5 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
-using DelightDinner.Domain.User;
+using DelightDinner.Domain.UserAggregate;
 
 namespace DelightDinner.Infrastructure.Persistence.Repositories;
 

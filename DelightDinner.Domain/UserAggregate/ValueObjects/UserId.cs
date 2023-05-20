@@ -1,8 +1,8 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
 
-namespace DelightDinner.Domain.User.ValueObjects;
+namespace DelightDinner.Domain.UserAggregate.ValueObjects;
 
-public class UserId : AggregateRootId<Guid>
+public sealed class UserId : AggregateRootId<Guid>
 {
     public UserId(Guid value) : base(value)
     {

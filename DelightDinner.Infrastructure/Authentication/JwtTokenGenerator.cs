@@ -1,12 +1,12 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿using DelightDinner.Application.Common.Interfaces.Authentication;
+using DelightDinner.Domain.UserAggregate;
+using DelightDinner.Application.Common.Interfaces.Services;
+
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-
-using DelightDinner.Application.Common.Interfaces.Authentication;
-using DelightDinner.Domain.User;
-using DelightDinner.Application.Common.Interfaces.Services;
 
 namespace DelightDinner.Infrastructure.Authentication;
 

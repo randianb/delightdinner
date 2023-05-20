@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Application.Authentication.Common;
 using DelightDinner.Application.Common.Interfaces.Authentication;
 using DelightDinner.Application.Common.Interfaces.Persistence;
-using DelightDinner.Domain.User;
+using DelightDinner.Domain.UserAggregate;
 using DelightDinner.Domain.Common.Errors;
 
 using ErrorOr;

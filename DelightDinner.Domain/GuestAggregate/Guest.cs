@@ -4,7 +4,7 @@ using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.GuestAggregate.Entities;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.MenuReviewAggregate.ValueObjects;
-using DelightDinner.Domain.User.ValueObjects;
+using DelightDinner.Domain.UserAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.GuestAggregate;
 
