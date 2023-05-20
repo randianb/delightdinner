@@ -1,6 +1,6 @@
 ﻿using DelightDinner.Application.Common.Interfaces.Persistence;
 using DelightDinner.Domain.DinnerAggregate;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 
 using Microsoft.EntityFrameworkCore;
 

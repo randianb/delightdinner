@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.GuestAggregate;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.User.ValueObjects;
 
 using Microsoft.EntityFrameworkCore;

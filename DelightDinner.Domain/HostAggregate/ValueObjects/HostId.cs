@@ -1,7 +1,7 @@
 ﻿using DelightDinner.Domain.Common.Models.Identities;
 using DelightDinner.Domain.User.ValueObjects;
 
-namespace DelightDinner.Domain.Host.ValueObjects;
+namespace DelightDinner.Domain.HostAggregate.ValueObjects;
 
 public sealed class HostId : AggregateRootId<string>
 {

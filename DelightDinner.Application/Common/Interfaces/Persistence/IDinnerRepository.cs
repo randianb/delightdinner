@@ -1,5 +1,5 @@
 ﻿using DelightDinner.Domain.DinnerAggregate;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 
 namespace DelightDinner.Application.Common.Interfaces.Persistence;
 

@@ -1,11 +1,11 @@
 ﻿using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.Common.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;
 using DelightDinner.Domain.User.ValueObjects;
 
-namespace DelightDinner.Domain.Host;
+namespace DelightDinner.Domain.HostAggregate;
 
 public class Host : AggregateRoot<HostId, string>
 {
@@ -17,10 +17,8 @@ public class Host : AggregateRoot<HostId, string>
     public Uri ProfileImage { get; private set; }
     public AverageRating AverageRating { get; private set; }
     public UserId UserId { get; private set; }
-
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
     public IReadOnlyList<MenuId> MenuIds => _menuIds.AsReadOnly();
-
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 

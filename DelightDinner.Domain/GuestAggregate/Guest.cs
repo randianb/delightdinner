@@ -21,14 +21,12 @@ public class Guest : AggregateRoot<GuestId, Guid>
     public string LastName { get; private set; }
     public Uri ProfileImage { get; private set; }
     public UserId UserId { get; private set; }
-
     public IReadOnlyList<DinnerId> UpcommingDinnerIds => _upcommingDinnerIds.AsReadOnly();
     public IReadOnlyList<DinnerId> PastDinnerIds => _pastDinnerIds.AsReadOnly();
     public IReadOnlyList<DinnerId> PendingDinnerIds => _pendingDinnerIds.AsReadOnly();
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
     public IReadOnlyList<GuestRating> Ratings => _ratings.AsReadOnly();
     public IReadOnlyList<BillId> BillIds => _billIds.AsReadOnly();
-
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 

@@ -3,7 +3,7 @@ using DelightDinner.Domain.DinnerAggregate;
 using DelightDinner.Domain.DinnerAggregate.Enums;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;
 
 using Microsoft.EntityFrameworkCore;

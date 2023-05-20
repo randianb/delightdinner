@@ -2,7 +2,7 @@
 using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.BillAggregate;
 

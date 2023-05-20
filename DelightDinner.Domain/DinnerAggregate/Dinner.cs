@@ -3,7 +3,7 @@ using DelightDinner.Domain.DinnerAggregate.Entities;
 using DelightDinner.Domain.DinnerAggregate.Enums;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.DinnerAggregate.Events;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.Menu.MenuObjects;
 
 namespace DelightDinner.Domain.DinnerAggregate;
@@ -26,9 +26,7 @@ public class Dinner : AggregateRoot<DinnerId, Guid>
     public MenuId MenuId { get; private set; }
     public Uri ImageUrl { get; private set; }
     public Location Location { get; private set; }
-
-    public IReadOnlyList<Reservation> Reservations => _reservations.AsReadOnly();
-    
+    public IReadOnlyList<Reservation> Reservations => _reservations.AsReadOnly();    
     public DateTime CreatedDateTime { get; private set; }
     public DateTime UpdatedDateTime { get; private set; }
 

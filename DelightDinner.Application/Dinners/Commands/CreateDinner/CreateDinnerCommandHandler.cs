@@ -3,7 +3,7 @@ using DelightDinner.Domain.DinnerAggregate;
 using DelightDinner.Domain.Menu.MenuObjects;
 using DelightDinner.Domain.Common.Errors;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
-using DelightDinner.Domain.Host.ValueObjects;
+using DelightDinner.Domain.HostAggregate.ValueObjects;
 
 using ErrorOr;
 using MediatR;
