@@ -2,6 +2,8 @@
 using DelightDinner.Domain.Dinner;
 using DelightDinner.Domain.Host.ValueObjects;
 
+using Microsoft.EntityFrameworkCore;
+
 namespace DelightDinner.Infrastructure.Persistence.Repositories;
 
 public class DinnerRepository : IDinnerRepository
@@ -13,16 +15,16 @@ public class DinnerRepository : IDinnerRepository
         _dbContext = dbContext;
     }
 
-    public void Add(Dinner dinner)
+    public async Task AddAsync(Dinner dinner)
     {
         _dbContext.Add(dinner);
-        _dbContext.SaveChanges();
+        await _dbContext.SaveChangesAsync();
     }
 
-    public List<Dinner> List(HostId hostId)
+    public async Task<List<Dinner>> ListAsync(HostId hostId)
     {
-        return _dbContext.Dinners
+        return await _dbContext.Dinners
             .Where(x => x.HostId == hostId)
-            .ToList();
+            .ToListAsync();
     }
 }

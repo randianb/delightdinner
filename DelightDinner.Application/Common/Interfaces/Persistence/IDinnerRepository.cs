@@ -5,7 +5,7 @@ namespace DelightDinner.Application.Common.Interfaces.Persistence;
 
 public interface IDinnerRepository
 {
-    void Add(Dinner dinner);
+    Task AddAsync(Dinner dinner);
 
-    List<Dinner> List(HostId hostId);
+    Task<List<Dinner>> ListAsync(HostId hostId);
 }
