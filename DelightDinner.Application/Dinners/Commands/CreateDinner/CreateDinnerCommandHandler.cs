@@ -61,7 +61,7 @@ public class CreateDinnerCommandHandler
                 command.Location.Latitude,
                 command.Location.Longtitude));
 
-        _dinnerRepository.Add(dinner);
+        await _dinnerRepository.AddAsync(dinner);
 
         return dinner;
     }

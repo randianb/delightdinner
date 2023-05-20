@@ -24,6 +24,6 @@ public class ListDinnersQueryHandler
         await Task.CompletedTask;
 
         var hostId = HostId.Create(query.HostId);
-        return _dinnerRepository.List(hostId);
+        return await _dinnerRepository.ListAsync(hostId);
     }
 }
