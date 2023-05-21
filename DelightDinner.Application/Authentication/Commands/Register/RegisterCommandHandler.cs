@@ -9,8 +9,7 @@ using MediatR;
 
 namespace DelightDinner.Application.Authentication.Commands.Register;
 
-public class RegisterCommandHandler :
-    IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
+public class RegisterCommandHandler : IRequestHandler<RegisterCommand, ErrorOr<AuthenticationResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserReposetory _userReposetory;
@@ -30,7 +29,7 @@ public class RegisterCommandHandler :
         await Task.CompletedTask;
 
         // 1. Validate the user doesn't exist.
-        if (_userReposetory.GetUserByEmail(command.Email) is not null)
+        if (await _userReposetory.GetUserByEmailAsync(command.Email) is not null)
         {
             return Errors.User.DuplicateEmail;
         }
@@ -42,7 +41,7 @@ public class RegisterCommandHandler :
             command.Email,
             command.Password);
 
-        _userReposetory.Add(user);
+        await _userReposetory.AddAsync(user);
 
         // 3. Create a JWT-token. 
         var token = _jwtTokenGenerator.GenerateToken(user);

@@ -4,7 +4,7 @@ namespace DelightDinner.Application.Common.Interfaces.Persistence;
 
 public interface IUserReposetory
 {
-    void Add(User user);
+    Task AddAsync(User user);
 
-    User? GetUserByEmail(string email);    
+    Task<User?> GetUserByEmailAsync(string email);    
 }
