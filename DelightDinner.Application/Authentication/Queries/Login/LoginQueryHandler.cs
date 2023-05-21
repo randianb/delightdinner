@@ -9,8 +9,7 @@ using MediatR;
 
 namespace DelightDinner.Application.Authentication.Queries.Login;
 
-public class LoginQueryHandler :
-    IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
+public class LoginQueryHandler : IRequestHandler<LoginQuery, ErrorOr<AuthenticationResult>>
 {
     private readonly IJwtTokenGenerator _jwtTokenGenerator;
     private readonly IUserReposetory _userReposetory;
@@ -23,7 +22,9 @@ public class LoginQueryHandler :
         _userReposetory = userReposetory;
     }
 
-    public async Task<ErrorOr<AuthenticationResult>> Handle(LoginQuery query, CancellationToken cancellationToken)
+    public async Task<ErrorOr<AuthenticationResult>> Handle(
+        LoginQuery query, 
+        CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
 

@@ -1,4 +1,5 @@
 ﻿using DelightDinner.Application.Authentication.Common;
+
 using ErrorOr;
 using MediatR;
 

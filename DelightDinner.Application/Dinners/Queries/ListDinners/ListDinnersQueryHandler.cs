@@ -7,8 +7,7 @@ using MediatR;
 
 namespace DelightDinner.Application.Dinners.Queries.ListDinners;
 
-public class ListDinnersQueryHandler 
-    : IRequestHandler<ListDinnersQuery, ErrorOr<List<Dinner>>>
+public class ListDinnersQueryHandler : IRequestHandler<ListDinnersQuery, ErrorOr<List<Dinner>>>
 {
     private readonly IDinnerRepository _dinnerRepository;
 
