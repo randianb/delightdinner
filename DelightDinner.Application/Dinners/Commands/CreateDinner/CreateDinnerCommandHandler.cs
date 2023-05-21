@@ -10,7 +10,8 @@ using MediatR;
 
 namespace DelightDinner.Application.Dinners.Commands.CreateDinner;
 
-public class CreateDinnerCommandHandler : IRequestHandler<CreateDinnerCommand, ErrorOr<Dinner>>
+public class CreateDinnerCommandHandler : 
+    IRequestHandler<CreateDinnerCommand, ErrorOr<Dinner>>
 {
     private readonly IDinnerRepository _dinnerRepository;
     private readonly IMenuRepository _menuRepository;

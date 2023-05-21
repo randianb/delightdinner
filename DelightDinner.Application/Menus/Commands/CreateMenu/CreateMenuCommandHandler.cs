@@ -7,7 +7,8 @@ using ErrorOr;
 using MediatR;
 
 namespace DelightDinner.Application.Menus.Commands.CreateMenu;
-public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, ErrorOr<Menu>>
+public class CreateMenuCommandHandler : 
+    IRequestHandler<CreateMenuCommand, ErrorOr<Menu>>
 {
     private readonly IMenuRepository _menuRepository;
 
@@ -16,7 +17,9 @@ public class CreateMenuCommandHandler : IRequestHandler<CreateMenuCommand, Error
         _menuRepository = menuRepository;
     }
 
-    public async Task<ErrorOr<Menu>> Handle(CreateMenuCommand request, CancellationToken cancellationToken)
+    public async Task<ErrorOr<Menu>> Handle(
+        CreateMenuCommand request, 
+        CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
 

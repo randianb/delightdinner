@@ -7,7 +7,8 @@ using MediatR;
 
 namespace DelightDinner.Application.Menus.Queries.ListMenus;
 
-public class ListMenusQueryHandler : IRequestHandler<ListMenusQuery, ErrorOr<List<Menu>>>
+public class ListMenusQueryHandler : 
+    IRequestHandler<ListMenusQuery, ErrorOr<List<Menu>>>
 {
     private readonly IMenuRepository _menuRepository;
 
@@ -16,7 +17,9 @@ public class ListMenusQueryHandler : IRequestHandler<ListMenusQuery, ErrorOr<Lis
         _menuRepository = menuRepository;
     }
 
-    public async Task<ErrorOr<List<Menu>>> Handle(ListMenusQuery query, CancellationToken cancellationToken)
+    public async Task<ErrorOr<List<Menu>>> Handle(
+        ListMenusQuery query, 
+        CancellationToken cancellationToken)
     {
         await Task.CompletedTask;
         
