@@ -1,28 +1,38 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.4.33205.214
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Api", "DelightDinner.Api\DelightDinner.Api.csproj", "{1BE3F102-6D39-4593-A0A6-FE4DC56F65E4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Contracts", "DelightDinner.Contracts\DelightDinner.Contracts.csproj", "{8D5AD78C-6CE3-402B-8681-E2A4B1782E37}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Infrastructure", "DelightDinner.Infrastructure\DelightDinner.Infrastructure.csproj", "{D03734FE-69D7-41C7-A37A-B6E4FAE4FCB1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Application", "DelightDinner.Application\DelightDinner.Application.csproj", "{C0DEA2D6-D3E6-4B22-95B1-60A141DF684A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Domain", "DelightDinner.Domain\DelightDinner.Domain.csproj", "{E8877DB9-AF04-446B-9094-7D4564710AEE}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AE9769D6-E3B4-4B56-BB9B-4D287467D047}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{44D179A5-3B41-43F6-B006-0DA442ABBE2B}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
 		Directory.Build.props = Directory.Build.props
+		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{09A98A4E-72F6-4694-B19F-A97DDA5C70BE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B3D3E6A8-9253-457C-89ED-829118BB4423}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModels", "DomainModels", "{3C3F7821-1D38-4627-AEF4-0997CDC0DC5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Api", "src\DelightDinner.Api\DelightDinner.Api.csproj", "{F6B9CC78-5BA8-421A-B392-2E02A1C47330}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Application", "src\DelightDinner.Application\DelightDinner.Application.csproj", "{7EE0329C-DB2C-42E6-86DA-805CF11E9FD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Contracts", "src\DelightDinner.Contracts\DelightDinner.Contracts.csproj", "{8655D93F-573B-4673-A2A5-294FD49A790C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Domain", "src\DelightDinner.Domain\DelightDinner.Domain.csproj", "{B245958C-DEAF-43D4-849D-2334B58E2984}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Infrastructure", "src\DelightDinner.Infrastructure\DelightDinner.Infrastructure.csproj", "{F4DAE4A3-0D60-48FB-9D68-F38CFA93E594}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{C117594A-9BA9-478C-9064-2BD903A54A33}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{5E1F5B6A-1BB9-4CDC-9D63-49A93C2F946F}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\Api\Api.Auth.md = Docs\Api\Api.Auth.md
+		Docs\Api\Api.Dinner.md = Docs\Api\Api.Dinner.md
+		Docs\Api\Api.Menu.md = Docs\Api\Api.Menu.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModels", "DomainModels", "{91E279FA-5466-41B2-B346-EC451A9FF2C4}"
 	ProjectSection(SolutionItems) = preProject
 		Docs\DomainModels\Aggregates.Bill.md = Docs\DomainModels\Aggregates.Bill.md
 		Docs\DomainModels\Aggregates.Dinner.md = Docs\DomainModels\Aggregates.Dinner.md
@@ -33,12 +43,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DomainModels", "DomainModel
 		Docs\DomainModels\Aggregates.User.md = Docs\DomainModels\Aggregates.User.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{6AEE4AE6-848C-443B-AB48-0F4D7D3093C4}"
-	ProjectSection(SolutionItems) = preProject
-		Docs\Api\Api.Auth.md = Docs\Api\Api.Auth.md
-		Docs\Api\Api.Dinner.md = Docs\Api\Api.Dinner.md
-		Docs\Api\Api.Menu.md = Docs\Api\Api.Menu.md
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5832A154-E9F8-41CD-9B8E-93D16E00ADD8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Application.UnitTests", "tests\DelightDinner.Application.UnitTests\DelightDinner.Application.UnitTests.csproj", "{937776CC-6364-4B24-823B-B94738294362}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,35 +53,42 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1BE3F102-6D39-4593-A0A6-FE4DC56F65E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BE3F102-6D39-4593-A0A6-FE4DC56F65E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BE3F102-6D39-4593-A0A6-FE4DC56F65E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BE3F102-6D39-4593-A0A6-FE4DC56F65E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D5AD78C-6CE3-402B-8681-E2A4B1782E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D5AD78C-6CE3-402B-8681-E2A4B1782E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D5AD78C-6CE3-402B-8681-E2A4B1782E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D5AD78C-6CE3-402B-8681-E2A4B1782E37}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D03734FE-69D7-41C7-A37A-B6E4FAE4FCB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D03734FE-69D7-41C7-A37A-B6E4FAE4FCB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D03734FE-69D7-41C7-A37A-B6E4FAE4FCB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D03734FE-69D7-41C7-A37A-B6E4FAE4FCB1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C0DEA2D6-D3E6-4B22-95B1-60A141DF684A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C0DEA2D6-D3E6-4B22-95B1-60A141DF684A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C0DEA2D6-D3E6-4B22-95B1-60A141DF684A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C0DEA2D6-D3E6-4B22-95B1-60A141DF684A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E8877DB9-AF04-446B-9094-7D4564710AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8877DB9-AF04-446B-9094-7D4564710AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8877DB9-AF04-446B-9094-7D4564710AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8877DB9-AF04-446B-9094-7D4564710AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B9CC78-5BA8-421A-B392-2E02A1C47330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B9CC78-5BA8-421A-B392-2E02A1C47330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B9CC78-5BA8-421A-B392-2E02A1C47330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B9CC78-5BA8-421A-B392-2E02A1C47330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE0329C-DB2C-42E6-86DA-805CF11E9FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE0329C-DB2C-42E6-86DA-805CF11E9FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE0329C-DB2C-42E6-86DA-805CF11E9FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE0329C-DB2C-42E6-86DA-805CF11E9FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8655D93F-573B-4673-A2A5-294FD49A790C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8655D93F-573B-4673-A2A5-294FD49A790C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8655D93F-573B-4673-A2A5-294FD49A790C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8655D93F-573B-4673-A2A5-294FD49A790C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B245958C-DEAF-43D4-849D-2334B58E2984}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B245958C-DEAF-43D4-849D-2334B58E2984}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B245958C-DEAF-43D4-849D-2334B58E2984}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B245958C-DEAF-43D4-849D-2334B58E2984}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4DAE4A3-0D60-48FB-9D68-F38CFA93E594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4DAE4A3-0D60-48FB-9D68-F38CFA93E594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4DAE4A3-0D60-48FB-9D68-F38CFA93E594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4DAE4A3-0D60-48FB-9D68-F38CFA93E594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{937776CC-6364-4B24-823B-B94738294362}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937776CC-6364-4B24-823B-B94738294362}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937776CC-6364-4B24-823B-B94738294362}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937776CC-6364-4B24-823B-B94738294362}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{3C3F7821-1D38-4627-AEF4-0997CDC0DC5B} = {09A98A4E-72F6-4694-B19F-A97DDA5C70BE}
-		{6AEE4AE6-848C-443B-AB48-0F4D7D3093C4} = {09A98A4E-72F6-4694-B19F-A97DDA5C70BE}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0541607F-6469-46BD-8DDA-867945F2E549}
+		{F6B9CC78-5BA8-421A-B392-2E02A1C47330} = {B3D3E6A8-9253-457C-89ED-829118BB4423}
+		{7EE0329C-DB2C-42E6-86DA-805CF11E9FD7} = {B3D3E6A8-9253-457C-89ED-829118BB4423}
+		{8655D93F-573B-4673-A2A5-294FD49A790C} = {B3D3E6A8-9253-457C-89ED-829118BB4423}
+		{B245958C-DEAF-43D4-849D-2334B58E2984} = {B3D3E6A8-9253-457C-89ED-829118BB4423}
+		{F4DAE4A3-0D60-48FB-9D68-F38CFA93E594} = {B3D3E6A8-9253-457C-89ED-829118BB4423}
+		{5E1F5B6A-1BB9-4CDC-9D63-49A93C2F946F} = {C117594A-9BA9-478C-9064-2BD903A54A33}
+		{91E279FA-5466-41B2-B346-EC451A9FF2C4} = {C117594A-9BA9-478C-9064-2BD903A54A33}
+		{937776CC-6364-4B24-823B-B94738294362} = {5832A154-E9F8-41CD-9B8E-93D16E00ADD8}
 	EndGlobalSection
 EndGlobal

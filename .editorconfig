@@ -428,5 +428,11 @@ dotnet_diagnostic.SA1118.severity = none
 # SA1601: Partial elements should be documented
 dotnet_diagnostic.SA1601.severity = none
 
+# SA1505: An opening brace should not be followed by a blank line
+dotnet_diagnostic.SA1505.severity = none
+
+# SA1508: A closing brace should not be preceded by a blank line
+dotnet_diagnostic.SA1508.severity = none
+
 [*/Migrations/*]
 generated_code = true
