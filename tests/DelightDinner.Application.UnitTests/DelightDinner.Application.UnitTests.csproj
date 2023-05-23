@@ -22,4 +22,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DelightDinner.Application\DelightDinner.Application.csproj" />
+    <ProjectReference Include="..\..\src\DelightDinner.Domain\DelightDinner.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
