@@ -6,19 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DelightDinner.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class ConfigurationsUpdate : Migration
+    public partial class Init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<Guid>(
-                name: "MenuReviewId",
-                table: "MenuReviewsIds",
-                type: "uniqueidentifier",
-                nullable: false,
-                oldClrType: typeof(string),
-                oldType: "nvarchar(max)");
-
             migrationBuilder.CreateTable(
                 name: "Bills",
                 columns: table => new
@@ -124,6 +116,24 @@ namespace DelightDinner.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Menus",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    AverageRating_Value = table.Column<double>(type: "float", nullable: false),
+                    AverageRating_NumRatings = table.Column<int>(type: "int", nullable: false),
+                    HostId = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedDateTime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Menus", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -170,8 +180,8 @@ namespace DelightDinner.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    BillId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BillId = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -189,8 +199,8 @@ namespace DelightDinner.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    MenuReviewId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MenuReviewId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -208,8 +218,8 @@ namespace DelightDinner.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    DinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -227,8 +237,8 @@ namespace DelightDinner.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    DinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -269,8 +279,8 @@ namespace DelightDinner.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    DinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    GuestId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -288,8 +298,8 @@ namespace DelightDinner.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    HostDinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    HostId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    HostId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    HostDinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -307,8 +317,8 @@ namespace DelightDinner.Infrastructure.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
-                    HostMenuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    HostId = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    HostId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    HostMenuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -318,6 +328,85 @@ namespace DelightDinner.Infrastructure.Migrations
                         column: x => x.HostId,
                         principalTable: "Hosts",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MenuDinnerIds",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    MenuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DinnerId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MenuDinnerIds", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MenuDinnerIds_Menus_MenuId",
+                        column: x => x.MenuId,
+                        principalTable: "Menus",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MenuReviewsIds",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    MenuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MenuReviewId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MenuReviewsIds", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MenuReviewsIds_Menus_MenuId",
+                        column: x => x.MenuId,
+                        principalTable: "Menus",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MenuSections",
+                columns: table => new
+                {
+                    MenuSectionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MenuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MenuSections", x => new { x.MenuSectionId, x.MenuId });
+                    table.ForeignKey(
+                        name: "FK_MenuSections_Menus_MenuId",
+                        column: x => x.MenuId,
+                        principalTable: "Menus",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MenuItems",
+                columns: table => new
+                {
+                    MenuItemId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MenuSectionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MenuId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MenuItems", x => new { x.MenuItemId, x.MenuSectionId, x.MenuId });
+                    table.ForeignKey(
+                        name: "FK_MenuItems_MenuSections_MenuSectionId_MenuId",
+                        columns: x => new { x.MenuSectionId, x.MenuId },
+                        principalTable: "MenuSections",
+                        principalColumns: new[] { "MenuSectionId", "MenuId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -360,6 +449,26 @@ namespace DelightDinner.Infrastructure.Migrations
                 name: "IX_HostMenuIds_HostId",
                 table: "HostMenuIds",
                 column: "HostId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MenuDinnerIds_MenuId",
+                table: "MenuDinnerIds",
+                column: "MenuId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MenuItems_MenuSectionId_MenuId",
+                table: "MenuItems",
+                columns: new[] { "MenuSectionId", "MenuId" });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MenuReviewsIds_MenuId",
+                table: "MenuReviewsIds",
+                column: "MenuId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MenuSections_MenuId",
+                table: "MenuSections",
+                column: "MenuId");
         }
 
         /// <inheritdoc />
@@ -393,7 +502,16 @@ namespace DelightDinner.Infrastructure.Migrations
                 name: "HostMenuIds");
 
             migrationBuilder.DropTable(
+                name: "MenuDinnerIds");
+
+            migrationBuilder.DropTable(
+                name: "MenuItems");
+
+            migrationBuilder.DropTable(
                 name: "MenuReviews");
+
+            migrationBuilder.DropTable(
+                name: "MenuReviewsIds");
 
             migrationBuilder.DropTable(
                 name: "Reservations");
@@ -408,15 +526,13 @@ namespace DelightDinner.Infrastructure.Migrations
                 name: "Hosts");
 
             migrationBuilder.DropTable(
+                name: "MenuSections");
+
+            migrationBuilder.DropTable(
                 name: "Dinners");
 
-            migrationBuilder.AlterColumn<string>(
-                name: "MenuReviewId",
-                table: "MenuReviewsIds",
-                type: "nvarchar(max)",
-                nullable: false,
-                oldClrType: typeof(Guid),
-                oldType: "uniqueidentifier");
+            migrationBuilder.DropTable(
+                name: "Menus");
         }
     }
 }

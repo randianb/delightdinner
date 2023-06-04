@@ -22,7 +22,7 @@ namespace DelightDinner.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("DelightDinner.Domain.Bill.Bill", b =>
+            modelBuilder.Entity("DelightDinner.Domain.BillAggregate.Bill", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -48,7 +48,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.ToTable("Bills", (string)null);
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Dinner.Dinner", b =>
+            modelBuilder.Entity("DelightDinner.Domain.DinnerAggregate.Dinner", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -106,7 +106,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.ToTable("Dinners", (string)null);
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Guest.Guest", b =>
+            modelBuilder.Entity("DelightDinner.Domain.GuestAggregate.Guest", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -139,7 +139,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.ToTable("Guests", (string)null);
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Host.Host", b =>
+            modelBuilder.Entity("DelightDinner.Domain.HostAggregate.Host", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -172,7 +172,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.ToTable("Hosts", (string)null);
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Menu.Menu", b =>
+            modelBuilder.Entity("DelightDinner.Domain.MenuAggregate.Menu", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -202,7 +202,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.ToTable("Menus", (string)null);
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.MenuReview.MenuReview", b =>
+            modelBuilder.Entity("DelightDinner.Domain.MenuReviewAggregate.MenuReview", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -236,7 +236,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.ToTable("MenuReviews", (string)null);
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.User.User", b =>
+            modelBuilder.Entity("DelightDinner.Domain.UserAggregate.User", b =>
                 {
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -272,9 +272,9 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.ToTable("Users", (string)null);
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Bill.Bill", b =>
+            modelBuilder.Entity("DelightDinner.Domain.BillAggregate.Bill", b =>
                 {
-                    b.OwnsOne("DelightDinner.Domain.Dinner.ValueObjects.Price", "Amount", b1 =>
+                    b.OwnsOne("DelightDinner.Domain.DinnerAggregate.ValueObjects.Price", "Amount", b1 =>
                         {
                             b1.Property<string>("BillId")
                                 .HasColumnType("nvarchar(450)");
@@ -298,9 +298,9 @@ namespace DelightDinner.Infrastructure.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Dinner.Dinner", b =>
+            modelBuilder.Entity("DelightDinner.Domain.DinnerAggregate.Dinner", b =>
                 {
-                    b.OwnsOne("DelightDinner.Domain.Dinner.ValueObjects.Price", "Price", b1 =>
+                    b.OwnsOne("DelightDinner.Domain.DinnerAggregate.ValueObjects.Price", "Price", b1 =>
                         {
                             b1.Property<Guid>("DinnerId")
                                 .HasColumnType("uniqueidentifier");
@@ -320,7 +320,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("DinnerId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Dinner.Entities.Reservation", "Reservations", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.DinnerAggregate.Entities.Reservation", "Reservations", b1 =>
                         {
                             b1.Property<Guid>("DinnerId")
                                 .HasColumnType("uniqueidentifier");
@@ -357,7 +357,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("DinnerId");
                         });
 
-                    b.OwnsOne("DelightDinner.Domain.Dinner.ValueObjects.Location", "Location", b1 =>
+                    b.OwnsOne("DelightDinner.Domain.DinnerAggregate.ValueObjects.Location", "Location", b1 =>
                         {
                             b1.Property<Guid>("DinnerId")
                                 .HasColumnType("uniqueidentifier");
@@ -393,9 +393,9 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.Navigation("Reservations");
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Guest.Guest", b =>
+            modelBuilder.Entity("DelightDinner.Domain.GuestAggregate.Guest", b =>
                 {
-                    b.OwnsMany("DelightDinner.Domain.Bill.ValueObjects.BillId", "BillIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.BillAggregate.ValueObjects.BillId", "BillIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -417,7 +417,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("GuestId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Guest.Entities.GuestRating", "Ratings", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.GuestAggregate.Entities.GuestRating", "Ratings", b1 =>
                         {
                             b1.Property<Guid>("Id")
                                 .HasColumnType("uniqueidentifier")
@@ -471,7 +471,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .IsRequired();
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.MenuReview.ValueObjects.MenuReviewId", "MenuReviewIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.MenuReviewAggregate.ValueObjects.MenuReviewId", "MenuReviewIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -493,7 +493,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("GuestId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Dinner.ValueObjects.DinnerId", "PastDinnerIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.DinnerAggregate.ValueObjects.DinnerId", "PastDinnerIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -515,7 +515,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("GuestId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Dinner.ValueObjects.DinnerId", "PendingDinnerIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.DinnerAggregate.ValueObjects.DinnerId", "PendingDinnerIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -537,7 +537,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("GuestId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Dinner.ValueObjects.DinnerId", "UpcommingDinnerIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.DinnerAggregate.ValueObjects.DinnerId", "UpcommingDinnerIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -572,7 +572,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.Navigation("UpcommingDinnerIds");
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Host.Host", b =>
+            modelBuilder.Entity("DelightDinner.Domain.HostAggregate.Host", b =>
                 {
                     b.OwnsOne("DelightDinner.Domain.Common.ValueObjects.AverageRating", "AverageRating", b1 =>
                         {
@@ -593,7 +593,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("HostId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Dinner.ValueObjects.DinnerId", "DinnerIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.DinnerAggregate.ValueObjects.DinnerId", "DinnerIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -616,7 +616,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("HostId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Menu.MenuObjects.MenuId", "MenuIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.MenuAggregate.MenuObjects.MenuId", "MenuIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -647,9 +647,9 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.Navigation("MenuIds");
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.Menu.Menu", b =>
+            modelBuilder.Entity("DelightDinner.Domain.MenuAggregate.Menu", b =>
                 {
-                    b.OwnsMany("DelightDinner.Domain.Menu.Entities.MenuSection", "Sections", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.MenuAggregate.Entities.MenuSection", "Sections", b1 =>
                         {
                             b1.Property<Guid>("Id")
                                 .HasColumnType("uniqueidentifier")
@@ -677,7 +677,7 @@ namespace DelightDinner.Infrastructure.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("MenuId");
 
-                            b1.OwnsMany("DelightDinner.Domain.Menu.Entities.MenuItem", "Items", b2 =>
+                            b1.OwnsMany("DelightDinner.Domain.MenuAggregate.Entities.MenuItem", "Items", b2 =>
                                 {
                                     b2.Property<Guid>("Id")
                                         .HasColumnType("uniqueidentifier")
@@ -731,7 +731,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("MenuId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.Dinner.ValueObjects.DinnerId", "DinnerIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.DinnerAggregate.ValueObjects.DinnerId", "DinnerIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -753,7 +753,7 @@ namespace DelightDinner.Infrastructure.Migrations
                                 .HasForeignKey("MenuId");
                         });
 
-                    b.OwnsMany("DelightDinner.Domain.MenuReview.ValueObjects.MenuReviewId", "MenuReviewIds", b1 =>
+                    b.OwnsMany("DelightDinner.Domain.MenuReviewAggregate.ValueObjects.MenuReviewId", "MenuReviewIds", b1 =>
                         {
                             b1.Property<int>("Id")
                                 .HasColumnType("int");
@@ -785,7 +785,7 @@ namespace DelightDinner.Infrastructure.Migrations
                     b.Navigation("Sections");
                 });
 
-            modelBuilder.Entity("DelightDinner.Domain.MenuReview.MenuReview", b =>
+            modelBuilder.Entity("DelightDinner.Domain.MenuReviewAggregate.MenuReview", b =>
                 {
                     b.OwnsOne("DelightDinner.Domain.Common.ValueObjects.Rating", "Rating", b1 =>
                         {
