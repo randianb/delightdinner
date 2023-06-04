@@ -1,0 +1,6 @@
+@host = https://localhost:7177
+@hostId = xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3YTVjY2Q5OC1hZjQ4LTQzODEtYjMwMS1kMmY5YWU1NDRhYmQiLCJnaXZlbl9uYW1lIjoiRW1tYSIsImZhbWlseV9uYW1lIjoiV2F0c29uIiwianRpIjoiZjEwNWFiZjgtZmYzZS00NzhlLWIzOWEtNDhlZDFjMTNkNDkzIiwiZXhwIjoxNjgzMzcxMjA4LCJpc3MiOiJEZWxpZ2h0RGlubmVyIiwiYXVkIjoiRGVsaWdodERpbm5lciJ9.yMfXfOl22FWjxp8V8MeIBnvBb5DkHipbpzAQGZ39Bwc
+
+GET {{host}}/hosts/{{hostId}}/menus
+Authorization: Bearer {{token}}

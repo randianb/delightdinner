@@ -49,6 +49,26 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelightDinner.Application.UnitTests", "tests\UnitTests\DelightDinner.Application.UnitTests\DelightDinner.Application.UnitTests.csproj", "{25CC32FC-07E6-440D-ABE3-16F199BDA9C6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Requests", "Requests", "{45E4BDBB-0677-45B7-BF57-2EB3FF7F682D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentification", "Authentification", "{E5ECE526-933A-4701-B84F-C6B4E9246459}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Authentication\Login.http = Requests\Authentication\Login.http
+		Requests\Authentication\Register.http = Requests\Authentication\Register.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dinners", "Dinners", "{0581F6A1-C27A-4AD2-9034-7D3BE246E187}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Dinners\CreateDinner.http = Requests\Dinners\CreateDinner.http
+		Requests\Dinners\ListDinners.http = Requests\Dinners\ListDinners.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Menus", "Menus", "{76CC93C0-F7EE-465D-A22E-ABC5DC916067}"
+	ProjectSection(SolutionItems) = preProject
+		Requests\Menus\CreateMenu.http = Requests\Menus\CreateMenu.http
+		Requests\Menus\ListMenus.http = Requests\Menus\ListMenus.http
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,5 +113,11 @@ Global
 		{91E279FA-5466-41B2-B346-EC451A9FF2C4} = {C117594A-9BA9-478C-9064-2BD903A54A33}
 		{C0B1ABD2-E5B7-4EC8-963C-B70BB8975AB7} = {5832A154-E9F8-41CD-9B8E-93D16E00ADD8}
 		{25CC32FC-07E6-440D-ABE3-16F199BDA9C6} = {C0B1ABD2-E5B7-4EC8-963C-B70BB8975AB7}
+		{E5ECE526-933A-4701-B84F-C6B4E9246459} = {45E4BDBB-0677-45B7-BF57-2EB3FF7F682D}
+		{0581F6A1-C27A-4AD2-9034-7D3BE246E187} = {45E4BDBB-0677-45B7-BF57-2EB3FF7F682D}
+		{76CC93C0-F7EE-465D-A22E-ABC5DC916067} = {45E4BDBB-0677-45B7-BF57-2EB3FF7F682D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59D728A9-1258-492A-8761-0E65A9C1AC87}
 	EndGlobalSection
 EndGlobal
