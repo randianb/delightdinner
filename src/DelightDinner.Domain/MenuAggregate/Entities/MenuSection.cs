@@ -9,7 +9,6 @@ public sealed class MenuSection : Entity<MenuSectionId>
 
     public string Name { get; private set; }
     public string Description { get; private set; }
-
     public IReadOnlyList<MenuItem> Items => _items.AsReadOnly(); 
 
     private MenuSection(        
