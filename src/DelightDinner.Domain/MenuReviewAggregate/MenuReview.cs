@@ -4,6 +4,7 @@ using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.HostAggregate.ValueObjects;
 using DelightDinner.Domain.MenuAggregate.MenuObjects;
+using DelightDinner.Domain.MenuReviewAggregate.Events;
 using DelightDinner.Domain.MenuReviewAggregate.ValueObjects;
 
 namespace DelightDinner.Domain.MenuReviewAggregate;
@@ -55,7 +56,7 @@ public sealed class MenuReview : AggregateRoot<MenuReviewId, Guid>
         // TODO: enforce invariants
         var ratingValueObject = Rating.Create(rating);
 
-        return new(
+        var menuReview = new MenuReview(
             menuReviewId ?? MenuReviewId.CreateUnique(),
             ratingValueObject,
             comment,
@@ -65,6 +66,10 @@ public sealed class MenuReview : AggregateRoot<MenuReviewId, Guid>
             dinnerId,
             createdDateTime,
             updateDateTime);
+
+        menuReview.AddDomainEvent(new MenuReviewCreated(menuReview));
+
+        return menuReview;
     }
 #pragma warning disable CS8618
     private MenuReview()
