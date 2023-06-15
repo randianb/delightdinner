@@ -16,4 +16,8 @@
     <ProjectReference Include="..\DelightDinner.Domain\DelightDinner.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dinners\Events\" />
+  </ItemGroup>
+
 </Project>
