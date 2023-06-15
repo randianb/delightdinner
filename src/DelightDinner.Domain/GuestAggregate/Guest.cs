@@ -2,6 +2,7 @@
 using DelightDinner.Domain.Common.Models;
 using DelightDinner.Domain.DinnerAggregate.ValueObjects;
 using DelightDinner.Domain.GuestAggregate.Entities;
+using DelightDinner.Domain.GuestAggregate.Events;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
 using DelightDinner.Domain.MenuReviewAggregate.ValueObjects;
 using DelightDinner.Domain.UserAggregate.ValueObjects;
@@ -52,11 +53,20 @@ public sealed class Guest : AggregateRoot<GuestId, Guid>
         Uri profileImage)
     {
         // TODO: enforce invariants
-        return new(
+        var gues = new Guest(
             firstName,
             lastName,
             userId,
             profileImage);
+
+        gues.AddDomainEvent(new GuestCreated(gues));
+
+        return gues;
+    }
+
+    public void AddMenuReviewId(MenuReviewId menuReviewId)
+    {
+        _menuReviewIds.Add(menuReviewId);
     }
 
 #pragma warning disable CS8618
