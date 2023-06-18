@@ -19,7 +19,6 @@
   <ItemGroup>
     <Folder Include="Bills\" />
     <Folder Include="Dinners\Events\" />
-    <Folder Include="Hosts\Events\" />
   </ItemGroup>
 
 </Project>
