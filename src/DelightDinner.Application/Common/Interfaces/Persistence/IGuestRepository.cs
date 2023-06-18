@@ -1,4 +1,5 @@
-﻿using DelightDinner.Domain.GuestAggregate;
+﻿using DelightDinner.Domain.DinnerAggregate.ValueObjects;
+using DelightDinner.Domain.GuestAggregate;
 using DelightDinner.Domain.GuestAggregate.ValueObjects;
 
 namespace DelightDinner.Application.Common.Interfaces.Persistence;
