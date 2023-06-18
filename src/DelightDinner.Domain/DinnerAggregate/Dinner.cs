@@ -92,6 +92,11 @@ public sealed class Dinner : AggregateRoot<DinnerId, Guid>
         return dinner;
     }
 
+    public void AddReservation(Reservation reservation)
+    {
+        _reservations.Add(reservation);
+    }
+
 #pragma warning disable CS8618
     private Dinner()
     {
