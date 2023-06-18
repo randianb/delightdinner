@@ -53,6 +53,16 @@ public sealed class Host : AggregateRoot<HostId, string>
             AverageRating.CreateNew());
     }
 
+    public void AddMenuId(MenuId menuId)
+    {
+        _menuIds.Add(menuId);
+    }
+
+    public void AddDinnerId(DinnerId dinnerId)
+    {
+        _dinnerIds.Add(dinnerId);
+    }
+
 #pragma warning disable CS8618
     private Host()
     {
