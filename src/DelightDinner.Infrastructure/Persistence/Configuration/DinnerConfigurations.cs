@@ -19,42 +19,6 @@ public class DinnerConfigurations : IEntityTypeConfiguration<Dinner>
         ConfigurateReservationsTable(builder);
     }
 
-    private void ConfigurateReservationsTable(EntityTypeBuilder<Dinner> builder)
-    {
-        builder.OwnsMany(x => x.Reservations, res =>
-        {
-            res.ToTable("Reservations");
-
-            res.WithOwner()
-                .HasForeignKey("DinnerId");
-
-            res.HasKey("DinnerId", "Id");
-
-            res.Property(x => x.Id)
-                .HasConversion(
-                    id => id.Value,
-                    value => ReservationId.Create(value));
-
-            res.Property(x => x.ReservationStatus)
-                .HasConversion(
-                    status => status.Value,
-                    value => ReservationStatus.FromValue(value));
-
-            res.Property(x => x.GuestId)
-                .HasConversion(
-                    id => id.Value,
-                    value => GuestId.Create(value));
-
-            res.Property(x => x.BillId)
-                .HasConversion(
-                    id => id!.Value,
-                    value => BillId.Create(value));
-        });
-
-        builder.Metadata.FindNavigation(nameof(Dinner.Reservations))!
-            .SetPropertyAccessMode(PropertyAccessMode.Field);
-    }
-
     private void ConfigureDinnersTable(EntityTypeBuilder<Dinner> builder)
     {
         builder.ToTable("Dinners");
@@ -91,5 +55,41 @@ public class DinnerConfigurations : IEntityTypeConfiguration<Dinner>
                 value => MenuId.Create(value));
 
         builder.OwnsOne(d => d.Location);
+    }
+
+    private void ConfigurateReservationsTable(EntityTypeBuilder<Dinner> builder)
+    {
+        builder.OwnsMany(x => x.Reservations, res =>
+        {
+            res.ToTable("Reservations");
+
+            res.WithOwner()
+                .HasForeignKey("DinnerId");
+
+            res.HasKey("DinnerId", "Id");
+
+            res.Property(x => x.Id)
+                .HasConversion(
+                    id => id.Value,
+                    value => ReservationId.Create(value));
+
+            res.Property(x => x.ReservationStatus)
+                .HasConversion(
+                    status => status.Value,
+                    value => ReservationStatus.FromValue(value));
+
+            res.Property(x => x.GuestId)
+                .HasConversion(
+                    id => id.Value,
+                    value => GuestId.Create(value));
+
+            res.Property(x => x.BillId)
+                .HasConversion(
+                    id => id!.Value,
+                    value => BillId.Create(value));
+        });
+
+        builder.Metadata.FindNavigation(nameof(Dinner.Reservations))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
     }
 }

@@ -10,11 +10,6 @@ public class UserConfigurations : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
-        ConfigureUsersTable(builder);
-    }
-
-    private void ConfigureUsersTable(EntityTypeBuilder<User> builder)
-    {
         builder.ToTable("Users");
 
         builder.HasKey(u => u.Id);

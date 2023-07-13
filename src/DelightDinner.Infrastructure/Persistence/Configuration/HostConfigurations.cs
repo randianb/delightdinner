@@ -16,44 +16,6 @@ public class HostConfigurations : IEntityTypeConfiguration<Host>
         ConfigureDinnerIdsTable(builder);
     }
 
-    private void ConfigureDinnerIdsTable(EntityTypeBuilder<Host> builder)
-    {
-        builder.OwnsMany(x => x.DinnerIds, did =>
-        {
-            did.ToTable("HostDinnerIds");
-
-            did.WithOwner()
-                .HasForeignKey("HostId");
-
-            did.HasKey("Id");
-
-            did.Property(x => x.Value)
-                .HasColumnName("HostDinnerId");
-        });
-
-        builder.Metadata.FindNavigation(nameof(Host.DinnerIds))!
-            .SetPropertyAccessMode(PropertyAccessMode.Field);
-    }
-
-    private void ConfigureMenuIdsTable(EntityTypeBuilder<Host> builder)
-    {
-        builder.OwnsMany(x => x.MenuIds, mid =>
-        {
-            mid.ToTable("HostMenuIds");
-
-            mid.WithOwner()
-                .HasForeignKey("HostId");
-
-            mid.HasKey("Id");
-
-            mid.Property(x => x.Value)
-                .HasColumnName("HostMenuId");
-        });
-
-        builder.Metadata.FindNavigation(nameof(Host.MenuIds))!
-            .SetPropertyAccessMode(PropertyAccessMode.Field);
-    }
-
     private void ConfigureHostsTable(EntityTypeBuilder<Host> builder)
     {
         builder.ToTable("Hosts");
@@ -78,4 +40,42 @@ public class HostConfigurations : IEntityTypeConfiguration<Host>
                 id => id.Value,
                 value => UserId.Create(value));
     }
+
+    private void ConfigureMenuIdsTable(EntityTypeBuilder<Host> builder)
+    {
+        builder.OwnsMany(x => x.MenuIds, mid =>
+        {
+            mid.ToTable("HostMenuIds");
+
+            mid.WithOwner()
+                .HasForeignKey("HostId");
+
+            mid.HasKey("Id");
+
+            mid.Property(x => x.Value)
+                .HasColumnName("HostMenuId");
+        });
+
+        builder.Metadata.FindNavigation(nameof(Host.MenuIds))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
+    }
+
+    private void ConfigureDinnerIdsTable(EntityTypeBuilder<Host> builder)
+    {
+        builder.OwnsMany(x => x.DinnerIds, did =>
+        {
+            did.ToTable("HostDinnerIds");
+
+            did.WithOwner()
+                .HasForeignKey("HostId");
+
+            did.HasKey("Id");
+
+            did.Property(x => x.Value)
+                .HasColumnName("HostDinnerId");
+        });
+
+        builder.Metadata.FindNavigation(nameof(Host.DinnerIds))!
+            .SetPropertyAccessMode(PropertyAccessMode.Field);
+    }  
 }

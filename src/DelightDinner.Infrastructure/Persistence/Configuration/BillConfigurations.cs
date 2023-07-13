@@ -13,11 +13,6 @@ public class BillConfigurations : IEntityTypeConfiguration<Bill>
 {
     public void Configure(EntityTypeBuilder<Bill> builder)
     {
-        ConfigureBillsTable(builder);
-    }
-
-    private void ConfigureBillsTable(EntityTypeBuilder<Bill> builder)
-    {
         builder.ToTable("Bills");
 
         builder.HasKey(b => b.Id);
@@ -42,7 +37,7 @@ public class BillConfigurations : IEntityTypeConfiguration<Bill>
                 id => id.Value,
                 value => HostId.Create(value));
 
-        builder.OwnsOne(x => x.Amount, pb => 
+        builder.OwnsOne(x => x.Amount, pb =>
             pb.Property(b => b.Amount)
                 .HasColumnType("decimal(5,4)"));
     }

@@ -14,11 +14,6 @@ public class MenuReviewConfigurations : IEntityTypeConfiguration<MenuReview>
 {
     public void Configure(EntityTypeBuilder<MenuReview> builder)
     {
-        ConfigureMenuReviewsTable(builder);
-    }
-
-    private static void ConfigureMenuReviewsTable(EntityTypeBuilder<MenuReview> builder)
-    {
         builder.ToTable("MenuReviews");
 
         builder.HasKey(x => x.Id);
