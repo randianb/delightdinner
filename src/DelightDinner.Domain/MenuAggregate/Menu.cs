@@ -11,14 +11,14 @@ namespace DelightDinner.Domain.MenuAggregate;
 
 public sealed class Menu : AggregateRoot<MenuId, Guid>
 {
-    private readonly List<MenuSection> _menuSections = new();
+    private readonly List<MenuSection> _sections = new();
     private readonly List<DinnerId> _dinnerIds = new();
     private readonly List<MenuReviewId> _menuReviewIds = new();
 
     public string Name { get; private set; }
     public string Description { get; private set; }
     public AverageRating AverageRating { get; private set; }
-    public IReadOnlyList<MenuSection> Sections => _menuSections.AsReadOnly();
+    public IReadOnlyList<MenuSection> Sections => _sections.AsReadOnly();
     public HostId HostId { get; private set; }
     public IReadOnlyList<DinnerId> DinnerIds => _dinnerIds.AsReadOnly();
     public IReadOnlyList<MenuReviewId> MenuReviewIds => _menuReviewIds.AsReadOnly();
@@ -38,7 +38,7 @@ public sealed class Menu : AggregateRoot<MenuId, Guid>
         Name = name;
         Description = description;
         AverageRating = averageRating;
-        _menuSections = sections;
+        _sections = sections;
     }
 
     public static Menu Create(

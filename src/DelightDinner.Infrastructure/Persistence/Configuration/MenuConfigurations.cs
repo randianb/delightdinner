@@ -105,6 +105,7 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
                 .HasForeignKey("MenuId");
 
             dib.HasKey("Id");
+            dib.Property("Id").ValueGeneratedOnAdd();
 
             dib.Property(d => d.Value)
                 .HasColumnName("DinnerId");
@@ -131,5 +132,5 @@ public class MenuConfigurations : IEntityTypeConfiguration<Menu>
 
         builder.Metadata.FindNavigation(nameof(Menu.MenuReviewIds))!
             .SetPropertyAccessMode(PropertyAccessMode.Field);
-    }  
+    }
 }

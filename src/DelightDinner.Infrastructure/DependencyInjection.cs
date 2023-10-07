@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+
 using System.Text;
 
 namespace DelightDinner.Infrastructure;
@@ -20,14 +21,14 @@ namespace DelightDinner.Infrastructure;
 public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(
-        this IServiceCollection services, 
+        this IServiceCollection services,
         ConfigurationManager configuration)
     {
         services
             .AddPersistance(configuration)
-            .AddAuth(configuration);  
-        
-        services.AddSingleton<IDateTimeProvider, DateTimeProvider>();        
+            .AddAuth(configuration);
+
+        services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
 
         return services;
     }
@@ -36,13 +37,14 @@ public static class DependencyInjection
         this IServiceCollection services,
         ConfigurationManager configuration)
     {
-        services.AddDbContext<DelightDinnerDbContext>(options => 
+        services.AddDbContext<DelightDinnerDbContext>(options =>
             options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<IUserReposetory, UserRepository>();
         services.AddScoped<IMenuRepository, MenuRepository>();
         services.AddScoped<IDinnerRepository, DinnerRepository>();
         services.AddScoped<IGuestRepository, GuestRepository>();
+        services.AddScoped<IHostRepository, HostRepository>();
 
         services.AddScoped<PublishDomainEventsInterceptor>();
 

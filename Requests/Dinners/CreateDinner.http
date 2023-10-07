@@ -1,27 +1,27 @@
-@host = https://localhost:7177
-@hostId = xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-@menuId = xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3YTVjY2Q5OC1hZjQ4LTQzODEtYjMwMS1kMmY5YWU1NDRhYmQiLCJnaXZlbl9uYW1lIjoiRW1tYSIsImZhbWlseV9uYW1lIjoiV2F0c29uIiwianRpIjoiZjEwNWFiZjgtZmYzZS00NzhlLWIzOWEtNDhlZDFjMTNkNDkzIiwiZXhwIjoxNjgzMzcxMjA4LCJpc3MiOiJEZWxpZ2h0RGlubmVyIiwiYXVkIjoiRGVsaWdodERpbm5lciJ9.yMfXfOl22FWjxp8V8MeIBnvBb5DkHipbpzAQGZ39Bwc
+@host = http://localhost:5008
+@hostId = 00000000-0000-0000-0000-000000000000
+@menuId = 61A89EFD-FAF8-473A-AE2E-B9AFBEB1A795
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1Y2U5ZDk5OC0zMjNkLTQ0NmMtYWU3MS05NGU3OWI5MzFhZjUiLCJnaXZlbl9uYW1lIjoiRW1tYSIsImZhbWlseV9uYW1lIjoiV2F0c29uIiwianRpIjoiMmJmMzllNDItNmM1NC00MWEzLWFkN2UtZDg4YTg3OWI2ZjU0IiwiZXhwIjoxNjk2NTM5MzczLCJpc3MiOiJEZWxpZ2h0RGlubmVyIiwiYXVkIjoiRGVsaWdodERpbm5lciJ9.qiLRvJZ4Y32EzK3fcfxnRrABazxiVtlVLDtwysvENNQ
 
 POST {{host}}/hosts/{{hostId}}/dinners
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
 {
-    "name": "Pizza, Ice Cream & Jazz",
+    "name": "Pizza, Ice Cream & Jazz1112",
     "description": "Join us for a night of Pizza and Jazz! After dinner we will continue the fun at the BRB bar 💪🏽🍺",
     "startDateTime": "2020-01-01T18:00:00.0000000Z",
     "endDateTime": "2020-01-01T18:00:00.0000000Z",
     "isPublic": true,
     "maxGuests": 10,
     "price": {
-        "amount": 18.00,
+        "amount": 18.01,
         "currency": "USD"
     },
     "menuId": "{{menuId}}",
     "ImageUrl": "https://images.unsplash.com/photo-1590947132387-155cc02f3212?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
     "location": {
-        "name": "Dan's Pizza House",
+        "name": "Dan's Pizza House1",
         "address": "Bergen, Norway",
         "latitude": 60.391262,
         "longitude": 5.322054

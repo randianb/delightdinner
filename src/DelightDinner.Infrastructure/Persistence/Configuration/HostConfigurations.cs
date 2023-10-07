@@ -51,7 +51,7 @@ public class HostConfigurations : IEntityTypeConfiguration<Host>
                 .HasForeignKey("HostId");
 
             mid.HasKey("Id");
-
+            mid.Property("Id").ValueGeneratedOnAdd();
             mid.Property(x => x.Value)
                 .HasColumnName("HostMenuId");
         });
@@ -77,5 +77,5 @@ public class HostConfigurations : IEntityTypeConfiguration<Host>
 
         builder.Metadata.FindNavigation(nameof(Host.DinnerIds))!
             .SetPropertyAccessMode(PropertyAccessMode.Field);
-    }  
+    }
 }

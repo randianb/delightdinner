@@ -17,7 +17,7 @@ public class DinnerCreatedEventHandler : INotificationHandler<DinnerCreated>
     }
 
     public async Task Handle(
-        DinnerCreated dinnerCreatedEvent, 
+        DinnerCreated dinnerCreatedEvent,
         CancellationToken cancellationToken)
     {
         if (await _menuRepository.GetByIdAsync(dinnerCreatedEvent.Dinner.MenuId) is not Menu menu)
